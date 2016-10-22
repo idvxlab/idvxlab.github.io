@@ -8,7 +8,42 @@ Version: 1.0
 License: GPL
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+.publication_content{
+	width:100%;
+	margin-bottom: 40px;
+}
 
+.publication_content img{
+	width:143px;
+	height:130px;
+
+}
+.publication_content h3{
+	color:#000;
+	font-weight:800;
+	margin-left: 150px;
+	margin-top: -130px;
+
+}
+.publication_content p{
+	color:#201d1e;
+	margin-left: 150px;
+}
+.publication_content a{
+	color:blue;
+
+}
+.publication_content a:hover{
+	color:#CF0000;
+
+}
+.footer_title{
+	    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.single_right_coloum ul li {
+    padding-bottom: 10px
+ }
 *{margin:0; padding:0}
 body{font-family:Arial; font-size:12px; line-height:13px; background:url("images/site_bg.png") top center no-repeat fixed #000}
 a{color:#000; text-decoration:none}
@@ -84,6 +119,7 @@ div{overflow:hidden}
 .more{background:url("images/plus.png") no-repeat scroll 57px 9px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:4px 20px; position:absolute; right:0; text-transform:uppercase; top:10px}
 .popular_more{background:url("images/plus.png") no-repeat scroll 57px 12px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:7px 20px; text-transform:uppercase; width:74px; margin-top:10px}
 .single_left_coloum{margin-left:10px; width:143px}
+.single_left_coloum_s{margin-left:10px; width:100px}
 .readmore, .single_cat_right_content_meta span{color:#CF0000; font-size:10px; text-transform:uppercase; font-weight:bold; margin-right:20px}
 .readmore:hover, .single_cat_right_content_meta span:hover{color:#CF0000; text-decoration:underline}
 .gallery{}
