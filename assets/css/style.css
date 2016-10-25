@@ -122,7 +122,7 @@ div{overflow:hidden}
 .more{background:url("images/plus.png") no-repeat scroll 57px 9px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:4px 20px; position:absolute; right:0; text-transform:uppercase; top:10px}
 .popular_more{background:url("images/plus.png") no-repeat scroll 57px 12px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:7px 20px; text-transform:uppercase; width:74px; margin-top:10px}
 .single_left_coloum{margin-left:10px; width:143px}
-.single_left_coloum_s{margin-left:10px; width:100px}
+.single_left_coloum_s{margin-left:10px; width:118px}
 .readmore, .single_cat_right_content_meta span{color:#CF0000; font-size:10px; text-transform:uppercase; font-weight:bold; margin-right:20px}
 .readmore:hover, .single_cat_right_content_meta span:hover{color:#CF0000; text-decoration:underline}
 .gallery{}
