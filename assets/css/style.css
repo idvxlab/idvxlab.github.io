@@ -17,24 +17,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .publication_content img{
-	width:143px;
-	height:130px;
-
+	width:120px;
+	height:80px;
+	padding:1px;
+    border:1px solid #021a40;
 }
 .publication_content h3{
 	color:#000;
 	font-weight:800;
 	margin-left: 150px;
 	margin-top: -130px;
-
 }
 .publication_content p{
 	color:#201d1e;
 	margin-left: 150px;
+	margin-top: -75px;
 }
 .publication_content a{
 	color:blue;
-
 }
 .publication_content a:hover{
 	color:#CF0000;
