@@ -1,530 +1,564 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Intelligent Big Data Visualization Lab</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" type="text/css" href="assets/font/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="assets/font/font.css" />
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css" media="screen" />
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-98265074-1', 'auto');
-  ga('send', 'pageview');
-</script>
-</head>
-<body>
-<div class="body_wrapper">
-  <div class="center">
-    <div class="header_area">
-      <div class="logo floatleft">
-	      <h1>智能大数据可视化实验室</h1>
-	      <h1>Intelligent Big Data Visualization Lab (iDV<sup>x</sup>)</h1>
-<!-- 	      <a href="#"><img src="images/logo.png" alt="" /></a> -->
-	  </div>
-<!--
-      <div class="top_menu floatleft">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Members</a></li>
-          <li><a href="#">Contact us</a></li>
-        </ul>
-      </div>
--->
-<!--
-      <div class="social_plus_search floatright">
-        <div class="social">
-          <ul>
-            <li><a href="#" class="twitter"></a></li>
-            <li><a href="#" class="facebook"></a></li>
-            <li><a href="#" class="feed"></a></li>
-          </ul>
-        </div>
-        <div class="search">
-          <form action="#" method="post" id="search_form">
-            <input type="text" value="Search news" id="s" />
-            <input type="submit" id="searchform" value="search" />
-            <input type="hidden" value="post" name="post_type" />
-          </form>
-        </div>
-      </div>
--->
-    </div>
-    <div class="main_menu_area">
-      <ul id="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="members.html">Members</a></li>
-      </ul>
-    </div>
-<!--
-    <div class="slider_area">
-      <div class="slider">
-        <ul class="bxslider">
-          <li><img src="images/teaser1.jpg" alt="" title="Whisper: Tracing the Spatiotemporal Process of Information Diffusion in Real Time, IEEE InfoVis 2012" /></li>
-          <li><img src="images/teaser2.jpg" alt="" title="SocialHelix: Visual Analysis of Sentiment Divergence in Social Media, Journal of Visualization, 2013" /></li>
-          <li><img src="images/teaser3.jpg" alt="" title="#FluxFlow: Visual Analysis of Anomalous Information Spreading on Social Media, IEEE VAST 2014 (Honorable Mention)" /></li>
-          <li><img src="images/teaser4.jpg" alt="" title="Episogram: Visual Summarization of Egocentric Social Interactions” IEEE CG&A, 2015" /></li>
-          <li><img src="images/teaser5.jpg" alt="" title="TargetVue: Visual Analysis of Anomalous User Behaviors in Online Communication Systems, IEEE VAST 2016" /></li>
-        </ul>
-      </div>
-    </div>
--->
-    <div class="content_area">
-	    
-	  <!--  Left (Main) Pannel -->
-   <!--    <div class="main_content floatleft">
-        <div class="left_coloum floatleft"> -->
-        	  <h2 class="title">2017</h2>
-        	  <div class="publication_content"> 
-                   <img src="papers/2017TVCG_StreamExplorer_Wu.jpg" alt="" />
-                   <p>
-                     Yingcai Wu, Zhutian Chen, Guodao Sun, Xiao Xie, <strong>Nan Cao</strong>, Shixia Liu, Weiwei Cui<br>
-                     StreamExplorer: A Multi-Stage System for Visually Exploring Events in Social Streams<br>
-                     IEEE TVCG 2017<br><br>
-                     <a href="papers/2017TVCG_StreamExplorer_Wu.pdf">paper</a>
-                 </p>
+    <head>
+        <title>Intelligent Big Data Visualization Lab</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="assets/font/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="assets/font/font.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="assets/css/jquery.bxslider.css" media="screen" />
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+             
+             ga('create', 'UA-98265074-1', 'auto');
+             ga('send', 'pageview');
+            </script>
+    </head>
+    <body>
+        <div class="body_wrapper">
+            <div class="center">
+                <div class="header_area">
+                    <div class="logo floatleft">
+                        <h1>智能大数据可视化实验室</h1>
+                        <h1>Intelligent Big Data Visualization Lab (iDV<sup>x</sup>)</h1>
+                        <!-- 	      <a href="#"><img src="images/logo.png" alt="" /></a> -->
+                    </div>
+                    <!--
+                     <div class="top_menu floatleft">
+                     <ul>
+                     <li><a href="index.html">Home</a></li>
+                     <li><a href="#">Members</a></li>
+                     <li><a href="#">Contact us</a></li>
+                     </ul>
+                     </div>
+                     -->
+                    <!--
+                     <div class="social_plus_search floatright">
+                     <div class="social">
+                     <ul>
+                     <li><a href="#" class="twitter"></a></li>
+                     <li><a href="#" class="facebook"></a></li>
+                     <li><a href="#" class="feed"></a></li>
+                     </ul>
+                     </div>
+                     <div class="search">
+                     <form action="#" method="post" id="search_form">
+                     <input type="text" value="Search news" id="s" />
+                     <input type="submit" id="searchform" value="search" />
+                     <input type="hidden" value="post" name="post_type" />
+                     </form>
+                     </div>
+                     </div>
+                     -->
                 </div>
-                <div class="publication_content"> 
-                   <img src="papers/2017TIIS_Adaptive_Gotz.jpg" alt="" />
-                   <p>
-                     David Gotz, Shun Sun, <strong>Nan Cao</strong>, Rita Kundu, Anne-Marie Meyer<br>
-                     Adaptive Contextualization Methods for Combating Selection Bias during High-Dimensional Visualization<br>
-                     ACM TIIS 2017<br><br>
-                     <a href="papers/2017TIIS_Adaptive_Gotz.pdf">paper</a>
-                 </p>
+                <div class="main_menu_area">
+                    <ul id="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="project.html">Projects</a></li>
+                        <li><a href="#">Publications</a></li>
+                        <li><a href="members.html">Members</a></li>
+                    </ul>
                 </div>
-              <div class="publication_content"> 
-                   <img src="papers/2017TVCG_Voila_Cao.jpg" alt="" />
-                   <p>
-                     <strong>Nan Cao</strong>, Chaoguang Lin, Qiuhan Zhu, Yu-Ru Lin, Xian Teng, Xidao Wen<br>
-                     Voila: Visual Anomaly Detection and Monitoring with Streaming Spatiotemporal Data<br>
-                     IEEE TVCG 2017<br><br>
-                     <a href="papers/2017TVCG_Voila_Cao.pdf">paper</a>
-                 </p>
-                </div>
-              <div class="publication_content"> 
-                   <img src="papers/2017TVCG_EventThread_Guo.jpg" alt="" />
-                   <p>
-                     Shunan Guo, Ke Xu, Rongwen Zhao, David Gotz, Hongyuan Zha, <strong>Nan Cao</strong><br>
-                     EventThread: Visual Summarization and Stage Analysis of Event Sequence Data<br>
-                     IEEE TVCG 2017<br><br>
-                     <a href="papers/2017TVCG_EventThread_Guo.pdf">paper</a>
-                 </p>
-                </div>
-        	  	<div class="publication_content"> 
-                   <img src="papers/2017TVCG_RCLens_Lin.jpg" alt="" />
-                   <p>
-	                   Hanfei Lin, Siyuan Gao, David Gotz, Fan Du, Jingrui He, <strong>Nan Cao</strong><br>
-	                   RCLens: Interactive Rare Category Exploration and Identification<br>
-	                   IEEE TVCG 2017<br><br>
-                     <a href="papers/2017TVCG_RCLens_Lin.pdf">paper</a>
-	               </p>
-                </div>
-              <div class="publication_content"> 
-                   <img src="papers/2017CSCW_IdeaWall_Shi.jpg" alt="" />
-                   <p>
-                     <strong>Yang Shi</strong>, Yang Wang, Ye Qi, John Chen, Xiaoyao Xu, Kwan-Liu Ma<br>
-                     IdeaWall: Improving Creative Collaboration through Combinatorial Visual Stimuli<br>
-                     ACM CSCW 2017<br><br>
-                     <a href="papers/2017CSCW_IdeaWall_Shi.pdf">paper</a>
-                 </p>
-                </div>
-                <div class="publication_content">
-	               <img src="papers/2017KDD_First_Du.jpg" alt="" />
-                   <p>
-	                   Boxin Du, Si Zhang, <strong>Nan Cao</strong>, Hanghang Tong<br>
-	                   FIRST: Fast Interactive Attributed Subgraph Matching<br>
-	                   ACM KDD 2017<br><br>
-                     <a href="papers/2017KDD_First_Du.pdf">paper</a>
-	               </p>
-                </div>
-                <div class="publication_content">
-	               <img src="papers/2017KDD_Is_Li.jpg" alt="" />
-                   <p>
-	                   Liangyue Li, Hanghang Tong, Yong Wang, Conglei Shi, <strong>Nan Cao</strong>, Norbou Buchler<br>
-	                   Is the Whole Greater Than the Sum of Its Parts?<br>
-	                   ACM KDD 2017<br><br>
-                     <a href="papers/2017KDD_Is_Li.pdf">paper</a>
-	               </p>
-                </div>
-                <div class="publication_content">
-	               <img src="papers/2017CHI_iSphere_Du.jpg" alt="" />
-                   <p>
-	                   Fan Du, <strong>Nan Cao</strong>, Yu-Ru Lin, Panpan Xu, Hanghang Tong<br>
-	                   iSphere: Focus+Context Sphere Visualization for Interactive Large Graph Exploration<br>
-	                   ACM SIGCHI 2017<br><br>
-	                   <a href="papers/2017CHI_iSphere_Du.pdf">paper</a>
-	               </p>
-                </div>
-                <div class="publication_content">
-	               <img src="papers/2017DMKD_Discovering_Zhou.jpg" alt="" />
-                   <p>
-	                   Dawei Zhou, Arun Karthikeyan, Kangyang Wang, <strong>Nan Cao</strong>, Jingrui He<br>
-					   Discovering rare categories from graph streams<br>
-					   Data Minining and Knowledge Discovery. 31(2): 400-423 (2017)<br><br>
-	                   <a href="papers/2017DMKD_Discovering_Zhou.pdf">paper</a>
-	               </p>
-                </div>
-                <div class="publication_content">
-	               <img src="papers/default.jpeg" alt="" />
-                   <p>
-	                   Liangyue Li, Hanghang Tong, <strong>Nan Cao</strong>, Kate Ehrlich, Yu-Ru Lin, Norbou Buchler<br>
-					   Enhancing Team Composition in Professional Networks: Problem Definitions and Fast Solutions<br>
-					   IEEE Transactions on Knowledge and Data Engineering 29(3): 613-626 (2017)<br><br>
-	                   <a href="papers/2017TKD_Enhancing_Li.pdf">paper</a>
-	               </p>
-                </div>
-        		<div class="publication_content"> 
-                   <img src="papers/2017PVis_MobiSeg_Wu.jpg" alt="" />
-                   <p>
-	                   Wenchao Wu, Yixian Zheng, <strong>Nan Cao</strong>, Haipeng Zeng, Bing Ni, Huamin Qu, Lionel M. Ni<br>
-	                   MobiSeg: Interactive Region Segmentation Using Heterogeneous Mobility Data<br>
-	                   IEEE PasificVis 2017<br><br>
-	                   <a href="papers/2017PVis_MobiSeg_Wu.pdf">paper</a>
-	               </p>
+                <!--
+                 <div class="slider_area">
+                 <div class="slider">
+                 <ul class="bxslider">
+                 <li><img src="images/teaser1.jpg" alt="" title="Whisper: Tracing the Spatiotemporal Process of Information Diffusion in Real Time, IEEE InfoVis 2012" /></li>
+                 <li><img src="images/teaser2.jpg" alt="" title="SocialHelix: Visual Analysis of Sentiment Divergence in Social Media, Journal of Visualization, 2013" /></li>
+                 <li><img src="images/teaser3.jpg" alt="" title="#FluxFlow: Visual Analysis of Anomalous Information Spreading on Social Media, IEEE VAST 2014 (Honorable Mention)" /></li>
+                 <li><img src="images/teaser4.jpg" alt="" title="Episogram: Visual Summarization of Egocentric Social Interactions” IEEE CG&A, 2015" /></li>
+                 <li><img src="images/teaser5.jpg" alt="" title="TargetVue: Visual Analysis of Anomalous User Behaviors in Online Communication Systems, IEEE VAST 2016" /></li>
+                 </ul>
+                 </div>
+                 </div>
+                 -->
+                <div class="content_area">
+                    
+                    <!--  Left (Main) Pannel -->
+                    <!--    <div class="main_content floatleft">
+                     <div class="left_coloum floatleft"> -->
+                    <h2 class="title">2018</h2>
+                    <div class="publication_content">
+                        <img src="papers/2018CHI_ECGLEN_Xu.jpg" alt="" />
+                        <p>Ke Xu, Shunan Guo, <strong>Nan Cao</strong>, David Gotz, Aiwen Xu, Huamin Qu, Zhenjie Yao, Yixin Chen
+                        <br>
+                        ECGLens: Interactive Visual Exploration of Large Scale ECG Data for Arrhythmia Detection
+                        <br>
+                        ACM SIGCHI (<font color="red">Honorable Mention</font>)<br><br>
+                        <a href="papers/2018CHI_ECGLEN_Xu.pdf">paper</a> | <a href="https://vimeo.com/230838506">video</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2018TVCG_Semantic_Xie.jpg" alt="" />
+                        <p>Xiao Xie, Xiwen Cai, Junpei Zhou, <strong>Nan Cao</strong>, Yingcai Wu
+                        <br>
+                        A Semantic-based Method for Visualizing Large Image Collections
+                        <br>
+                        IEEE TVCG<br><br>
+                        accepted
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2018TVCG_MeetingVis_Shi.jpg" alt="" />
+                        <p><strong>Yang Shi</strong>, Chris Bryan, Sridatt Bhamidipati, Ying Zhao, Yaoxue Zhang, Kwan-Liu Ma
+                        <br>
+                        A Semantic-based Method for Visualizing Large Image Collections
+                        <br>
+                        IEEE TVCG<br><br>
+                        accepted
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017TVCG_Voila_Cao.jpg" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, Chaoguang Lin, Qiuhan Zhu, Yu-Ru Lin, Xian Teng, Xidao Wen<br>
+                        Voila: Visual Anomaly Detection and Monitoring with Streaming Spatiotemporal Data<br>
+                        IEEE TVCG<br><br>
+                        <a href="papers/2017TVCG_Voila_Cao.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017TVCG_EventThread_Guo.jpg" alt="" />
+                        <p>
+                        Shunan Guo, Ke Xu, Rongwen Zhao, David Gotz, Hongyuan Zha, <strong>Nan Cao</strong><br>
+                        EventThread: Visual Summarization and Stage Analysis of Event Sequence Data<br>
+                        IEEE TVCG<br><br>
+                        <a href="papers/2017TVCG_EventThread_Guo.pdf">paper</a>
+                        </p>
+                    </div>
+                    <!-- end 2018 -->
+                    
+                    <h2 class="title">2017</h2>
+                    <div class="publication_content">
+                        <img src="papers/2017TVCG_StreamExplorer_Wu.jpg" alt="" />
+                        <p>
+                        Yingcai Wu, Zhutian Chen, Guodao Sun, Xiao Xie, <strong>Nan Cao</strong>, Shixia Liu, Weiwei Cui<br>
+                        StreamExplorer: A Multi-Stage System for Visually Exploring Events in Social Streams<br>
+                        IEEE TVCG 2017<br><br>
+                        <a href="papers/2017TVCG_StreamExplorer_Wu.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017TIIS_Adaptive_Gotz.jpg" alt="" />
+                        <p>
+                        David Gotz, Shun Sun, <strong>Nan Cao</strong>, Rita Kundu, Anne-Marie Meyer<br>
+                        Adaptive Contextualization Methods for Combating Selection Bias during High-Dimensional Visualization<br>
+                        ACM TIIS 2017<br><br>
+                        <a href="papers/2017TIIS_Adaptive_Gotz.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017TVCG_RCLens_Lin.jpg" alt="" />
+                        <p>
+                        Hanfei Lin, Siyuan Gao, David Gotz, Fan Du, Jingrui He, <strong>Nan Cao</strong><br>
+                        RCLens: Interactive Rare Category Exploration and Identification<br>
+                        IEEE TVCG 2017<br><br>
+                        <a href="papers/2017TVCG_RCLens_Lin.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017CSCW_IdeaWall_Shi.jpg" alt="" />
+                        <p>
+                        <strong>Yang Shi</strong>, Yang Wang, Ye Qi, John Chen, Xiaoyao Xu, Kwan-Liu Ma<br>
+                        IdeaWall: Improving Creative Collaboration through Combinatorial Visual Stimuli<br>
+                        ACM CSCW 2017<br><br>
+                        <a href="papers/2017CSCW_IdeaWall_Shi.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017KDD_First_Du.jpg" alt="" />
+                        <p>
+                        Boxin Du, Si Zhang, <strong>Nan Cao</strong>, Hanghang Tong<br>
+                        FIRST: Fast Interactive Attributed Subgraph Matching<br>
+                        ACM KDD 2017<br><br>
+                        <a href="papers/2017KDD_First_Du.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017KDD_Is_Li.jpg" alt="" />
+                        <p>
+                        Liangyue Li, Hanghang Tong, Yong Wang, Conglei Shi, <strong>Nan Cao</strong>, Norbou Buchler<br>
+                        Is the Whole Greater Than the Sum of Its Parts?<br>
+                        ACM KDD 2017<br><br>
+                        <a href="papers/2017KDD_Is_Li.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017CHI_iSphere_Du.jpg" alt="" />
+                        <p>
+                        Fan Du, <strong>Nan Cao</strong>, Yu-Ru Lin, Panpan Xu, Hanghang Tong<br>
+                        iSphere: Focus+Context Sphere Visualization for Interactive Large Graph Exploration<br>
+                        ACM SIGCHI 2017<br><br>
+                        <a href="papers/2017CHI_iSphere_Du.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017DMKD_Discovering_Zhou.jpg" alt="" />
+                        <p>
+                        Dawei Zhou, Arun Karthikeyan, Kangyang Wang, <strong>Nan Cao</strong>, Jingrui He<br>
+                        Discovering rare categories from graph streams<br>
+                        Data Minining and Knowledge Discovery. 31(2): 400-423 (2017)<br><br>
+                        <a href="papers/2017DMKD_Discovering_Zhou.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/default.jpeg" alt="" />
+                        <p>
+                        Liangyue Li, Hanghang Tong, <strong>Nan Cao</strong>, Kate Ehrlich, Yu-Ru Lin, Norbou Buchler<br>
+                        Enhancing Team Composition in Professional Networks: Problem Definitions and Fast Solutions<br>
+                        IEEE Transactions on Knowledge and Data Engineering 29(3): 613-626 (2017)<br><br>
+                        <a href="papers/2017TKD_Enhancing_Li.pdf">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="papers/2017PVis_MobiSeg_Wu.jpg" alt="" />
+                        <p>
+                        Wenchao Wu, Yixian Zheng, <strong>Nan Cao</strong>, Haipeng Zeng, Bing Ni, Huamin Qu, Lionel M. Ni<br>
+                        MobiSeg: Interactive Region Segmentation Using Heterogeneous Mobility Data<br>
+                        IEEE PasificVis 2017<br><br>
+                        <a href="papers/2017PVis_MobiSeg_Wu.pdf">paper</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="papers/2017IV_ZGlyph_Cao.jpg" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, Yu-Ru Lin, David Gotz, Fan Du<br>
+                        Z-Glyph: Visualizing Outliers in Multivariate Data<br>
+                        Information Visualization 2017<br><br>
+                        <a href="papers/2017IV_ZGlyph_Cao.pdf">paper</a>
+                        </p>
+                    </div>
+                    <!-- end 2017 -->
+                    
+                    <h2 class="title">2016</h2>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/telcoflow.png" alt="" />
+                        <p>
+                        Yixian Zheng, Wenchao Wu, Haipeng Zeng, <strong>Nan Cao</strong>, Huamin Qu, Mingxuan Yuan, Jia Zeng, and Lionel M. Ni<br>
+                        TelcoFlow: Visual Exploration of Collective Behaviors Based on Telco Data<br>
+                        IEEE Big Data 2016<br><br>
+                        <a href="http://nancao.org/pubs/zheng_bigdata16_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/telcoflow.mp4">video </a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/2016_sun_siggraph.png" alt="" />
+                        <p>
+                        Zhida Sun, Mingfei Sun, <strong>Nan Cao</strong>, Xiaojuan Ma<br> VideoForest: Interactive Visual Summarization of Video Streams Based on Danmu Data<br>
+                        ACM SIGGRAPH Asia 2016<br><br>
+                        <a href="http://nancao.org/pubs/sun_siggraphasia16_paper.pdf" target="_blank">paper</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/2016_ma_cscw.png" alt="" />
+                        <p>
+                        Xiaojuan Ma, <strong>Nan Cao</strong><br>
+                        Video-based Evanescent, Anonymous, Asynchronous Social Interaction: Motivation and Adaption to Medium<br>
+                        ACM CSCW 2017<br><br>
+                        <a href="http://nancao.org/pubs/ma_cscw16_paper.pdf" target="_blank">paper</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/gsample.png" alt="" />
+                        <p>
+                        Yanhong Wu, <strong>Nan Cao</strong>, Daniel Archambault, Huamin Qu, Weiwei Cui<br>
+                        Evaluation of Graph Sampling: A Visualization Perspective<br>
+                        IEEE InfoVis 2016<br><br>
+                        <a href="http://nancao.org/pubs/wu_infovis16_paper.pdf" target="_blank">paper</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/fcanimation.png" alt="" />
+                        <p>
+                        Yixian Zheng, Wenchao Wu,Shun Sun, <strong>Nan Cao</strong>, Huamin Qu<br>
+                        Focus+Context Grouping for Animated Transitions<br>
+                        ChinaVis 2016 (<font color="red">Honorable Mention</font>)<br><br>
+                        <a href="http://nancao.org/pubs/zheng_jov16_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/fcanimation.mp4">video</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/16cocluster.png" alt="" />
+                        <p>
+                        Panpan Xu, <strong>Nan Cao</strong>, John Stasko, Huamin Qu <br>
+                        Interactive Visual Co-Cluster Analysis of Bipartite Graphs<br>
+                        IEEE PasificVis 2016<br><br>
+                        <a href="http://nancao.org/pubs/xu_pvis16_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/xu_pvis16_video.mp4">video</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/2016_gotz_iui.jpg" alt="" />
+                        <p>
+                        David Gotz, Shun Sun, <strong>Nan Cao</strong><br>
+                        Adaptive Contextualization: Combating Bias During High-Dimensional Visualization and Data Selection <br>
+                        ACM IUI 2016 (<font color="red">Best Paper</font>)<br><br>
+                        <a href="http://nancao.org/pubs/gotz_iui16_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/gotz_iui16_video.mp4">video</a>
+                        </p>
+                    </div>
+                    <!-- end 2016 -->
+                    
+                    <h2 class="title">2015</h2>
+                    <div class="publication_content">
+                        <img src="images/pubs/targetvue.png" alt="" /><br><br>
+                        <p>
+                        <strong>Nan Cao</strong>, Conglei Shi, Sabrina Lin, Jie Lu, Yu-Ru Lin, Ching-Yung Lin <br>
+                        TargetVue : Visual Analysis of Anomalous User Behaviors in Online Communication Systems<br>
+                        IEEE Transaction on Visualization and Computer Graphics (VAST'15)<br><br>
+                        <a href="http://nancao.org/pubs/cao_vast15_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/targetvue.mp4">video </a>| <a href="http://nancao.org/projects/targetvue.html">homepage</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/episogram.jpg" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>，Yu-Ru Lin, Fan Du, Dashun Wang<br>
+                        Episogram: Visual Summarization of Egocentric Social Interactions<br>
+                        IEEE Computer Graphics and Applications<br><br>
+                        <a href="http://nancao.org/pubs/cao_cga15_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/episogram.mp4">video </a>| <a href="http://nancao.org/pubs/cao_visweek16_ppt.pdf">ppt</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/untanglemap.jpg" alt="" />
+                        <p>
+                        Xiangmin Fan, Youming Liu, <strong>Nan Cao</strong>, Jason Hong, Jingtao Wang<br>
+                        MindMiner: Quantifying Entity Similarity via Interactive Distance Metric Learning (demo paper)<br>
+                        IUI 2015<br><br>
+                        <a href="http://nancao.org/pubs/fan_interact15_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/mindminer.mp4">video</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/gminer.png" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, Yu-Ru Lin, Liangyue Li, HangHang Tong,
+                        g-Miner: Interactive Visual Group Mining on Multivariate Graphs, ACM CHI 2015<br>
+                        Liangyue Li, HangHang Tong, <strong>Nan Cao</strong>, Kate Ehrlich, Yu-Ru Lin and Norbou Buchler,
+                        Replacing the Irreplaceable: Fast Algorithms for Team Member Recommendation, WWW 2015<br><br>
+                        <a href="http://nancao.org/pubs/cao_chi15_paper.pdf" target="_blank">CHI paper </a>| <a href="http://nancao.org/pubs/li_www15_paper.pdf">WWW paper </a>| <a href="http://nancao.org/videos/gminer.mp4">video</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/trajectory.png" alt="" />
+                        <p>
+                        Fan Du, <strong>Nan Cao</strong>, Nan Cao, Jian Zhao, Yu-Ru Lin.<br>
+                        Trajectory Bundling for Animated Transitions<br>
+                        ACM CHI 2015<br><br>
+                        <a href="http://nancao.org/pubs/du_chi15_paper.pdf" target="_blank">paper </a>| <a href="hhttp://nancao.org/videos/trajectory.mp4">video</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/shelix.png" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, Lu Lu, Yu-Ru Lin, Fei Wang, Zhen Wen<br>
+                        SocialHelix: Visual Analysis of Sentiment Divergence in Social Media<br>
+                        Journal of Visualization, May 2015, Volume 18, Issue 2, pp 221-235<br><br>
+                        <a href="http://nancao.org/pubs/cao_jov14_paper.pdf" target="_blank">paper |</a>| <a href="http://nancao.org/videos/socialhelix.mp4">video</a>
+                        </p>
+                    </div>
+                    <!-- end 2015 -->
+                    
+                    <h2 class="title">2014</h2>
+                    <div class="publication_content">
+                        <img src="images/pubs/untangle.jpg" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, David Gotz, and Lu Lu<br>
+                        UnTangle: Visual Mining for Data with Uncertain Multi-labels via Triangle Map<br>
+                        ICDM 2014<br><br>
+                        <a href="http://nancao.org/pubs/lin_icdm14_paper.pdf" target="_blank">paper</a> | <a href="http://nancao.org/videos/untangle.mp4">video </a>| <a href="http://nancao.org/pubs/lin_icdm14_slides.pdf">slides </a>| <a href="http://nancao.org/projects/untangle.html">homepage</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/fluxflow.jpg" alt="" />
+                        <p>
+                        Jian Zhao, <strong>Nan Cao</strong>， Zhen Wen, Yale Song, Yu-Ru Lin and Christopher Collins<br>
+                        FluxFlow: Visual Analysis of Anomalous Information Spreading on Social Media<br>
+                        IEEE VAST 2014 (<font color="red">Honorable Mention</font>)<br><br>
+                        <a href="http://nancao.org/pubs/zhao_vast14_paper.pdf" target="_blank">paper </a> | <a href="http://nancao.org/videos/fluxflow.mp4">video </a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/trajuncertainty.png" alt="" />
+                        <p>
+                        Lu Lu, <strong>Nan Cao</strong>, Siyuan Liu, Lionel Ni, Xiaoru Yuan, and Huamin Qu<br>
+                        MVisual Analysis of Uncertainty in Trajectories<br>
+                        PaKDD 2014<br><br>
+                        <a href="http://nancao.org/pubs/lulu_pakdd2014_paper.pdf" target="_blank">paper</a>
+                        </p>
+                    </div>
+                    <!-- end 2014 -->
+                    
+                    <h2 class="title">2013</h2>
+                    <div class="publication_content">
+                        <img src="images/pubs/graphset.png" alt="" />
+                        <p>
+                        Panpan Xu, Fan Du, <strong>Nan Cao</strong>, Conglei Shi, Hong Zhou, and Huamin Qu <br>
+                        Visual Analysis of Set Relations in a Graph, Computer Graphics Forum<br>
+                        EuroVis 2013<br><br>
+                        <a href="http://nancao.org/pubs/xu_eurovis13_paper.pdf" target="_blank">paper</a>
+                        </p>
+                    </div>
+                    <!-- end 2013 -->
+                    
+                    <h2 class="title">2012</h2>
+                    <div class="publication_content">
+                        <img src="images/pubs/pwhisper.gif" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, Yu-Ru Lin, Xiaohua Sun, David Lazer, Shixia Liu, and Huamin Qu<br>
+                        Whisper: Tracing the Spatiotemporal Process of Information Diffusion in Real Time<br>
+                        IEEE InfoVis 2012<br><br>
+                        <a href="http://nancao.org/pubs/cao_infovis12_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/whisper.mp4">video </a>| <a href="http://nancao.org/pubs/cao_infovis12_ppt.pdf">ppt</a>
+                        </p>
+                    </div>
+                    <!-- end 2012 -->
+                    
+                    <h2 class="title">2011</h2>
+                    <div class="publication_content">
+                        <img src="images/pubs/psolarmap.jpg" alt="" />
+                        <br>
+                        <p>
+                        <strong>Nan Cao</strong>, David Gotz, Jimeng Sun, Yu-Ru Lin, and Huamin Qu<br>
+                        SolarMap: Multifaceted Visual Analytics for Topic Exploration<br>
+                        IEEE ICDM 2011<br><br>
+                        <a href="http://nancao.org/pubs/cao_icdm11_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/solarmap.mp4">video </a>| <a href="http://nancao.org/pubs/cao_icdm11_ppt.pdf">ppt</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/pdicon.jpg" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>，David Gotz, Jimeng Sun, and Huamin Qu<br>
+                        DICON : Interactive Visual Analysis of Multidimensional Clusters<br>
+                        IEEE InfoVis 2011<br><br>
+                        <a href="http://nancao.org/pubs/cao_infovis11_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/dicon.mp4">video </a>| <a href="http://nancao.org/pubs/cao_infovis11_ppt.pdf">ppt </a>| <a href="http://nancao.org/multidim.html">online demo </a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/pimpactwheel.jpg" alt="" />
+                        <p>
+                        Wei Wei, <strong>Nan Cao</strong>, Jon Atle Gulla, and Huamin Qu<br>
+                        Visual Analysis of the Impact of Online News<br>
+                        IEEE/WIC/ACM International Conference on Web Intelligence 2011<br><br>
+                        <a href="http://nancao.org/pubs/wei_wi11_paper.pdf" target="_blank">paper </a>| <a href="http://www.youtube.com/watch?v=OQTEp5dUCr4">video</a>
+                        </p>
+                    </div>
+                    <!-- end 2011 -->
+                    
+                    <h2 class="title">2010</h2>
+                    <div class="publication_content">
+                        <img src="images/pubs/pfacetatlas.jpg" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, Jimeng Sun, Yu-Ru Lin, David Gotz, Shixia Liu, and Huamin Qu<br>
+                        FacetAtlas: Multifacet Visualization for Rich Text Corpora<br>
+                        IEEE InfoVis 2010<br><br>
+                        <a href="http://nancao.org/pubs/cao_infovis10_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/facetatlas.mp4">video </a>| <a href="http://nancao.org/pubs/cao_infovis10_ppt.pdf">ppt</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/pcontextour.jpg" alt="" />
+                        <p>
+                        Yu-Ru Lin, Jimeng Sun, <strong>Nan Cao</strong>，and Shixia Liu<br>
+                        ContexTour: Contextual Contour Visual Analysis on Dynamic Multi-Relational Clustering<br>
+                        SDM 2010<br><br>
+                        <a href="http://nancao.org/pubs/lin_sdm09_paper.pdf" target="_blank">paper </a>
+                        </p>
+                    </div>
+                    <!-- end 2010 -->
+                    
+                    <h2 class="title">before 2010</h2>
+                    <div class="publication_content">
+                        <img src="images/pubs/psmallblue.jpg" alt="" />
+                        <p>
+                        Ching-Yung Lin, <strong>Nan Cao</strong>, Shixia Liu, Spiros Papadimitriou, Jimeng Sun, and Xifeng Yan<br>
+                        SmallBlue: Social Network Analysis for Expertise Search and Collective Intelligence<br>
+                        IEEE ICDE 2009<br><br>
+                        <a href="http://nancao.org/pubs/lin_icde09_paper.pdf" target="_blank">paper</a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="images/pubs/phimap.jpg" alt="" />
+                        <p>
+                        Lei Shi, <strong>Nan Cao</strong>，Shixia Liu, Weihong Qian, Li Tan, Guodong Wang, Jimeng Sun, and Ching-Yung Lin<br>
+                        HiMap: Adaptive visualization of large-scale online social networks<br>
+                        IEEE PacificVis 2009<br><br>
+                        <a href="http://nancao.org/pubs/shi_apvis09_paper.pdf" target="_blank">paper </a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="images/pubs/pcontent.jpg" alt="" /><br><br>
+                        <p>
+                        Jimeng Sun, Spiros Papadimitriou, Ching-Yung Lin, <strong>Nan Cao</strong>, Shixia Liu, and Weihong Qian<br>
+                        Content-based Social Network Exploration Through Multi-way Visual Analysis<br>
+                        SDM 2009<br><br>
+                        <a href="http://nancao.org/pubs/sun_sdm09_paper.pdf" target="_blank">paper</a>
+                        </p>
+                    </div>
+                    
+                    <div class="publication_content">
+                        <img src="images/pubs/pnsf.jpg" alt="" />
+                        <p>
+                        Shixia Liu, <strong>Nan Cao</strong>，and Hao Lv<br>
+                        Interactive Visual Analysis of the NSF Funding Information<br>
+                        IEEE PacificVis 2008<br><br>
+                        <a href="http://nancao.org/pubs/liu_apvis08_paper.pdf" target="_blank">paper </a>
+                        </p>
+                    </div>
+                    <div class="publication_content">
+                        <img src="images/pubs/ppeony.jpg" alt="" />
+                        <p>
+                        <strong>Nan Cao</strong>, Shixia Liu, and Hui Su<br>
+                        Peony : A Light Weighted Interactive InfoVis Toolkit<br>
+                        HCHI 2006<br><br>
+                        <a href="#">paper</a>
+                        </p>
+                    </div>
+                    
+                    <div class="footer_bottom_area">
+                        <div class="copyright_text">
+                            <p>Copyright &copy; Intelligent Big Data Visualization Lab All Rights Reserved</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="publication_content"> 
-                  <img src="papers/2017IV_ZGlyph_Cao.jpg" alt="" />
-                  <p>
-	              	<strong>Nan Cao</strong>, Yu-Ru Lin, David Gotz, Fan Du<br>
-	              	Z-Glyph: Visualizing Outliers in Multivariate Data<br>
-	              	Information Visualization 2017<br><br>
-	              	<a href="papers/2017IV_ZGlyph_Cao.pdf">paper</a>
-                  </p>
-                </div>
-        
-              <h2 class="title">2016</h2>
-              
-              	<div class="publication_content"> 
-                  <img src="images/pubs/telcoflow.png" alt="" />
-                  <p>
-	              	Yixian Zheng, Wenchao Wu, Haipeng Zeng, <strong>Nan Cao</strong>, Huamin Qu, Mingxuan Yuan, Jia Zeng, and Lionel M. Ni<br>
-	              	TelcoFlow: Visual Exploration of Collective Behaviors Based on Telco Data<br>
-	              	IEEE Big Data 2016<br><br>
-	              	<a href="http://nancao.org/pubs/zheng_bigdata16_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/telcoflow.mp4">video </a>
-                  </p>
-                </div>
                 
-                <div class="publication_content"> 
-                  <img src="images/pubs/2016_sun_siggraph.png" alt="" />
-                  <p>
-	              	Zhida Sun, Mingfei Sun, <strong>Nan Cao</strong>, Xiaojuan Ma<br> VideoForest: Interactive Visual Summarization of Video Streams Based on Danmu Data<br> 
-	              	ACM SIGGRAPH Asia 2016<br><br>
-	              	<a href="http://nancao.org/pubs/sun_siggraphasia16_paper.pdf" target="_blank">paper</a>
-                  </p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/2016_ma_cscw.png" alt="" />
-				   <p>
-					   Xiaojuan Ma, <strong>Nan Cao</strong><br> 
-					   Video-based Evanescent, Anonymous, Asynchronous Social Interaction: Motivation and Adaption to Medium<br> 
-					   ACM CSCW 2017<br><br>
-					   <a href="http://nancao.org/pubs/ma_cscw16_paper.pdf" target="_blank">paper</a>
-				   </p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/gsample.png" alt="" />
-				   <p>
-					 Yanhong Wu, <strong>Nan Cao</strong>, Daniel Archambault, Huamin Qu, Weiwei Cui<br>
-	                 Evaluation of Graph Sampling: A Visualization Perspective<br> 
-	                 IEEE InfoVis 2016<br><br>
-					 <a href="http://nancao.org/pubs/wu_infovis16_paper.pdf" target="_blank">paper</a>
-                   </p>
-                </div>
-
-                <div class="publication_content"> 
-                   	<img src="images/pubs/fcanimation.png" alt="" />
-				   	<p>
-					   Yixian Zheng, Wenchao Wu,Shun Sun, <strong>Nan Cao</strong>, Huamin Qu<br>
-					   Focus+Context Grouping for Animated Transitions<br> 
-					   ChinaVis 2016 (<font color="red">Honorable Mention</font>)<br><br>
-					   <a href="http://nancao.org/pubs/zheng_jov16_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/fcanimation.mp4">video</a>
-					</p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/16cocluster.png" alt="" />
-				   <p>
-					   Panpan Xu, <strong>Nan Cao</strong>, John Stasko, Huamin Qu <br>
-					   Interactive Visual Co-Cluster Analysis of Bipartite Graphs<br> 
-					   IEEE PasificVis 2016<br><br>
-					   <a href="http://nancao.org/pubs/xu_pvis16_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/xu_pvis16_video.mp4">video</a>
-				   </p>
-                </div>
-
-                <div class="publication_content"> 
-                   	<img src="images/pubs/2016_gotz_iui.jpg" alt="" />
-				   	<p>
-					   David Gotz, Shun Sun, <strong>Nan Cao</strong><br>
-					   Adaptive Contextualization: Combating Bias During High-Dimensional Visualization and Data Selection <br> 
-					   ACM IUI 2016 (<font color="red">Best Paper</font>)<br><br>
-					   <a href="http://nancao.org/pubs/gotz_iui16_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/gotz_iui16_video.mp4">video</a>
-					</p>
-                </div>
-                <!-- end 2016 -->
-
-                <h2 class="title">2015</h2>
-                <div class="publication_content"> 
-                  <img src="images/pubs/targetvue.png" alt="" /><br><br>
-                   	<p>
-	                   <strong>Nan Cao</strong>, Conglei Shi, Sabrina Lin, Jie Lu, Yu-Ru Lin, Ching-Yung Lin <br>
-	                   TargetVue : Visual Analysis of Anomalous User Behaviors in Online Communication Systems<br>
-	                   IEEE Transaction on Visualization and Computer Graphics (VAST'15)<br><br>
-					   <a href="http://nancao.org/pubs/cao_vast15_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/targetvue.mp4">video </a>| <a href="http://nancao.org/projects/targetvue.html">homepage</a>
-					</p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/episogram.jpg" alt="" />
-				   	<p>
-					   <strong>Nan Cao</strong>，Yu-Ru Lin, Fan Du, Dashun Wang<br>
-					   Episogram: Visual Summarization of Egocentric Social Interactions<br>
-					   IEEE Computer Graphics and Applications<br><br>
-					   <a href="http://nancao.org/pubs/cao_cga15_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/episogram.mp4">video </a>| <a href="http://nancao.org/pubs/cao_visweek16_ppt.pdf">ppt</a>
-					</p>
-                </div>
-
-                 <div class="publication_content"> 
-                   	<img src="images/pubs/untanglemap.jpg" alt="" />                 
-				   	<p>
-					   Xiangmin Fan, Youming Liu, <strong>Nan Cao</strong>, Jason Hong, Jingtao Wang<br>
-					   MindMiner: Quantifying Entity Similarity via Interactive Distance Metric Learning (demo paper)<br> 
-					   IUI 2015<br><br>
-					   <a href="http://nancao.org/pubs/fan_interact15_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/mindminer.mp4">video</a>
-					</p>
-                </div>
-
-                <div class="publication_content"> 
-                   	<img src="images/pubs/gminer.png" alt="" />                 
-				   	<p>
-					   <strong>Nan Cao</strong>, Yu-Ru Lin, Liangyue Li, HangHang Tong,
-					   g-Miner: Interactive Visual Group Mining on Multivariate Graphs, ACM CHI 2015<br>
-					   Liangyue Li, HangHang Tong, <strong>Nan Cao</strong>, Kate Ehrlich, Yu-Ru Lin and Norbou Buchler,
-					   Replacing the Irreplaceable: Fast Algorithms for Team Member Recommendation, WWW 2015<br><br>
-					   <a href="http://nancao.org/pubs/cao_chi15_paper.pdf" target="_blank">CHI paper </a>| <a href="http://nancao.org/pubs/li_www15_paper.pdf">WWW paper </a>| <a href="http://nancao.org/videos/gminer.mp4">video</a>
-					</p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/trajectory.png" alt="" />                 
-                   	<p>
-	                   Fan Du, <strong>Nan Cao</strong>, Nan Cao, Jian Zhao, Yu-Ru Lin.<br>
-	                   Trajectory Bundling for Animated Transitions<br> 
-					   ACM CHI 2015<br><br>
-					   <a href="http://nancao.org/pubs/du_chi15_paper.pdf" target="_blank">paper </a>| <a href="hhttp://nancao.org/videos/trajectory.mp4">video</a>
-	                </p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/shelix.png" alt="" />                 
-				   <p>
-					   <strong>Nan Cao</strong>, Lu Lu, Yu-Ru Lin, Fei Wang, Zhen Wen<br>
-					   SocialHelix: Visual Analysis of Sentiment Divergence in Social Media<br> 
-					   Journal of Visualization, May 2015, Volume 18, Issue 2, pp 221-235<br><br>
-					   <a href="http://nancao.org/pubs/cao_jov14_paper.pdf" target="_blank">paper |</a>| <a href="http://nancao.org/videos/socialhelix.mp4">video</a>
-				   </p>
-                </div>
-                <!-- end 2015 -->
-
-                <h2 class="title">2014</h2>
-                <div class="publication_content"> 
-                  <img src="images/pubs/untangle.jpg" alt="" />
-                   	<p>
-	                   <strong>Nan Cao</strong>, David Gotz, and Lu Lu<br>
-	                   UnTangle: Visual Mining for Data with Uncertain Multi-labels via Triangle Map<br> 
-	                   ICDM 2014<br><br>
-	                   <a href="http://nancao.org/pubs/lin_icdm14_paper.pdf" target="_blank">paper</a> | <a href="http://nancao.org/videos/untangle.mp4">video </a>| <a href="http://nancao.org/pubs/lin_icdm14_slides.pdf">slides </a>| <a href="http://nancao.org/projects/untangle.html">homepage</a>
-	                </p>
-                </div>
-
-                <div class="publication_content"> 
-                   	<img src="images/pubs/fluxflow.jpg" alt="" />
-				   	<p>
-					   Jian Zhao, <strong>Nan Cao</strong>， Zhen Wen, Yale Song, Yu-Ru Lin and Christopher Collins<br>
-					   FluxFlow: Visual Analysis of Anomalous Information Spreading on Social Media<br>
-					   IEEE VAST 2014 (<font color="red">Honorable Mention</font>)<br><br>
-					   <a href="http://nancao.org/pubs/zhao_vast14_paper.pdf" target="_blank">paper </a> | <a href="http://nancao.org/videos/fluxflow.mp4">video </a>
-					</p>
-                </div>
-
-                 <div class="publication_content"> 
-                   	<img src="images/pubs/trajuncertainty.png" alt="" />                 
-				   	<p>
-					   Lu Lu, <strong>Nan Cao</strong>, Siyuan Liu, Lionel Ni, Xiaoru Yuan, and Huamin Qu<br>
-					   MVisual Analysis of Uncertainty in Trajectories<br> 
-					   PaKDD 2014<br><br>
-					   <a href="http://nancao.org/pubs/lulu_pakdd2014_paper.pdf" target="_blank">paper</a>
-					</p>
-                </div>
-                <!-- end 2014 -->
-
-                <h2 class="title">2013</h2>
-                 <div class="publication_content"> 
-                   <img src="images/pubs/graphset.png" alt="" />                 
-				   	<p>
-					   Panpan Xu, Fan Du, <strong>Nan Cao</strong>, Conglei Shi, Hong Zhou, and Huamin Qu <br>
-					   Visual Analysis of Set Relations in a Graph, Computer Graphics Forum<br>
-					   EuroVis 2013<br><br>
-					   <a href="http://nancao.org/pubs/xu_eurovis13_paper.pdf" target="_blank">paper</a>
-					</p>
-                </div>
-                <!-- end 2013 -->
-
-                <h2 class="title">2012</h2>
-                <div class="publication_content"> 
-                   <img src="images/pubs/pwhisper.gif" alt="" />
-                   <p>
-	                   <strong>Nan Cao</strong>, Yu-Ru Lin, Xiaohua Sun, David Lazer, Shixia Liu, and Huamin Qu<br>
-	                   Whisper: Tracing the Spatiotemporal Process of Information Diffusion in Real Time<br>
-	                   IEEE InfoVis 2012<br><br>
-	                   <a href="http://nancao.org/pubs/cao_infovis12_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/whisper.mp4">video </a>| <a href="http://nancao.org/pubs/cao_infovis12_ppt.pdf">ppt</a>
-	               </p>
-                </div>
-                <!-- end 2012 -->
                 
-                <h2 class="title">2011</h2>
-                <div class="publication_content"> 
-                  <img src="images/pubs/psolarmap.jpg" alt="" />
-                   <br>
-                   	<p>
-	                   <strong>Nan Cao</strong>, David Gotz, Jimeng Sun, Yu-Ru Lin, and Huamin Qu<br>
-	                   SolarMap: Multifaceted Visual Analytics for Topic Exploration<br> 
-	                   IEEE ICDM 2011<br><br>
-	                   <a href="http://nancao.org/pubs/cao_icdm11_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/solarmap.mp4">video </a>| <a href="http://nancao.org/pubs/cao_icdm11_ppt.pdf">ppt</a>
-	                </p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/pdicon.jpg" alt="" />                   
-				   	<p>
-					   <strong>Nan Cao</strong>，David Gotz, Jimeng Sun, and Huamin Qu<br>
-					   DICON : Interactive Visual Analysis of Multidimensional Clusters<br>
-					   IEEE InfoVis 2011<br><br>
-					   <a href="http://nancao.org/pubs/cao_infovis11_paper.pdf" target="_blank">paper </a>| <a href="http://nancao.org/videos/dicon.mp4">video </a>| <a href="http://nancao.org/pubs/cao_infovis11_ppt.pdf">ppt </a>| <a href="http://nancao.org/multidim.html">online demo </a>
-					</p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/pimpactwheel.jpg" alt="" />
-				   	<p>
-					   Wei Wei, <strong>Nan Cao</strong>, Jon Atle Gulla, and Huamin Qu<br>
-					   Visual Analysis of the Impact of Online News<br> 
-					   IEEE/WIC/ACM International Conference on Web Intelligence 2011<br><br>
-					   <a href="http://nancao.org/pubs/wei_wi11_paper.pdf" target="_blank">paper </a>| <a href="http://www.youtube.com/watch?v=OQTEp5dUCr4">video</a>
-					</p>
-                </div>
-                <!-- end 2011 -->
-
-                <h2 class="title">2010</h2>
-                <div class="publication_content"> 
-                  <img src="images/pubs/pfacetatlas.jpg" alt="" />
-                   	<p>
-	                   <strong>Nan Cao</strong>, Jimeng Sun, Yu-Ru Lin, David Gotz, Shixia Liu, and Huamin Qu<br>
-	                   FacetAtlas: Multifacet Visualization for Rich Text Corpora<br>
-	                   IEEE InfoVis 2010<br><br>
-	                   <a href="http://nancao.org/pubs/cao_infovis10_paper.pdf" target="_blank">paper</a>| <a href="http://nancao.org/videos/facetatlas.mp4">video </a>| <a href="http://nancao.org/pubs/cao_infovis10_ppt.pdf">ppt</a>
-	                </p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/pcontextour.jpg" alt="" />
-				   	<p>
-					   Yu-Ru Lin, Jimeng Sun, <strong>Nan Cao</strong>，and Shixia Liu<br>
-					   ContexTour: Contextual Contour Visual Analysis on Dynamic Multi-Relational Clustering<br>
-					   SDM 2010<br><br>
-					   <a href="http://nancao.org/pubs/lin_sdm09_paper.pdf" target="_blank">paper </a>
-					</p>
-                </div>
-                <!-- end 2010 -->
-
-                <h2 class="title">before 2010</h2>
-                <div class="publication_content"> 
-                  <img src="images/pubs/psmallblue.jpg" alt="" />
-                   	<p>
-	                   Ching-Yung Lin, <strong>Nan Cao</strong>, Shixia Liu, Spiros Papadimitriou, Jimeng Sun, and Xifeng Yan<br>
-	                   SmallBlue: Social Network Analysis for Expertise Search and Collective Intelligence<br> 
-	                   IEEE ICDE 2009<br><br>
-	                   <a href="http://nancao.org/pubs/lin_icde09_paper.pdf" target="_blank">paper</a>
-	                </p>
-                </div>
-                <div class="publication_content"> 
-                   <img src="images/pubs/phimap.jpg" alt="" />
-				   	<p>
-					   Lei Shi, <strong>Nan Cao</strong>，Shixia Liu, Weihong Qian, Li Tan, Guodong Wang, Jimeng Sun, and Ching-Yung Lin<br>
-					   HiMap: Adaptive visualization of large-scale online social networks<br>
-					   IEEE PacificVis 2009<br><br>
-					   <a href="http://nancao.org/pubs/shi_apvis09_paper.pdf" target="_blank">paper </a>
-					</p>
-                </div>
-                <div class="publication_content"> 
-                  <img src="images/pubs/pcontent.jpg" alt="" /><br><br>
-                   <p>
-	                   Jimeng Sun, Spiros Papadimitriou, Ching-Yung Lin, <strong>Nan Cao</strong>, Shixia Liu, and Weihong Qian<br>
-	                   Content-based Social Network Exploration Through Multi-way Visual Analysis<br>
-	                   SDM 2009<br><br>
-	                   <a href="http://nancao.org/pubs/sun_sdm09_paper.pdf" target="_blank">paper</a>
-                   </p>
-                </div>
-
-                <div class="publication_content"> 
-                   <img src="images/pubs/pnsf.jpg" alt="" />
-				   	<p>
-					   Shixia Liu, <strong>Nan Cao</strong>，and Hao Lv<br>
-					   Interactive Visual Analysis of the NSF Funding Information<br>
-					   IEEE PacificVis 2008<br><br>
-					   <a href="http://nancao.org/pubs/liu_apvis08_paper.pdf" target="_blank">paper </a>
-					</p>
-                </div>
-                <div class="publication_content"> 
-                   <img src="images/pubs/ppeony.jpg" alt="" />
-                   <p>
-	                   <strong>Nan Cao</strong>, Shixia Liu, and Hui Su<br>
-	                   Peony : A Light Weighted Interactive InfoVis Toolkit<br> 
-	                   HCHI 2006<br><br>
-	                   <a href="#">paper</a>
-                   </p>
-                </div>
-
-    <div class="footer_bottom_area">
-      <div class="copyright_text">
-        <p>Copyright &copy; Intelligent Big Data Visualization Lab All Rights Reserved</p>
-      </div>
-    </div>
-  </div>
-
-
-  
-<script type="text/javascript" src="assets/js/jquery-min.js"></script> 
-<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="assets/js/jquery.bxslider.js"></script> 
-<script type="text/javascript" src="assets/js/selectnav.min.js"></script> 
-<script type="text/javascript">
-selectnav('nav', {
-    label: '-Navigation-',
-    nested: true,
-    indent: '-'
-});
-selectnav('f_menu', {
-    label: '-Navigation-',
-    nested: true,
-    indent: '-'
-});
-$('.bxslider').bxSlider({
-    mode: 'fade',
-    captions: true
-});
-</script>
-</body>
+                <script type="text/javascript" src="assets/js/jquery-min.js"></script>
+                <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+                <script type="text/javascript" src="assets/js/jquery.bxslider.js"></script>
+                <script type="text/javascript" src="assets/js/selectnav.min.js"></script>
+                <script type="text/javascript">
+                    selectnav('nav', {
+                              label: '-Navigation-',
+                              nested: true,
+                              indent: '-'
+                              });
+                              selectnav('f_menu', {
+                                        label: '-Navigation-',
+                                        nested: true,
+                                        indent: '-'
+                                        });
+                                        $('.bxslider').bxSlider({
+                                                                mode: 'fade',
+                                                                captions: true
+                                                                });
+                    </script>
+                </body>
 </html>
