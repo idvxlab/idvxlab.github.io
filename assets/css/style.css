@@ -115,7 +115,7 @@ div{overflow:hidden}
 .slider2{width:250px}
 .content_area{margin-top:25px}
 .main_content{width:670px}
-.left_coloum{width:450px}
+.left_coloum{width:600px}
 .single_left_coloum_wrapper{position:relative; margin-left:-10px; margin-bottom:30px}
 .single_left_coloum_wrapper .title{margin-left:10px}
 .title{border-bottom:4px solid #CF0000; font-family:'bebasregular'; font-size:20px; word-spacing:2px}
@@ -123,6 +123,9 @@ div{overflow:hidden}
 .popular_more{background:url("images/plus.png") no-repeat scroll 57px 12px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:7px 20px; text-transform:uppercase; width:74px; margin-top:10px}
 .single_left_coloum{margin-left:10px; width:143px}
 .single_left_coloum_s{margin-left:10px; width:118px}
+.past_member{width:85px;height:180px}
+.past_member img{width:80px;height:80px}
+
 .readmore, .single_cat_right_content_meta span{color:#CF0000; font-size:10px; text-transform:uppercase; font-weight:bold; margin-right:20px}
 .readmore:hover, .single_cat_right_content_meta span:hover{color:#CF0000; text-decoration:underline}
 .gallery{}
@@ -142,7 +145,7 @@ div{overflow:hidden}
 .single_cat_right_content_meta{}
 .editorial{}
 .editorial h3{color:#CF0000}
-.sidebar{width:250px}
+.sidebar{width:270px}
 .single_sidebar{margin-bottom:20px}
 .news-letter{padding:10px; background:#E4E4E4}
 .news-letter h2{font-family:bebasregular; font-size:20px; margin-bottom:5px; word-spacing:2px}
