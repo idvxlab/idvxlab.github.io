@@ -211,12 +211,6 @@
                     });
             } );
 
-        loader = new THREE.JSONLoader();
-        
-        loader.load( 'assets/blenderDeleteRoad.obj', function( geometry ) {
-            var mesh = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
-            scene.add(mesh)
-        } );
        
 
         var tween = new TWEEN.Tween()
