@@ -239,7 +239,7 @@
         mesh_floor.position.y = -1
         test_floor = mesh_floor;
         mesh_floor.receiveShadow = true;
-        scene.add(mesh_floor);
+        //scene.add(mesh_floor);
 
         var material_floor_2 = new THREE.MeshPhongMaterial({
             // map: texture,
