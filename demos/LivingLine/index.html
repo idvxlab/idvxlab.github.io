@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LivingLine NICE2035原型街智能数据分析</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.css">
+    <script src="js/jquery-ui/jquery-ui.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/Tween.js"></script>
+    <script type="text/javascript" src="data/data.json"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/LoaderSupport.js"></script>
+    <script src="js/MTLLoader.js"></script>
+    <script src="js/OBJLoader.js"></script>
+    <script src="js/OBJLoader2.js"></script>
+    <script src="js/Projector.js"></script>
+    <script src="js/dat.gui.min.js"></script>
+    <script src="js/stats.min.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="img/idvx_icon.ico" />
+    <style>
+        #info {
+            color:#000;
+            position: absolute;
+            top: 0px; width: 100%;
+            padding: 5px;
+        }
+        a {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="topbar">LinvingLine NICE2035原型街智能数据分析</div>
+    <div class="leftbar">
+        <div id='switch_ui' class="switch">
+            <div id = 'model_ui' class = 'to_model'></div>
+            <div id = 'switch_text' class = 'switch_text'>模型</div>
+            <div id = 'data_ui' class = 'data'></div>
+        </div>
+        <div id = 'model_toolbar' class="m_toolbar">
+             <ul class="sidenav">
+                <li class='store'>市场：    6</li>
+                <li class='store'>咖啡店：   2</li>
+                <li class='store'>社区：    1</li>
+                <li class='store'>实验室：   6</li>
+                <li class='store'>零售商：   1</li>
+                <li class='store'>餐饮：    1</li>
+                <li class='store'>工作区：   2</li>
+                <li class='store'>便利设施：  2</li>
+            </ul>
+
+        </div>
+        <div id = 'data_toolbar' class="toolbar">
+            <ul class="sidenav" id="sidenav">
+                <li id="vis_user" class='vis_user'>用户流量数据分析</li>
+                <li id="vis_money" class="vis_money">销售额数据分析</li>
+                <li id="vis_energy" class="vis_energy">水电能耗数据分析</li>
+
+            </ul>
+
+            <div class="days">
+                <div id="d_vals" class="vals">周一</div>
+                <div id="day_slider"></div>
+
+            </div>
+
+            <div class="hours">
+                <div id="hour_slider"></div>
+                <div id="vals" class="vals">0 AM</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info">
+    </div>
+
+
+
+    <script>
+    var div_user = document.getElementById('vis_user');
+    var div_money = document.getElementById('vis_money');
+    var div_energy = document.getElementById('vis_energy');
+    //点击切换数据
+    div_user.addEventListener("click", function(e){
+        
+        div_user.setAttribute('class', 'vis_user');
+        div_money.setAttribute('class', 'data_change');
+        div_energy.setAttribute('class', 'data_change');
+
+        //user data
+    });
+    div_money.addEventListener("click", function(e){
+        
+        div_user.setAttribute('class', 'data_change');
+        div_money.setAttribute('class', 'vis_money_after');
+        div_energy.setAttribute('class', 'data_change');
+
+        //money data
+    });
+    div_energy.addEventListener("click", function(e){            
+        div_user.setAttribute('class', 'data_change');
+        div_money.setAttribute('class', 'data_change');
+        div_energy.setAttribute('class', 'vis_energy_after');
+
+        //energy data
+    });
+
+
+    var div_data_ui = document.getElementById('data_ui');
+    var div_model_ui = document.getElementById('model_ui');
+    var div_switch_text = document.getElementById('switch_text');
+
+    var div_m_tool = document.getElementById('model_toolbar');
+    var div_d_tool = document.getElementById('data_toolbar');
+
+    $('#data_ui').on('click',function(){
+      
+        div_data_ui.setAttribute('class', 'to_data');
+        div_model_ui.setAttribute('class', 'model');
+        div_switch_text.innerText = "数据";
+
+
+        div_m_tool.style.opacity= '0';
+        div_d_tool.style.opacity= '1';
+
+        div_m_tool.style.display= 'none';
+        div_d_tool.style.display= 'block';
+        
+    });
+
+    // div_model_ui.addEventListener("click", function(e){   
+    $('#model_ui').on('click',function(){      
+        div_data_ui.setAttribute('class', 'data');
+        div_model_ui.setAttribute('class', 'to_model');
+
+        //div_switch_text.innerText = "模型";
+        div_switch_text.innerText = "模型";
+
+
+        div_m_tool.style.opacity= '1';
+        div_d_tool.style.opacity= '0';
+        div_m_tool.style.display= 'block';
+        div_d_tool.style.display= 'none';
+        
+    });
+
+    </script>
+    <script type="text/javascript" src="object.js"></script>
+</body>
+</html>
