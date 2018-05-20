@@ -1,0 +1,30 @@
+
+School of Information Science and Engineering
+Central South University
+932 Lushan North Road
+Changsha, Hunan, China 410008
+
+University of California Davis
+Visualization and Interface Design Innovation 
+Davis, CA, US 
+
+Country
+CHINA
+ 
+Line 1
+Room2810, Unit4-2
+ 
+Line 2
+126 Xiangjiang Middle Road
+ 
+City, Postal Code
+Changsha, Hunan, 410008
+
+Phone
+(86-731)88865298
+
+UCDavis
+Name:	Yang Shi
+LoginID:	yysshi
+E-mail Address:	yysshi@ucdavis.edu
+sy0650@UCDAVIS
