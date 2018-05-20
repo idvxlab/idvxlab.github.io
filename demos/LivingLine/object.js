@@ -38,6 +38,9 @@
     var days = 0;
     var hours = 0;
     var grid_size=13.4
+    var x_init = -84*grid_size/2
+    var z_init = -24*grid_size/2
+    var move = 120
     function num_to_days(num){
         if(num==0)
             return "一"
@@ -96,9 +99,9 @@
                 test[i][j].energy_green.push(test[i][j].energy_colors[k].colorRgb()[1])
                 test[i][j].energy_blue.push(test[i][j].energy_colors[k].colorRgb()[2])
 
-                test[i][j].people_num[k] /= 4
-                test[i][j].sell_num[k] /= 30
-                test[i][j].energy_num[k] /= 10
+                test[i][j].people_num[k] /=1
+                test[i][j].sell_num[k] /= 15
+                test[i][j].energy_num[k] /= 2
 
 
                 test[i][j].people_num[k] = test[i][j].people_num[k]+1
@@ -133,7 +136,7 @@
     };
 
     //创建dat.GUI，传递并设置属性
-    // var gui = new dat.GUI();
+    //var gui = new dat.GUI();
     // gui.add(controls1, 'y_move', -2000, 2000);
     // gui.add(controlsa, 'y_move', -2000, 2000);
     // gui.add(controlsb, 'y_move', -2000, 2000);
@@ -162,70 +165,66 @@
         controls.dampingFactor = 0.25;
         controls.screenSpacePanning = false;
         controls.minDistance = 100;
-        controls.maxDistance = 500
-        controls.maxPolarAngle = Math.PI / 2;
-        controls.object.position.set(-500, 2000, 2500);
-        controls.target = new THREE.Vector3(400, 260, 50);
+        controls.maxDistance = 2000
+        controls.maxPolarAngle = Math.PI / 4;
+        controls.object.position.set(-2300, 2300, 2300);
+        controls.target = new THREE.Vector3(0, 0, 0);
 
         new THREE.MTLLoader()
             .setPath( 'assets/' )
-            .load( 'blenderDeleteRoad.mtl', function(materials){
+            .load( '3dmaxDeleteRoad.mtl', function(materials){
                 materials.preload();
 
                 new THREE.OBJLoader()
                     .setMaterials( materials )
                     .setPath( 'assets/' )
-                    .load( 'blenderDeleteRoad.obj', function(object){
+                    .load( '3dmaxDeleteRoad.obj', function(object){
                         // object.position.y = - 95;
                         object.rotation.y = 0
                         object.position.y = 1
-                        object.position.x = 100
-                        object.position.z = -430
+                        object.position.x = move+x_init
+                        object.position.z = move+z_init
 
                         object.castShadow = true; //default is false
                         object.receiveShadow = true; //default
                         ro_object = object;
 
-                        scene.add( object );
+                        object1 = object;               
+                         for(var k in object.children){                                                                                               
+                            object.children[k].castShadow = true;  
+                            object.children[k].receiveShadow = true; 
+                         }
+
+                        scene.add( object1 );
 
                         $('#data_ui').on('click',function(){      
-                            scene.remove( object );
+                            scene.remove( object1 );
                             scene.remove(test_floor_2)
                             scene.add(test_floor)
                         });
   
                         $('#model_ui').on('click',function(){   
-                            scene.add( object );
+                            scene.add( object1 );
                             scene.remove(test_floor)
                             scene.add(test_floor_2)
                         }); 
                     });
             } );
 
-        // loader = new THREE.JSONLoader();
-        //
-        // loader.load( 'assets/blenderDeleteRoad.obj', function( geometry ) {
-        //     var mesh = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
-        //     scene.add(mesh)
-        // } );
-
-
-        // var loader = new THREE.OBJLoader();//在init函数中，创建loader变量，用于导入模型
-        // loader.load('assets/blenderDeleteRoad.obj', function(obj) {//第一个表示模型路径，第二个表示完成导入后的回调函数，一般我们需要在这个回调函数中将导入的模型添加到场景中
-        //     var helper = new THREE.EdgesHelper( obj, 0xff0000 );
-        //     helper.material.linewidth = 2;
-        //     scene.add( helper );
-        //     将导入的模型添加到场景中
-        // });
-
+        loader = new THREE.JSONLoader();
         
+        loader.load( 'assets/blenderDeleteRoad.obj', function( geometry ) {
+            var mesh = new THREE.Mesh( geometry, new THREE.MeshNormalMaterial() );
+            scene.add(mesh)
+        } );
+       
 
         var tween = new TWEEN.Tween()
         // world
-        var rate = 1
+        var rate = 2.2
         var floor = new THREE.PlaneGeometry(7401*rate,4017*rate);
         var texture = THREE.ImageUtils.loadTexture("assets/MAP.png");
-        var material_floor = new THREE.MeshPhongMaterial({
+        var material_floor = new THREE.MeshLambertMaterial({
             map: texture,
             side: THREE.DoubleSide
             //color: 0xd6d5da
@@ -233,15 +232,15 @@
         });
         var mesh_floor = new THREE.Mesh(floor,material_floor);
         mesh_floor.rotation.x = -90/180*Math.PI;
-        mesh_floor.rotation.z = 116/180*Math.PI
-        mesh_floor.position.x = 853
-        mesh_floor.position.z = -491
+        mesh_floor.rotation.z = 26/180*Math.PI
+        mesh_floor.position.x = move+419
+        mesh_floor.position.z = move+506
         mesh_floor.position.y = -1
         test_floor = mesh_floor;
         mesh_floor.receiveShadow = true;
-        //scene.add(mesh_floor);
+        // scene.add(mesh_floor);
 
-        var material_floor_2 = new THREE.MeshPhongMaterial({
+        var material_floor_2 = new THREE.MeshLambertMaterial({
             // map: texture,
             // side: THREE.DoubleSide
             color: 0xd6d5da
@@ -250,8 +249,8 @@
         var mesh_floor_2 = new THREE.Mesh(floor,material_floor_2);
         mesh_floor_2.rotation.x = -90/180*Math.PI;
         mesh_floor_2.rotation.z = 119/180*Math.PI
-        mesh_floor_2.position.x = 853
-        mesh_floor_2.position.z = -491
+        mesh_floor_2.position.x = move+419
+        mesh_floor_2.position.z = move+506
         mesh_floor_2.position.y = -1
         test_floor_2 = mesh_floor_2
         mesh_floor_2.castShadow = false;
@@ -278,11 +277,11 @@
                 //     mesh.scale.y = 1
                 //     mesh.position.y = 0;
                 // }
-                mesh.position.x = 100+j*grid_size;
-                mesh.position.z = -430+i*grid_size;
+                mesh.position.x = move+x_init+j*grid_size;
+                mesh.position.z = move+z_init+i*grid_size;
                 mesh.updateMatrix();
-                mesh.castShadow = true;
-                mesh.receiveShadow = true;
+                mesh.castShadow = false;
+                mesh.receiveShadow = false;
                 temp_list.push(mesh);
                 // mesh.matrixAutoUpdate = false;
                 //scene.add( mesh );
@@ -290,20 +289,48 @@
             list.push(temp_list)
         }
 
-        // lights
-        var light = new THREE.DirectionalLight( 0xffffff, 0.5 );
+        //lights
+         
+        //创建聚光灯
+        var spotLight = new THREE.SpotLight(0xffffff);
+        spotLight.position.set(-100, 4000, -1200);
+        spotLight.castShadow = true;
+        spotLight.shadow.camera.far = 30000;
+        spotLight.shadowMapWidth = 2048;
+        spotLight.shadowMapHeight = 2048;
+        //spotLight.shadow.bias = 0.005;
+        // spotLight.target = target;
+        scene.add(spotLight);
+        // var helper = new THREE.CameraHelper(spotLight.shadow.camera );
+        // scene.add(helper);
+
+
+        //创建平行光
+        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
+        directionalLight.position.set( 22, 200, -19 );
+        directionalLight.castShadow = false;
+        scene.add(directionalLight);
+         
+        //显示光照区域
+        // var helper = new THREE.CameraHelper(directionalLight.shadow.camera );
+        // scene.add(helper);
+
+
+        var light = new THREE.DirectionalLight( 0xffffff, 0.6 );
         light.position.set( 223, 1000, -189 );
-        light.castShadow = true;
-        // light.castShadow = true;
-        test_light = light;
-        scene.add( light );
-        // var light = new THREE.DirectionalLight( 0x002288 );
-        // light.position.set( - 1, - 1, - 1 );
+        light.castShadow = false;
+
+        // test_light = light;
         // scene.add( light );
-        var light = new THREE.AmbientLight( 0xffffff, 0.75);
-        light.castShadow = true;
+
+        // var helper = new THREE.CameraHelper(light.shadow.camera );
+        // scene.add(helper);
+
+
+        var light = new THREE.AmbientLight( 0xffffff, 0.6);
+        light.castShadow = false;
         scene.add( light );
-        //
+        
         // document.addEventListener( 'mousemove', onDocumentMouseMove, false );
         window.addEventListener( 'resize', onWindowResize, false );
 
@@ -363,9 +390,9 @@
                     .easing(TWEEN.Easing.Back.Out)
                     .start();
                 new TWEEN.Tween(list[i][j].position).to(
-                    {   x:100+j*grid_size,
+                    {   x:move+x_init+j*grid_size,
                         y:test[i][j][choice+"_half"][d_id],
-                        z:-430+i*grid_size }
+                        z:move+z_init+i*grid_size }
                     , timeIntervel)
                     .easing(TWEEN.Easing.Back.Out)
                     .start();
