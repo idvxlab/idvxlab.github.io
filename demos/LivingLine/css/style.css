@@ -9,7 +9,7 @@ body{
     font-family: 'Helvetica';
 }
 a{
-    color: #8a80b5;
+    color: white;
     text-decoration: none;
 }
 
@@ -40,11 +40,10 @@ a{
     top: 8px;
     position: absolute;
 }
-.nav_about{
+.nav_about, .nav_index{
     display: inline;
     float:right;
     position: relative;
-    top:-22px;
     right:30px;
     padding: 6px;
     border: solid 1px #8a80b5;
@@ -53,11 +52,17 @@ a{
     color:#8a80b5;
     
 }
-.nav_about:hover{
+.nav_about:hover, .nav_index:hover{
     background-color: rgba(0,0,0,0.5);
     color:rgba(255,255,255,1);
     border: solid 1px white;
     cursor: pointer;
+}
+.nav_index{
+    top:-22px;
+}
+.nav_about{
+    top:-20px;
 }
 
 .leftbar .switch{
