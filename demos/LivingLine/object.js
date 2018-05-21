@@ -43,19 +43,19 @@
     var move = 120
     function num_to_days(num){
         if(num==0)
-            return "一"
+            return "Monday"
         if(num==1)
-            return "二"
+            return "Tuesday"
         if(num==2)
-            return "三"
+            return "Wendesday"
         if(num==3)
-            return "四"
+            return "Thursday"
         if(num==4)
-            return "五"
+            return "Friday"
         if(num==5)
-            return "六"
+            return "Saturday"
         if(num==6)
-            return "日"
+            return "Sunday"
     }
 
 
@@ -419,7 +419,7 @@
 
                 days = ui.value;
 
-                $( "#d_vals" ).text('周'+num_to_days(days));
+                $( "#d_vals" ).text(num_to_days(days));
                 var d_i = days*24+hours
                 updateData(list, test, choice, d_i, 1000)
 

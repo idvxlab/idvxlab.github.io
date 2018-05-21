@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>LivingLine NICE2035原型街智能数据分析</title>
+    <title>LivingLine NICE2035 Intelligent Data Visualization system</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery-1.10.1.min.js"></script>
@@ -18,6 +18,15 @@
     <script src="js/Projector.js"></script>
     <script src="js/dat.gui.min.js"></script>
     <script src="js/stats.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118776059-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118776059-1');
+    </script>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="shortcut icon" href="img/idvx_icon.ico" />
     <style>
@@ -36,36 +45,36 @@
 <body>
 
 
-    <div class="topbar">LivingLine NICE2035原型街智能数据分析</div>
+    <div class="topbar">LivingLine NICE2035 Intelligent Data Visualization system</div>
     <div class="leftbar">
         <div id='switch_ui' class="switch">
             <div id = 'model_ui' class = 'to_model'></div>
-            <div id = 'switch_text' class = 'switch_text'>模型</div>
+            <div id = 'switch_text' class = 'switch_text'>Model</div>
             <div id = 'data_ui' class = 'data'></div>
         </div>
         <div id = 'model_toolbar' class="m_toolbar">
              <ul class="sidenav">
-                <li class='store'>市场：    6</li>
-                <li class='store'>咖啡店：   2</li>
-                <li class='store'>社区：    1</li>
-                <li class='store'>实验室：   6</li>
-                <li class='store'>零售商：   1</li>
-                <li class='store'>餐饮：    1</li>
-                <li class='store'>工作区：   2</li>
-                <li class='store'>便利设施：  2</li>
+                <li class='store'>Market：    6</li>
+                <li class='store'>Cafe：   2</li>
+                <li class='store'>Community：    1</li>
+                <li class='store'>Lab：   6</li>
+                <li class='store'>Retail：   1</li>
+                <li class='store'>Restaurant：    1</li>
+                <li class='store'>Workplace：   2</li>
+                <li class='store'>Amenities：  2</li>
             </ul>
 
         </div>
         <div id = 'data_toolbar' class="toolbar">
             <ul class="sidenav" id="sidenav">
-                <li id="vis_user" class='vis_user'>用户流量数据分析</li>
-                <li id="vis_money" class="vis_money">销售额数据分析</li>
-                <li id="vis_energy" class="vis_energy">水电能耗数据分析</li>
+                <li id="vis_user" class='vis_user'>Visitors Flow Analysis</li>
+                <li id="vis_money" class="vis_money">Sales Amount Analysis</li>
+                <li id="vis_energy" class="vis_energy">Energy Consumption Analysis</li>
 
             </ul>
 
             <div class="days">
-                <div id="d_vals" class="vals">周一</div>
+                <div id="d_vals" class="vals">Monday</div>
                 <div id="day_slider"></div>
 
             </div>
@@ -123,7 +132,7 @@
       
         div_data_ui.setAttribute('class', 'to_data');
         div_model_ui.setAttribute('class', 'model');
-        div_switch_text.innerText = "数据";
+        div_switch_text.innerText = "Data";
 
 
         div_m_tool.style.opacity= '0';
@@ -140,7 +149,7 @@
         div_model_ui.setAttribute('class', 'to_model');
 
         //div_switch_text.innerText = "模型";
-        div_switch_text.innerText = "模型";
+        div_switch_text.innerText = "Model";
 
 
         div_m_tool.style.opacity= '1';
