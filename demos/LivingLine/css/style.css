@@ -6,7 +6,11 @@ body{
 	position:absolute;
 	left:0;bottom:0;
 	background-size:cover;
-    font-family: 'Helvetica'
+    font-family: 'Helvetica';
+}
+a{
+    color: #8a80b5;
+    text-decoration: none;
 }
 
 .topbar{
@@ -19,7 +23,7 @@ body{
     /* top: 10px; */
     height: 36px;
     color: white;
-    font-size: 12px;
+    font-size: 16px;
 /*    padding-left: 74px;*/
     padding-top: 24px;
     z-index: 2;
@@ -35,6 +39,25 @@ body{
     height: 100%;
     top: 8px;
     position: absolute;
+}
+.nav_about{
+    display: inline;
+    float:right;
+    position: relative;
+    top:-22px;
+    right:30px;
+    padding: 6px;
+    border: solid 1px #8a80b5;
+    border-radius: 2px;
+    font-size: 12px;
+    color:#8a80b5;
+    
+}
+.nav_about:hover{
+    background-color: rgba(0,0,0,0.5);
+    color:rgba(255,255,255,1);
+    border: solid 1px white;
+    cursor: pointer;
 }
 
 .leftbar .switch{
@@ -327,6 +350,39 @@ body{
     border-radius: 500px;
     left: 100%;
     top: -10px;
+}
+
+
+.middlebar{
+/*    background-color: #191b3a;
+    opacity: 0.90;*/
+    background-color:rgba(25,27,58,0.8);
+    width: 100%;
+    /*width: 264px;*/
+    height: 100%;
+    top: 8px;
+    position: absolute;
+    text-align: center;
+
+}
+
+.about_name{
+    position: relative;
+    top:20px;
+    color: white;
+    font-family: 'Avenir';
+    font:bold;
+}
+
+.sidenav .name{
+/*    height: 45px;*/
+    position: relative;
+    padding-top: 35px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    /*color: #8a80b5;*/
+    z-index: 3;
+    color:white;
 }
 
 
