@@ -125,6 +125,8 @@ div{overflow:hidden}
 .single_left_coloum_s{margin-left:10px; width:118px}
 .past_member{width:85px;height:180px}
 .past_member img{width:80px;height:80px}
+.speakers{width:216px;height:320px}
+.speakers img{width:216px;height:310px}
 
 .readmore, .single_cat_right_content_meta span{color:#CF0000; font-size:10px; text-transform:uppercase; font-weight:bold; margin-right:20px}
 .readmore:hover, .single_cat_right_content_meta span:hover{color:#CF0000; text-decoration:underline}
