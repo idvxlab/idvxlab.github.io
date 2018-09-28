@@ -121,12 +121,12 @@ div{overflow:hidden}
 .title{border-bottom:4px solid #CF0000; font-family:'bebasregular'; font-size:20px; word-spacing:2px}
 .more{background:url("images/plus.png") no-repeat scroll 57px 9px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:4px 20px; position:absolute; right:0; text-transform:uppercase; top:10px}
 .popular_more{background:url("images/plus.png") no-repeat scroll 57px 12px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:7px 20px; text-transform:uppercase; width:74px; margin-top:10px}
-.single_left_coloum{margin-left:10px; width:143px; height:240px;}
+.single_left_coloum{margin-left:10px; width:143px; height:270px;}
 .single_left_coloum_s{margin-left:10px; width:118px}
 .past_member{width:85px;height:180px}
 .past_member img{width:80px;height:80px}
-.speakers{width:216px;height:320px}
-.speakers img{width:216px;height:310px}
+.speakers{width:143px; height:265px}
+.speakers img{width:143px;height:176px}
 
 .readmore, .single_cat_right_content_meta span{color:#CF0000; font-size:10px; text-transform:uppercase; font-weight:bold; margin-right:20px}
 .readmore:hover, .single_cat_right_content_meta span:hover{color:#CF0000; text-decoration:underline}
