@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name='format-detection' content='telephone=no'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'>
+    <meta name='apple-touch-fullscreen' content='no'>
+    <meta http-equiv='Cache-Control' content='no-cache, no-store, must-revalidate'>
+    <meta http-equiv='Pragma' content='no-cache'>
+    <meta http-equiv='Expires' content='0'>
+	<title>十里南京路，百年仍可期</title>
+	<meta name="keywords" content="数据新闻，南京东路"/>
+
+	<!--导入需要的CSS-->
+    <!-- <link charset="utf-8" type="text/css" rel="stylesheet" href="css/reset.min.css"/> -->
+    <!-- <link charset="utf-8" type="text/css" rel="stylesheet" href="css/swiper.min.css"/> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+    <link charset="utf-8" type="text/css" rel="stylesheet" href="css/swiper.min.css"/>
+    <link charset="utf-8" type="text/css" rel="stylesheet" href="css/animate.css"/>
+    <link charset="utf-8" type="text/css" rel="stylesheet" href="css/index.css"/>
+
+	<!--计算REM-->
+	<!-- <script type="text/javascript">
+        document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
+    </script> -->
+
+<script charset="utf-8" type="text/javascript" src="js/lib/swiper.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/lib/ScrollMagic.min.js"></script>
+<!-- <script charset="utf-8" type="text/javascript" src="js/lib/makisu.min.js"></script> -->
+<script charset="utf-8" type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/lib/d3/d3-request.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/lib/d3/d3.min.js"></script>
+</head>
+<body>
+	<div class="loading-page" id="loading">
+		<div class="loading_house_gif"></div>
+		<div class="loading_street_gif"></div>
+        <div class="counter">
+            <p>正在加载</p>
+            	<h1>0%</h1>
+        </div>
+	</div>
+	<div class="map-container" style="overflow-x: auto;">
+		<!-- <div id="nj1"><h1>南京东路          East Nanjing Road</h1></div>
+		<div id="nj2"><h1>南京东路          East Nanjing Road</h1></div>
+		<div id="nj3"><h1>南京东路          East Nanjing Road</h1></div> -->
+
+		<div class="building" id="street-north"></div>
+		<div class="building" id="street-south"></div>
+		<img id="arrowHori" src="img/Arrow_2.gif">
+	</div>
+	<div class="container swiper-container">
+
+		<div class="main_article swiper-wrapper">
+			<div class="swiper-slide_0 swiper-slide">
+				
+				<div id="title"></div>
+				<!-- <img id="bg" src="img/bg.png"> -->
+				<img id="bg" src="img/BackGround.gif">
+				<img id="arrowDown" src="img/Arrow_3.gif">
+			</div>
+			<div class="swiper-slide_1 swiper-slide">
+				
+				<div style="height: 1px;"id="trigger1"></div>
+				<h1>1</h1>
+				<p>
+					<strong>南京东路</strong>位于上海市黄浦区，它东起外滩、西至西藏中路，全长1599米，其中河南中路以西部分为步行街，素有“中华商业第一街”之称。
+				</p>
+				<p>
+					如今到上海旅游的人们都会选择到名店林立的南京路上走一走，看看上海最繁华的商业百货和最著名的老字号，捎一点上海老特产。目睹如今的繁华，今人可能难以想到在两百年前这里曾是“溪涧纵横”的卑湿之地。
+				</p>
+				<div id="map">
+					<img id="map2" src="img/map-identified.png"/>
+					<img id="map1" src="img/map-before.png"/>
+					
+				</div>
+			</div>
+			<div class="swiper-slide swiper-slide_2">
+				<div style="height: 1px;"id="trigger2"></div>
+				<h1>2</h1>
+				<p>1842年的一声炮响，第一次鸦片战争失败，《南京条约》签订，上海开埠。</p>
+				<p>清道光30年（1850年）外籍商人在租界内组织跑马总会，最先在今南京东路、河南中路一带占地80余亩辟作花园，围绕花园筑跑马道，成为上海第一个跑马场。次年，又从外滩修建了通往花园的小道，也即是现在的外滩到河南中路一段，因国人经常看到外国人在这里骑马，所以就称这条路为马路，它的正式名字叫花园弄（Park Lane）。这条短短不足500米的花园弄就是日后南京路的雏形，也是中国第一条近代意义上的马路。为纪念《南京条约》带来的利益，1865年英租界工部局正式命名大马路为“南京路”。据《沪游日记》载，当时南京路“其平如砥”，一经损坏，随时修补；马路每日打扫两次，又有洒水车洒道，“终久异常洁净”；十里长街“两旁所植，葱郁成林，洵堪入画”。</p>
+				<img src="img/1870road.jpg" class="fadeIn" >
+				
+			</div>
+			<div class="swiper-slide swiper-slide_3">
+				<h1>3</h1>
+				<p>
+					南京东路，不仅因其路“其平如砥”而成为南京东路，更因其中生机勃勃的各色资本加入，而筑造起的风格各异的建筑而兴盛。
+				</p>
+				<p>
+					1850年以来，建筑建起又重建，我们也许难以知道这中间哪些建筑建起又倒下，但是我们还有很多现存的建筑，通过体察她们，我们得以管中窥豹，感叹交杂在这短短十里长的路上的上海近现代史。
+				</p>
+				
+			</div>
+			<div class="swiper-slide swiper-slide_3">
+				<h1>4</h1>
+				<p>通过对过去一百年来南京东路上的历史建筑中发生的变化可视化，我们来看不同的时间点发生了什么。图以竖轴为不同的建筑，横轴为时间，范围为1910年到2019年。</p>
+				<p>20世纪10年代，外国列强忙于应对战争，中国商人则抓住了机会，先后创建了先施、永安、大新、新新百货公司，它们互相竞争，许多创新都属国内先例，如第一部扶手电梯，第一次用广播来吸引顾客，第一个歌舞厅。文化，娱乐，商业相长，茅盾先生在其书《上海的早晨》中评价南京东路的建筑“七重天”为上海人心目中梦寐以求、魂牵梦绕的顶级豪华娱乐场所。日军侵略中国后，南京东路由于在租界内相对安全，形成了畸形的繁荣，称为“孤岛时期”。上海沦陷后，多个建筑曾为抗日救亡人士、学生提供过临时的住所。新中国成立后，永安百货顶部的塔楼升起了上海第一面红旗。几乎所有公司进入了国有化阶段，每栋建筑均有不同的新动向。</p>
+				<div id="architecture"></div>
+			</div>
+			<div class="swiper-slide swiper-slide_4">
+				<h1>结语</h1>
+				<p>
+					如今的南京东路古今事物百花齐放，将要继续诉说上海不一样的故事。您在后面可以自行探索南京街头！
+				</p>
+			</div>
+			<div class="swiper-slide swiper-slide_5"></div>
+			
+
+		</div>
+		
+		<div class="swiper-scrollbar">
+			
+		</div>
+
+	</div>
+	<script type="text/javascript">
+		$(function() {
+               var controller = new ScrollMagic.Controller();
+                var scene = new ScrollMagic.Scene({
+                        triggerElement: "#trigger1",
+                        duration: 1300,
+                        //offset: 300,
+                        triggerHook: 0.05,
+                    })
+                    .setClassToggle("#map1", "after")
+                    .addTo(controller);
+                var scene2 = new ScrollMagic.Scene({
+                        triggerElement: "#trigger2",
+                        duration: 1300,
+                        //offset: 300,
+                        triggerHook: 0.05,
+                    })
+                    .setClassToggle(".swiper-slide_3 img", "fadeIn")
+                    .addTo(controller);
+        });
+	</script>
+	
+
+</body>
+
+<!--导入需要的JS-->
+<!-- <script charset="utf-8" type="text/javascript" src="js/lib/zepto.min.js"></script> -->
+<!-- <script charset="utf-8" type="text/javascript" src="js/lib/swiper.min.js"></script> -->
+
+<script charset="utf-8" type="text/javascript" src="js/data.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/index.js"></script>
+</html>
