@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+* {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-align: justify;
+    /*height: 100%;*/
+    font-size: 16px;
+}
+
+body {
+    font-family: "Helvetica", "PingFang SC";
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    left: unset;
+    /*user-select: none;*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #fbfbfb;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex; 
+    justify-content: center;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    border: 5px;
+}
+h3 {
+    margin: 0 auto;
+    color: #808080;
+    font-size: 12px;
+}
+
+h4 {
+    position: relative;
+    font-size: 14px;
+    margin: 0% auto;
+    font-weight: normal;
+    color: #000;
+    background-color: #fff;
+    padding: 0% 4%;
+    display: inline-block;
+}
+
+h5 {
+    font-size: 14px;
+    text-align: center;
+    margin: 2% auto;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+/*.head {
+    position: relative;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('temp.jpg');
+    background-size: cover;
+    background-position: center;
+} */  
+
+.loading-page {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.loading-page .counter p {
+    display: inline-block;
+    font-size: 14px;
+    color: #000;
+}
+
+.loading-page .counter h1 {
+    display: inline-block;
+    color: #000;
+    font-size: 14px;
+    margin-top: -10px;
+    /*bottom: 0;*/
+    right: 0;
+    font-weight: lighter;
+}
+.loading-page .loading_house_gif {
+    position: absolute;
+    top: 18%;
+    width: 150px;
+    height: 150px;
+    background-image: url("../img/HouseLOADING.gif");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    z-index: 9;
+}
+
+.loading-page .loading_street_gif {
+    position: absolute;
+    bottom: 28%;
+    /*left: 50%;*/
+    width: 60%;
+    height: 150px;
+    background-image: url("../img/StreetLOADING.gif");
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    z-index: 99;
+}
+
+.loading-page .counter {
+    position: absolute;
+    top: 42%;
+    width: 70%;
+    text-align: center;
+    z-index: 999;
+}
+
+
+
+#bg {
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#title{
+    position: absolute;
+    z-index: 99;
+    width:30%;
+    height: 30%;
+    left: 35%;
+    top: 35%;
+    background-image: url("../img/title.png");
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.swiper-slide {
+    width: 90%;
+    height: auto;   
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    /*display: inline-flex;*/
+}
+
+.swiper-wrapper {
+    display: none;
+}
+
+.swiper-slide_0 {
+    display: none;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.swiper-slide_1 #map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+   /* -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;*/
+    border: 10px;
+    /*margin: 2%, 10%, 2%, 2%;*/
+    top: 3%;
+    /*width: 100%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#map2 {
+    z-index: 9;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+#map1 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+}
+#trigger1 {
+        display: block;
+}
+#trigger2 {
+        display: block;
+}
+.after {
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+#swiper-slide_2 img {
+    opacity: 0;
+}
+.fadeIn {
+    opacity: 1;
+    transform: opacity 3s;
+}
+
+#architecture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#streets {
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+#streets .building {
+    display: inline-block; /* make it scrollable!*/
+}
+
+.svg {
+        width: 50%;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    /* width: 64px; */
+    /* height: 20px; */
+    padding: 2px;
+    font: 14px sans-serif;
+    background: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    z-index: 999999999999999;
+}
+
+.map-container {
+    position: absolute;
+    bottom: 0%;
+    width: 100vw;
+    height: 80vh;
+    background-color: transparent;
+    z-index: 9999999;
+    /* pointer-events: none; */
+    display: none;
+    overflow: scroll;
+    /*margin: auto;*/
+}
+
+.map-container #nj1 {
+    position: absolute;
+    bottom: 50%;
+    left: 20%;
+}
+
+.map-container #nj2 {
+    position: absolute;
+    bottom: 50%;
+    left: 70%;
+}
+
+.map-container #nj3 {
+    position: absolute;
+    bottom: 50%;
+    left: 120%;
+}
+
+#arrowHori {
+    bottom: 3%;
+    border: 5px;
+    width: 10%;
+    height: auto;
+}
+
+#arrowDown {
+    bottom: 3%;
+    z-index: 99;
+    width: 5%;
+    position: absolute;
+    left: 50%;
+}
+
+@media screen and (min-width: 500px) {
+    img {
+        width: 50%;
+        height: auto;
+    }
+    #map {
+        width: 30%;
+        height: auto;
+
+    }
+    .svg {
+        width: 50%;
+        height: auto;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+}

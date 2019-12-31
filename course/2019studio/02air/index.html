@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Run Away From Haze</title>
+	<meta name="description" content="Scrollama: Sticky Overlay Example">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='css/style.css'>
+
+	<style>
+		main {
+			background-color: #fff;
+			position: sticky;
+		}
+
+		#intro {
+			width: 100%;
+			height: 100%;
+			background-size: 430%;
+			background-image: url('images/sky.gif');
+
+		}
+
+		#intro-svg {
+			width: 100%;
+			height: 1800px;
+		}
+
+		#scrolly {
+			position: relative;
+			background-color: #f3f3f3;
+			/* padding: 1rem; */
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			max-width: 20rem;
+			margin: 0 auto;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			z-index: 0;
+			background-image: url('images/smog.png');
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			-moz-background-size: 100% 100%;
+
+		}
+
+		figure p {
+			text-align: center;
+			padding: 1rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #fff;
+		}
+
+
+		.step {
+			font-size: 12px;
+			letter-spacing: 0px;
+			text-align: left;
+			z-index: 9999999;
+			background: white;
+			box-shadow: 0 0 7px 0 rgba(92, 104, 137, 0.29);
+			border-radius: 2px;
+			padding: 8px;
+			pointer-events: none;
+			line-height: 20px;
+			margin-bottom: 100px;
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+		}
+
+		.step.is-active p {
+			color: #3b3b3b;
+		}
+
+		.step p {
+			text-align: center;
+			padding: 1rem;
+			font-size: 0.8rem;
+			/* background-color: #3b3b3b; */
+			color: #3b3b3b;
+		}
+
+		#step0 {
+			/* margin: 0 auto 0 auto; */
+			padding: 0px;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0);
+			width: 100%;
+			height: 100%;
+			/* opacity: 0; */
+			/* position: absolute;*/
+		}
+
+		#step1 {
+			opacity: 0;
+		}
+
+		#step3 {
+			opacity: 0;
+		}
+
+		#step5 {
+			opacity: 0;
+		}
+
+		#step7 {
+			opacity: 0;
+		}
+
+		#step8 {
+			opacity: 0;
+		}
+
+		#step10 {
+			opacity: 0;
+		}
+
+		#step11 {
+			opacity: 0;
+		}
+
+		#step13 {
+			opacity: 0;
+		}
+
+		#step14 {
+			opacity: 0;
+		}
+
+		#step16 {
+			opacity: 0;
+		}
+
+		#step17 {
+			opacity: 0;
+		}
+
+		#step19 {
+			opacity: 0;
+		}
+
+		#step20 {
+			opacity: 0;
+		}
+
+		#step22 {
+			opacity: 0;
+		}
+
+		#step23 {
+			opacity: 0;
+		}
+
+		#step25 {
+			opacity: 0;
+		}
+
+
+		#step27 {
+			opacity: 0;
+			/* margin:auto;
+			width:800px; */
+
+		}
+
+		#step34 {
+			opacity: 0;
+			/* margin:auto;
+			width:800px; */
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<!-- <script type="text/javascript">
+		$(function () {
+			var loading = "<div id='loading'><img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1504002746731&di=a7d82714e2b6a150ecb6ab45d2dc73b9&imgtype=0&src=http%3A%2F%2Falcastongallery.com.au%2Fassets%2Fimages%2Fajax-loader.gif'></div>";
+			$('body').append($(loading));
+
+			setTimeout(function () {
+				$('#loading').remove();
+			}, 3000);
+		});
+	</script> -->
+	<a href="https://github.com/russellgoldenberg/scrollama" target="_blank" class="github-corner"
+		aria-label="View source on GitHub" style="width:80px;height:80px;">
+
+		<svg width="80" height="80" viewBox="0 0 250 250"
+			style=" position: absolute; top: 15; border: 0; right: 0; background-image: url('images/tianqi.svg'); z-index:9999;"
+			aria-hidden="true">
+
+		</svg>
+	</a>
+	<main>
+		<!-- <nav>
+			<a href='https://github.com/russellgoldenberg/scrollama'>scrollama.js</a>
+			<div class='nav__examples'>
+				<p>Examples:</p>
+				<a href='https://russellgoldenberg.github.io/scrollama/basic'>Basic</a>
+				<a href='https://russellgoldenberg.github.io/scrollama/progress'>Progress</a>
+				<a href='https://russellgoldenberg.github.io/scrollama/sticky-side'>Sticky Side</a>
+				<a href='https://russellgoldenberg.github.io/scrollama/sticky-overlay'>Sticky Overlay</a>
+			</div>
+		</nav> -->
+		<section id='intro'>
+
+			<!-- <h1 class='intro__hed'>Sticky Overlay Example</h1>
+			<p class='intro__dek'>
+				Start scrolling to see how it works.
+			</p> -->
+
+		</section>
+
+		<section id='scrolly'>
+
+			<figure class='figure' id='figure'>
+				<!-- <p>1</p> -->
+				<div id='title' style='margin:auto 2rem; padding:1.5rem;'><svg></svg></div>
+				<!-- <div id = 'xiansvg' style='width:0; height:0; padding:2rem;'><svg></svg></div> -->
+			</figure>
+
+			<article>
+				<div id="step0" data-step='1'>
+					<div id='step0svg' style="width: 100%; height:100%;"></div>
+					<!-- <svg id="intro-svg" xmlns="http://www.w3.org/2000/svg" version="1.1">
+						<line id="intro-line" />
+					</svg> -->
+
+				</div>
+				<div class='step' id='step1' data-step='2'>
+					<!-- <p>STEP 1</p>
+					<div>全国空气质量指数</div> -->
+
+				</div>
+
+				<div class='step' id='step2' data-step='3'>
+					<svg id='step2svg'></svg>
+					<!-- <p>STEP 2</p> -->
+
+				</div>
+				<div class='step' id='step3' data-step='4'>
+					<!-- <p>STEP 3</p> -->
+				</div>
+				<div class='step' id='step4' data-step='5'>
+					<!-- <p>STEP 4</p> -->
+					<svg id='step4svg'></svg>
+					<div></div>
+
+				</div>
+				<div class='step' id='step5' data-step='6'>
+					<!-- <p>STEP 5</p> -->
+
+				</div>
+				<div class='step' id='step6' data-step='7'>
+					<!-- <p>STEP 6</p> -->
+					<svg id='step6svg'></svg>
+
+				</div>
+				<div class='step drop' id='step7' data-step='8'>
+					<!-- <p>STEP 7</p> -->
+				</div>
+
+				<div class='step' id='step8' data-step='9'>
+					<!-- <p>STEP 8</p> -->
+
+				</div>
+
+				<div class='step pre' id='step9' data-step='10'>
+					<svg id='step9svg'></svg>
+					<!-- <p>STEP 9</p> -->
+
+				</div>
+				<div class='step drop' id='step10' data-step='11'>
+					<!-- <p>STEP 10</p> -->
+
+				</div>
+
+				<div class='step' id='step11' data-step='12'>
+					<!-- <p>STEP 11</p> -->
+
+				</div>
+
+				<div class='step pre' id='step12' data-step='13'>
+					<svg id='step12svg'></svg>
+					<!-- <p>STEP 12</p> -->
+
+				</div>
+				<div class='step drop' id='step13' data-step='14'>
+					<!-- <p>STEP 13</p> -->
+
+				</div>
+				<div class='step' id='step14' data-step='15'>
+					<!-- <p>STEP 14</p> -->
+
+				</div>
+				<div class='step pre' id='step15' data-step='16'>
+					<svg id='step15svg'></svg>
+					<!-- <p>STEP 15</p> -->
+
+				</div>
+				<div class='step drop' id='step16' data-step='17'>
+					<!-- <p>STEP 16</p> -->
+
+				</div>
+				<div class='step' id='step17' data-step='18'>
+					<!-- <p>STEP 17</p> -->
+
+				</div>
+				<div class='step pre' id='step18' data-step='19'>
+					<svg id='step18svg'></svg>
+					<!-- <p>STEP 18</p> -->
+
+				</div>
+				<div class='step drop' id='step19' data-step='20'>
+					<!-- <p>STEP 19</p> -->
+
+				</div>
+				<div class='step' id='step20' data-step='21'>
+					<!-- <p>STEP 20</p> -->
+
+				</div>
+				<div class='step pre' id='step21' data-step='22'>
+					<svg id='step21svg'></svg>
+					<!-- <p>STEP 21</p> -->
+
+				</div>
+				<div class='step drop' id='step22' data-step='23'>
+					<!-- <p>STEP 22</p> -->
+
+				</div>
+				<div class='step' id='step23' data-step='24'>
+					<!-- <p>STEP 23</p> -->
+
+				</div>
+				<div class='step pre' id='step24' data-step='25'>
+					<svg id='step24svg'></svg>
+					<!-- <p>STEP 24</p> -->
+
+				</div>
+				<div class='step' id='step25' data-step='26'>
+					<!-- <p>STEP 25</p> -->
+
+				</div>
+				<div class='step pre2' id='step26' data-step='27'>
+					<div id='step26svg'></div>
+					<!-- <p>STEP 26</p> -->
+
+				</div>
+
+				<div class='step pre2' id='step27' data-step='28'>
+					<!-- <p>STEP 27</p> -->
+
+				</div>
+
+				<div class='step pre2' id='step28' data-step='29'>
+					<div id='step28svg'></div>
+					<!-- <p>STEP 28</p> -->
+
+				</div>
+				<div class='step pre2' id='step29' data-step='30'>
+					<div id='step29svg'></div>
+					<!-- <p>STEP 29</p> -->
+
+				</div>
+
+				<div class='step pre2' id='step30' data-step='31'>
+					<div id='step30svg'></div>
+					<!-- <p>STEP 30</p> -->
+
+				</div>
+				<div class='step pre2' id='step31' data-step='32'>
+					<div id='step31svg'></div>
+					<!-- <p>STEP 31</p> -->
+
+				</div>
+				<div class='step pre2' id='step32' data-step='33'>
+					<div id='step32svg'></div>
+					<!-- <p>STEP 32</p> -->
+
+				</div>
+				<div class='step pre2' id='step33' data-step='34'>
+					<div id='step33svg'></div>
+					<!-- <p>STEP 33</p> -->
+
+				</div>
+				<div class='step' id='step34' data-step='35'>
+					<!-- <p>STEP 34</p> -->
+
+				</div>
+
+				<!-- <div class='step' id='step33' data-step='34'>
+					<p>STEP 33</p>			
+					
+				</div>
+				<div class='step' id='step34' data-step='35'>
+					<p>STEP 34</p>			
+					
+				</div>
+				<div class='step' id='step35' data-step='36'>
+					<p>STEP 35</p>			
+					
+				</div>
+				<div class='step' id='step36' data-step='37'>
+					<p>STEP 36</p>			
+					
+				</div> -->
+
+
+			</article>
+
+
+		</section>
+
+
+		<section id='outro'></section>
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src='js/data.js'></script>
+
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script>
+	<script src='js/stickyfill.min.js'></script>
+	<script src='js/scrollama.min.js'></script>
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src='js/graphic.js'></script>
+	<script src='js/bar.js'></script>
+
+
+	<script>
+		// using d3 for convenience
+		var main = d3.select('main');
+		var intro = main.select('#intro');
+		var scrolly = main.select('#scrolly');
+		var figure = scrolly.select('figure');
+		var article = scrolly.select('article');
+		var step = article.selectAll('.step');
+		var drop = article.selectAll('.drop');
+		var pre = article.selectAll('.pre');
+		var pre2 = article.selectAll('.pre2');
+		var step1 = article.selectAll('#step0');
+		var step0 = document.getElementById("step0");
+		var step10 = article.selectAll("#step10");
+		var step27 = article.selectAll("#step27");
+		var step28 = article.selectAll("#step28");
+		var corner = d3.select('.github-corner');
+
+		var width = window.innerWidth;
+		var height = $(window).height();
+
+		var intro = d3.select('#intro')
+			.attr('width', width)
+			.attr('height', height);
+
+		article.select('#step9').style('margin-bottom', height + 'px');
+		// d3.select('#step9').style('margin-bottom',height);
+		// step1.style('margin-bottom', height + 'px');
+		// step10.style('margin-bottom', height + 'px');
+		// console.log(height);
+
+
+
+		d3.xml("images/intro.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var step1 = document.getElementById("intro");
+			var title = xml.documentElement;
+			step1.appendChild(xml.documentElement);
+
+		});
+
+
+
+		d3.xml("images/timeline3.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var step1 = document.getElementById("step0svg")
+			var title = xml.documentElement;
+			// title.setAttribute('x', width  + 'px');
+			// title.setAttribute('y', '-800');
+			// title.setAttribute('transform', 'scale(0.3)');
+			step1.appendChild(xml.documentElement);
+
+		});
+
+		d3.xml("images/step2.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step2svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step4.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step4svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step6.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step6svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step9.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step9svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step12.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step12svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step15.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step15svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step18.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step18svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step21.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step21svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step24.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step24svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/card.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step26svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/step28.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step28svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/card2.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step29svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/card3.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step30svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/card4.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step31svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/card5.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step32svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+		d3.xml("images/card6.svg").mimeType("image/svg+xml").get(function (error, xml) {
+			if (error) throw error;
+			var figure = document.getElementById("step33svg")
+			figure.appendChild(xml.documentElement);
+
+		});
+
+
+
+
+
+		// initialize the scrollama
+		var scroller = scrollama();
+
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight * 0.25);
+			var stepM = Math.floor(window.innerHeight * 0.6);
+
+
+			step.style('height', stepH + 'px');
+			step.style('margin-bottom', stepM + 'px');
+
+			step1.style('height', 1800 + 'px');
+			step1.style('margin-bottom', Math.floor(window.innerHeight * 0.5) + 'px');
+			step10.style('margin-bottom', Math.floor(window.innerHeight * 1.2) + 'px');
+			pre.style('margin-bottom', Math.floor(window.innerHeight * 1) + 'px');
+			pre2.style('height', Math.floor(window.innerHeight * 0.3) + 'px');
+			pre2.style('margin-bottom', Math.floor(window.innerHeight * 1.2) + 'px');
+			drop.style('margin-bottom', Math.floor(window.innerHeight * 0.5) + 'px');
+			step28.style('height', 90 + 'px');
+
+			// step27.style('height', Math.floor(window.innerHeight * 1) + 'px');
+			// step27.style('margin-bottom', Math.floor(window.innerHeight * 0)+ 'px');
+
+
+			var figureHeight = window.innerHeight;
+			var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+			figure
+				.style('height', figureHeight + 'px')
+				.style('top', figureMarginTop + 'px');
+
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			// console.log(response)
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed('is-active', function (d, i) {
+				return i === response.index;
+			})
+
+			// update graphic based on step
+			// figure.select('p')
+			// 	.text(response.index);
+
+			if (response.index == 0) {
+				d3.select('#title').html('');
+				d3.xml("images/title_1.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+
+				figure.style('background-image', "url('images/background-02.svg')");
+				figure.style('background-color', 'rgb(249,248,248)');
+				love_period_2(".figure");
+				love_period_transition_2(".figure");
+			}
+			if (response.index == 1) {
+				// figure.selectAll('.titlesvg').remove();
+
+			}
+
+			if (response.index == 2) {
+				d3.select('#title').html('');
+				d3.xml("images/title_2.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.select('.love_period_circle_g_0').transition().duration(800).style("opacity", 0);
+			}
+
+			if (response.index == 4) {
+				d3.select('#title').html('');
+				d3.xml("images/title_3.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.select('.love_period_circle_g_0').transition().duration(800).style("opacity", 1);
+				d3.select('.love_period_circle_g_1').transition().duration(800).style("opacity", 0);
+			}
+			if (response.index == 6) {
+				d3.select('#title').html('');
+				d3.xml("images/title_PM25.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.selectAll('.circle_fill').attr('opacity', 0.2);
+				d3.selectAll('.PM25_2').attr('fill', '#8dd3c7');
+				d3.selectAll('.PM25_2').attr('opacity', 1);
+
+			}
+			if (response.index == 7) {
+				love_period_3('.figure', 'PM25');
+				figure.selectAll('.bar').attr('opacity', 0);
+				figure.selectAll('.bar_0').attr('opacity', 1);
+				love_period_transition_3('PM25');
+			}
+			if (response.index == 9) {
+				d3.select('#title').html('');
+				d3.xml("images/title_PM10.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				figure.selectAll('.bar').remove();
+				d3.selectAll('.circle_fill').attr('opacity', 0.2);
+				d3.selectAll('.PM25_2').attr('fill', '#ffd967');
+				d3.selectAll('.PM10_2').attr('fill', '#fdb462');
+				d3.selectAll('.PM10_2').attr('opacity', 1);
+
+			}
+			if (response.index == 10) {
+				love_period_3('.figure', 'PM10');
+				figure.selectAll('.bar').attr('opacity', 0);
+				figure.selectAll('.bar_1').attr('opacity', 1);
+				love_period_transition_3('PM10');
+			}
+			if (response.index == 12) {
+				d3.select('#title').html('');
+				d3.xml("images/title_O3.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				figure.selectAll('.bar').remove();
+				d3.selectAll('.circle_fill').attr('opacity', 0.2);
+				d3.selectAll('.PM10_2').attr('fill', '#ffd967');
+				d3.selectAll('.O3_2').attr('fill', '#Bebada');
+				d3.selectAll('.O3_2').attr('opacity', 1);
+
+			}
+			if (response.index == 13) {
+				love_period_3('.figure', 'O3');
+				figure.selectAll('.bar').attr('opacity', 0);
+				figure.selectAll('.bar_2').attr('opacity', 1);
+				love_period_transition_3('O3');
+			}
+			if (response.index == 15) {
+				d3.select('#title').html('');
+				d3.xml("images/title_SO2.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				figure.selectAll('.bar').remove();
+				d3.selectAll('.circle_fill').attr('opacity', 0.2);
+				d3.selectAll('.O3_2').attr('fill', '#ffd967');
+				d3.selectAll('.SO2_2').attr('fill', '#Fb8072');
+				d3.selectAll('.SO2_2').attr('opacity', 1);
+
+			}
+			if (response.index == 16) {
+				love_period_3('.figure', 'SO2');
+				figure.selectAll('.bar').attr('opacity', 0);
+				figure.selectAll('.bar_3').attr('opacity', 1);
+				love_period_transition_3('SO2');
+			}
+			if (response.index == 18) {
+				d3.select('#title').html('');
+				d3.xml("images/title_NO2.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				figure.selectAll('.bar').remove();
+				d3.selectAll('.circle_fill').attr('opacity', 0.2);
+				d3.selectAll('.SO2_2').attr('fill', '#ffd967');
+				d3.selectAll('.NO2_2').attr('fill', '#80b1d3');
+				d3.selectAll('.NO2_2').attr('opacity', 1);
+
+			}
+			if (response.index == 19) {
+				love_period_3('.figure', 'NO2');
+				figure.selectAll('.bar').attr('opacity', 0);
+				figure.selectAll('.bar_4').attr('opacity', 1);
+				love_period_transition_3('NO2');
+			}
+			if (response.index == 21) {
+				d3.select('#title').html('');
+				d3.xml("images/title_CO.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				figure.selectAll('.bar').remove();
+				d3.selectAll('.circle_fill').attr('opacity', 0.2);
+				d3.selectAll('.NO2_2').attr('fill', '#ffd967');
+				d3.selectAll('.CO_2').attr('fill', '#b3de69');
+				d3.selectAll('.CO_2').attr('opacity', 1);
+
+			}
+			if (response.index == 22) {
+				love_period_3('.figure', 'CO');
+				figure.selectAll('.bar').attr('opacity', 0);
+				figure.selectAll('.bar_5').attr('opacity', 1);
+				love_period_transition_3('CO');
+			}
+			if (response.index == 24) {
+				d3.selectAll('.circle_fill').attr('opacity', 1);
+				d3.selectAll('.CO_2').attr('fill', '#ffd967');
+				figure.selectAll('.bar').attr('opacity', 1);
+
+			}
+			if (response.index == 26) {
+				d3.select('#title').html('');
+				d3.xml("images/title_5.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.selectAll('.figure').selectAll('svg').remove();
+				var xiansvg = d3.selectAll('.figure').append('svg').attr('width', '100%').attr('height', '85%').attr('id',
+					'xiansvg');
+				d3.xml("images/xian1.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var xiansvg = document.getElementById("xiansvg");;
+					var title = xml.documentElement;
+					xiansvg.appendChild(title);
+				});
+				// console.log(xian.select('#xian-10'));
+				// console.log(xian);
+				// d3.select('#flog')
+				// 	.transition()
+				// 	.duration(800)
+				// 	.attr('fill','333');
+
+
+				// d3.selectAll('.figure')
+				// 	.append('svg')
+				// 	.attr('class','mask')
+				// 	.attr('height',window.innerHeight + 'px')
+				// 	.attr('width',window.innerWidth + 'px')
+				// 	.attr('transform', 'translate(0,'+ (- window.innerHeight * 3) + ')')
+				// 	.append('rect')
+				// 	.attr('height',window.innerHeight + 'px')
+				// 	.attr('width',window.innerWidth + 'px')
+				// 	.style('fill', 'white');
+				// 	d3.selectAll('.mask')
+				// 		.transition()
+				// 		.duration(6000)
+				// 		.attr('transform', 'translate(0,'+ (- window.innerHeight * 2) + ')')
+
+			}
+			//加工业高亮图
+			if (response.index == 28) {
+				d3.select('#title').html('');
+				d3.xml("images/jiaotong.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.selectAll('.figure').selectAll('svg').remove();
+				var xiansvg = d3.selectAll('.figure').append('svg').attr('width', '100%').attr('height', '85%').attr('id',
+					'xiansvg');
+				d3.xml("images/xian2.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var xiansvg = document.getElementById("xiansvg");;
+					var title = xml.documentElement;
+					xiansvg.appendChild(title);
+				});
+			}
+			if (response.index == 29) {
+				d3.select('#title').html('');
+				d3.xml("images/fadian.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.selectAll('.figure').selectAll('svg').remove();
+				var xiansvg = d3.selectAll('.figure').append('svg').attr('width', '100%').attr('height', '85%').attr('id',
+					'xiansvg');
+				d3.xml("images/xian3.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var xiansvg = document.getElementById("xiansvg");;
+					var title = xml.documentElement;
+					xiansvg.appendChild(title);
+				});
+			}
+			if (response.index == 30) {
+				d3.select('#title').html('');
+				d3.xml("images/jumin.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.selectAll('.figure').selectAll('svg').remove();
+				var xiansvg = d3.selectAll('.figure').append('svg').attr('width', '100%').attr('height', '85%').attr(
+					'id', 'xiansvg');
+				d3.xml("images/xian4.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var xiansvg = document.getElementById("xiansvg");;
+					var title = xml.documentElement;
+					xiansvg.appendChild(title);
+				});
+			}
+			if (response.index == 32) {
+				d3.select('#title').html('');
+				d3.xml("images/gongye.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var figure = document.getElementById("title")
+					figure.appendChild(xml.documentElement);
+
+				});
+				d3.selectAll('.figure').selectAll('svg').remove();
+				var xiansvg = d3.selectAll('.figure').append('svg').attr('width', '100%').attr('height', '85%')
+					.attr('id', 'xiansvg');
+				d3.xml("images/xian5.svg").mimeType("image/svg+xml").get(function (error, xml) {
+					if (error) throw error;
+					var xiansvg = document.getElementById("xiansvg");
+					var title = xml.documentElement;
+					xiansvg.appendChild(title);
+				});
+
+
+			}
+		}
+
+		function setupStickyfill() {
+			d3.selectAll('.sticky').each(function () {
+				Stickyfill.add(this);
+			});
+		}
+
+		function init() {
+			setupStickyfill();
+
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+					step: '#scrolly article .step',
+					offset: 1,
+					debug: true,
+				})
+				.onStepEnter(handleStepEnter)
+
+
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+		}
+
+		// kick things off
+		init();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Died companies</title>
+	<meta name="description" content="Died companies">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet' href='./style.css'>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+	<script src="jquery-3.4.1.min.js"></script>
+
+
+	<style>
+		#scrolly {
+			position: relative;
+			/* background-color: #f3f3f3; */
+			/* 本来是1rem 这样会有空隙 */
+			padding: 0rem;
+		}
+
+		article {
+			position: relative;
+			padding: 0;
+			/* 本来是20rem */
+			max-width: 22rem;
+			margin: 0 auto;
+			/* 为了能够响应下面的click*/
+			pointer-events: none;
+		}
+
+		figure {
+			position: -webkit-sticky;
+			position: sticky;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			/* background-color: #8a8a8a; */
+			background-color: black;
+			z-index: 0;
+		}
+
+		.title {
+			text-align: center;
+			height: 60px;
+			width: 100%;
+			position: absolute;
+			top: 20px;
+		}
+
+		.title p {
+			margin: 0 auto;
+			text-align: center;
+			padding: 1rem;
+			/* top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%); */
+			font-size: 2rem;
+			font-weight: 900;
+			color: white;
+		}
+
+		.step {
+			margin: 0 auto 2rem auto;
+			/* color: #fff; */
+		}
+
+		.step:last-child {
+			margin-bottom: 0;
+			/* padding-bottom: 2rem; */
+		}
+
+		.step.is-active p {
+			/* background-color: goldenrod; */
+			color: #3b3b3b;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="loading"></div>
+	<main>
+		<!-- <div class="flourish-embed" data-src="visualisation/1129604"></div><script src="https://public.flourish.studio/resources/embed.js"></script> -->
+		<section id='intro' style="width:100%;">
+			<!-- <h1 class='intro__hed'>data news</h1> -->
+			<!-- <div id ='arrow'>
+				<img style="height:120px;width:40px;position:absolute;bottom:20px" src="img/arrow.gif" alt="">
+			</div> -->
+			<div class="cover_up"></div>
+			<div id='teaser' style="width:100%;height:100vh;">
+
+				<img src="img/teaser-content.png" alt="" style="position:relative;top:10%;width:80%;height:550px">
+			</div>
+		</section>
+
+		<section id='scrolly'>
+
+			<figure id='figure'>
+				<!-- <div id = 'gif'><img src="img/company_data_trend.gif" alt=""></div>
+				 -->
+				<!-- <p>0</p> -->
+
+				<div class="title" style="z-index: 10000;position: absolute;top:40px">
+					<p></p>
+				</div>
+				<div class="figure-content" style="max-width:550px;margin:0 auto;background-color: black">
+					<div style="position: absolute;top: 50%;transform: translateY(-47%);">
+						<div class="bar-race" style="display:none;margin:0 auto;max-width:550px;">
+							<div class="flourish-embed" data-src="visualisation/1112101"></div>
+							<div class="bar-intro">
+								<p style="font-size: 8px;"><img
+										style="width:16px;height:16px;top: 2px;position: relative" src="img/alert2.png">
+									拖动时间轴上的箭头，即可探索每年各行业死亡的公司数量。</p>
+								<br>
+								<div class="bar-insight"
+									style="font-size:13px;border:1px dotted #d3d3d3;padding:12px;line-height:25px">
+									<p class="ghost" style="position: relative">在2013-2016年间，死亡数量排行第一、第二的行业，分别在电子商务和企业服务中轮换，而到了2018年，金融行业首当其冲，直接从排名第6跃升为第1，成为倒闭数量第一的行业，而2019年也再度“蝉联”榜首。
+									</p>
+									<p class="ghost" style="margin-top:10px;position: relative">观察右下角的Total数据，可以发现在2017年，年度死亡公司数量达到了近十年来的顶峰。从2017年至今，死亡公司数量呈下降趋势。但是这与近三年新增公司数量逐年降低有关。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="figure-img" style="max-width:550px;margin:0 auto;">
+						<div id="red-black" style="display:block">
+							<td style="position:relative;">
+								<div style="position:absolute;z-index:100;" id="img_0">
+									<img class="logo" src="img/1-logo.png" alt="">
+									<img style="height:100vh" src="img/img_0.png">
+								</div>
+								<div style="position:absolute;z-index:99" id="img_1">
+									<img class="logo" src="img/2-logo.png" alt="">
+									<img style="height:100vh" src="img/img_1.png">
+								</div>
+								<div style="position:absolute;z-index:98" id="img_2">
+									<img class="logo" src="img/3-logo.png" alt="">
+									<img style="height:100vh" src="img/img_2.png">
+								</div>
+								<div style="position:absolute;z-index:97" id="img_3">
+									<div class="cover_up"></div>
+									<img src="img/img_3.png">
+								</div>
+							</td>
+						</div>
+						<div id="circle-packing" style="display:none;height:100vh">
+							<td style="position:relative;">
+								<img style="position:absolute;z-index:87" id="img_5" src="img/img_5.png">
+								<img style="position:absolute;z-index:86" id="img_6" src="img/img_6.png">
+								<img style="position:absolute;z-index:85" id="img_7" src="img/img_7.png">
+								<img style="position:absolute;z-index:84" id="img_8" src="img/img_8.png">
+								<img style="position:absolute;z-index:83" id="img_9" src="img/img_9.png">
+
+							</td>
+						</div>
+						<div id="treemap" style="display:none;height:100vh;">
+							<td style="position:relative;">
+								<img style="height:100vh;position:absolute;z-index:82;" id="img_10"
+									src="img/img_10.png">
+							</td>
+						</div>
+
+						<div id="bangdan" style="display:none;height:100vh">
+							<td style="position:relative;">
+								<img style="height:100vh;position:absolute;z-index:77" id="img_11" src="img/img_11.png">
+								<img style="height:100vh;position:absolute;z-index:76" id="img_12" src="img/img_12.png">
+								<img style="height:100vh;position:absolute;z-index:75" id="img_13" src="img/img_13.png">
+								<img style="height:100vh;position:absolute;z-index:74" id="img_14" src="img/img_14.png">
+								<img style="height:100vh;position:absolute;z-index:73" id="img_15" src="img/img_15.png">
+								<img style="height:100vh;position:absolute;z-index:72" id="img_16" src="img/img_16.png">
+							</td>
+						</div>
+					</div>
+
+					<!-- <div class="flourish-embed" data-src="visualisation/1129604"></div> -->
+					<!-- <div class="flourish-embed" data-src="visualisation/1111069"></div> -->
+			</figure>
+
+			<article>
+				<div class='step' data-step='0'>
+					<div class="blank"></div>
+				</div>
+				<div class='step' data-step='1'>
+					<div class="blank"></div>
+				</div>
+				<div class='step' data-step='2'>
+					<div class="blank"></div>
+				</div>
+				<div class='step' data-step='3'>
+					<div class="blank"></div>
+				</div>
+				<div class='step' data-step='4'>
+					<div class="blank"></div>
+				</div>
+
+
+				<div class='step' data-step='5'>
+					<div class="panel">每一年都有不计其数的新经济公司死亡，那么他们都是因为什么原因倒闭的呢？</div>
+					<div class="panel" style="margin-top:500px"> 将死亡原因分成6个大类，由死亡数量排序分别是 <span
+							class="background1"><i>市场定位 </i></span>、<span class="background2"><i>外部问题 </i></span>、<span
+							class="background3"><i>资金问题 </i></span>、<span class="background4"><i>产品问题 </i></span>、<span
+							class="background5"><i>运营问题 </i></span>、<span class="background6"><i>团队问题 </i></span>。</div>
+
+				</div>
+
+				<div class='step' data-step='7'>
+					<div class="panel">
+						这6个大类，又可以细分为20个小类，分别为：<br>
+						<ul style="font-size: smaller;">
+							<li id="li-1" style="list-style-type:none;">商业模式匮乏、市场伪需求、业务调整、业务过于分散</li>
+							<li id="li-2" style="list-style-type:none;">行业竞争、政策监管、法律法规风险</li>
+							<li id="li-3" style="list-style-type:none;">现金流断裂、融资能力不足、烧钱</li>
+							<li id="li-4" style="list-style-type:none;">产品入场时机、产品缺陷严重</li>
+							<li id="li-5" style="list-style-type:none;">定价/成本问题、营销不足、转型问题、不重视客户</li>
+							<li id="li-6" style="list-style-type:none;">创始人问题、团队能力不足、团队缺乏激情、与投资人冲突</li>
+						</ul>
+
+						<!-- “商业模式匮乏”、“市场伪需求”、“业务调整”、“业务过于分散”、“现金流断裂”、“融资能力不足”、“烧钱”、“行业竞争”、“政策监管”、“法律法规风险”、“产品入场时机”、“产品缺陷严重”、“定价/成本问题”、“营销不足”、“转型问题”、“不重视客户”、“创始人问题”、“团队能力不足”、“团队缺乏激情”、“与投资人冲突”。 -->
+					</div>
+				</div>
+				<div class='step' data-step='8'>
+					<div class="panel">其中绝大多数行业的公司的死亡原因中，致死率最高的是“商业模式匮乏”。例如广告营销行业因为商业模式匮乏而死亡的公司占比高达<span
+							class="background1"><i>42.8%</i></span>，其次是工具软件行业，占比<span
+							class="background1"><i>34.1%</i></span>。</div>
+					<div class="panel" style="margin-top:500px">但是也存在着例外，分别是汽车交通行业和金融行业。</div>
+				</div>
+				<div class='step' data-step='9'>
+					<div class="panel">
+						汽车交通行业致死率最高的死亡原因是“行业竞争”。例如共享单车，作为汽车交通行业的代表性分支之一，就曾经是风口行业。“一夜之间”，各种共享单车企业如雨后春笋般涌出，而后过不了多久，就在行业竞争中死亡了一大片。就连共享单车巨头ofo，也未能幸免。
+						<img style="width:100%" src="img/car1.jpg">
+					</div>
+				</div>
+				<div class='step' data-step='10'>
+					<div class="panel">
+						而金融行业死亡原因最多的则是“政策监管”。新经济公司金融行业中有很大一部分是网贷公司。大学生裸贷、315晚会爆出的“714高炮”，以及各种卷钱跑路的P2P网贷平台，这一系列丑闻揭露了网贷行业的乱象，显示了政府监管的必要性。所以政府的监管，成为了金融行业死亡原因占比最高的原因。
+						<div style="text-align:center;">
+							<img style="width:50%;" src="img/money.jpg">
+						</div>
+					</div>
+
+				</div>
+				<div class='step' data-step='11'>
+					<div class="panel">
+						不同的行业因为有着其自身特点，所以有着不同的死亡原因。那么，对于不同的融资轮次，死亡的原因是否有所差别呢？从图中可以看出，从”尚未获投“一直到”C轮“，死亡公司的数量逐级递减。</div>
+					<div class="panel" style="margin-top:600px">
+						在尚未获得投资和天使轮死亡的公司中，死亡原因排名第一的是市场定位，而到了A轮和B轮，排名第一的死亡原因则变成了外部原因。</div>
+					<div class="panel" style="margin-top:600px">值得注意的是，团队问题(<svg style="position:relative;top:5px"
+							t="1577696638572" class="icon" viewBox="0 0 1024 1024" version="1.1"
+							xmlns="http://www.w3.org/2000/svg" p-id="2169" width="20" height="20">
+							<path d="M128.9 128h772.3v772.3H128.9V128z" p-id="2170" fill="#7db35c"></path>
+						</svg>方块所表示部分)这个死亡原因在不同轮次(天使轮->A轮->B轮->C轮)中所占的比例，也逐步提高。说明公司越发展到后期，团队问题愈显重要，可能成为一个容易被忽视但却致命的因素。
+						<img style="width:300px;margin:20px auto" src="img/tuandui.png">
+					</div>
+				</div>
+
+				<div class='step' data-step='11'>
+					<div class="panel">在“激烈”的新经济公司死亡赛道中，究竟是哪些公司拔得头筹呢？让我们来一起揭秘新经济公司排行榜之最🏆。</div>
+				</div>
+				<div class='step' data-step='12'>
+					<div class="panel">
+
+						<h2 style="text-align: center;font-weight:800">韦博英语</h2>
+						<h4 style="text-align: center;font-weight:600">上榜理由：存活时长高达21年</h4>
+						<div style="position:relative;">
+							<ul class="timeline">
+								<li class="block-item">1998 韦博英语创立。</li>
+								<li class="block-item">2017.11 双十一期间韦博英语成交位列语言培训行业销售排行第一。</li>
+								<li class="block-item">2019.10 韦博英语多家门店相继停止运营、员工被曝出拖欠薪资。</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel">
+						<h4><b>韦博英语人去楼空、员工欠薪未发、学员退费无门，21岁“高龄”的昔日培训巨头竟沦落到如此地步？</b></h4>
+						<br>
+
+						据韦博英语创始人高卫宇发表的公开道歉信表示，韦博英语由于原本的融资计划因业绩持续恶化，以及近期各类负面舆情影响不断被推迟，带来了资金链断裂，导致公司无法正常运营下去。可是曾经的培训巨头，
+						是怎么沦落到这一步呢？<br><br>
+						<span class="background1"><b><i>1. 没有及时转型 </i></b></span><br>
+						1998年韦博英语成立，正好是改革开放后外资企业进入中国与出国热的第一波高潮，因此韦博英语捕捉到了这波成人英语培训的市场红利。然而在二十多年后的今天，在现在高度重视英语的大环境下，英语已经都从娃娃抓起，英语培训的主力在20年间已经慢慢从成人下沉到了娃娃们，
+						这注定导致了成人英语培训市场的萎缩，而韦博英语主打成人英语培训，明日黄花已成必然。
+						<br><br>
+						<span class="background1"><b><i>2. 盲目扩张，现金流断裂 </i></b></span><br>
+						同时，韦博英语还涉嫌诱导学员使用网络贷款来一次性缴足学费，并利用这些钱来进行门店的快速扩张，导致入不敷出，现金流断裂，融资计划也未能成功。
+						不少学员使用了韦博英语推荐的互联网金融产品，现在却竹篮打水一场空，他们面临着既上不了课，又退不了钱还必须每个月还贷款的三重困境中。
+						最终一家21年的老企业，带着连续不断的负面舆情，欠着学员的一屁股债，黯然离场。
+					</div>
+				</div>
+				<div class='step' data-step='13'>
+					<div class="panel">
+						<h2 style="text-align: center;font-weight:800">卡拉单车</h2>
+						<h4 style="text-align: center;font-weight:600">上榜理由：上线时间19天即倒闭</h4>
+						<!-- <br> -->
+						<div style="position:relative;">
+							<ul class="timeline">
+								<li class="block-item">2016.10 卡拉单车团队组建</li>
+								<li class="block-item">2017.2 卡拉单车表示，公司在1个月内分两批次，分别投放了500辆和167辆单车，但最终只找回157辆车，丢失率为76.5%
+								</li>
+								<li class="block-item">2017.3 卡拉单车关闭</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel">
+						<h4><b>上线19天就倒闭，共享单车创业心酸史</b></h4>
+						<br>
+						卡拉单车，用19天时间在莆田市投放了667辆车，结果丢失大半，只找回来157辆车，丢失率76.5%。投资人立马全额撤资，导致公司不能不面临倒闭。<br><br>
+						<span class="background1"><b><i>让投资人管账的“职业经理人”式创业不可取 </i></b></span><br>
+						卡拉单车创始人与投资人签订的协议是让投资人管理财务，自己做“甩手掌柜”。
+						在公司危难时刻，投资人居然可以从用户的押金池里面把全额投资款抽出来带走，并且撤走了财务和客服，这样的行为不仅直接导致了公司的破产，还将所有的风险全部转嫁到用户身上。所以“职业经理人”式创业让卡拉单车陷入了如此被动的境地。
+					</div>
+
+				</div>
+				<div class='step' data-step='14'>
+					<div class="panel">
+						<h2 style="text-align: center;font-weight:800">酷骑单车</h2>
+						<h4 style="text-align: center;font-weight:600">上榜理由：存活379天 融资10亿元 日均烧钱263.85万 排名第一</h4>
+						<div style="position:relative;">
+							<ul class="timeline">
+								<li class="block-item">2016.11 酷骑单车成立</li>
+								<li class="block-item">2017.9 因押金难退，多处运营单位与工商局失去联系等问题，部分地区已开始对酷骑单车进行清理。</li>
+								<li class="block-item">2017.12 中国消费者协会公开发文，称截至12月11日，仅针对酷骑单车的投诉就超过21万次，涉及金额10亿多元。</li>
+								<li class="block-item">2019.7 据用户投诉，在2019年7月12日，酷骑单车公布的显示退押金专线3个电话已经全部停机。</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel">
+
+						<span class="background1"><b><i>共享单车行业已到寒冬，烧多少钱也没法取暖 </i></b></span><br>
+						资金链断裂，成了压死酷骑单车的最后一根稻草。曾经的ofo，在行业竞争中，打败了多少共享单车创业公司和中小投资者，如今它也变得苟延残喘。<br>
+						酷骑单车与ofo一样，都面临着押金退不出来的困境。针对酷骑单车的投诉连续不断，涉案金额庞大，高达21亿元。作为受害者之一，以后类似的押金收取形式我们应当慎之又慎。
+					</div>
+				</div>
+				<div class='step' data-step='15'>
+					<div class="panel">
+						<h2 style="text-align: center;font-weight:800">团贷网</h2>
+						<h4 style="text-align: center;font-weight:600">上榜理由：融资榜第一 24.75亿元</h4>
+						<div style="position:relative;">
+							<ul class="timeline">
+								<li class="block-item">2012.7 团贷网上线</li>
+								<li class="block-item">2017.9 团贷网创始人兼CEO唐军成为新三板上市公司光影侠第一大股东和实际控制人。</li>
+								<li class="block-item">2016.3 平台累计交易量近160亿元，平台的投资注册用户超过240万人，为投资人赚取了超5.2亿元的收益。</li>
+								<li class="block-item">2019.3 东莞市公安局发布情况通报，团贷网实际控制人唐某、张某主动向东莞市公安局投案。</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel">
+						团贷网涉嫌非法吸收公众存款已被立案侦查，唐军作为实控人已经投案自首。一场游戏一场梦，一位年纪轻轻、身价上亿的八五后CEO，转眼发生了身份的巨变。
+						<br><br>
+						<span class="background1"><b><i>投资有风险，互联网金融更需谨慎 </i></b></span><br>
+						团贷网的“权威性”——推荐人分析的头头是道、别人投我也投的“从众思想”让很多民众入了“大坑”。高新手标年化收益率，更是让人心动。
+						所以要做投资，一定要深刻反思时时警惕做好风险预警。要甄别不可盲目跟投也不相信空头“承诺”，充分的了解深入的分析后在对其投资，如没办办法分辨，建议规避风险。
+						同时也应该推动互联网金融大数据与征信系统结合，建立更好的社会征信体系。
+					</div>
+
+				</div>
+
+				<div class='step' data-step='16'>
+					<div class="panel">
+						<h2 style="text-align: center;font-weight:800">快播</h2>
+						<h4 style="text-align: center;font-weight:600">上榜理由：IT桔子上香榜排名第一 705柱</h4>
+						<div style="position:relative;">
+							<ul class="timeline">
+								<li class="block-item">2007.12 深圳快播成立</li>
+								<li class="block-item">2009.1 深圳快播获得软银赛富数百万美元A轮投资</li>
+								<li class="block-item">2011 快播成为了全中国市场占有量第一的播放器 </li>
+								</li>
+								<li class="block-item">2016.9 快播公司及主管人员涉嫌传播淫秽物品牟利被审理，快播王欣获刑3年6个月</li>
+								<!-- <li class="block-item">2007.12 深圳快播成立</li> -->
+								<li class="block-item">2018.9 深圳中院裁定快播破产清算,即日生效</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel">
+						快播曾被喻为“宅男的青春”。所以快播在上香榜上排名最高，也是情有可原。
+						当年，王欣在辩护时提出的“技术无罪”论得到了绝大多数网友的认同，但是也并没有改变结局，快播还是败诉了，王欣被判入狱3年6个月。
+						时过境迁，现在的我们都已经承认一个公司有义务对用户的行为负责。正如滴滴的顺风车杀人案件，滴滴也必须站出来挨打。所以快播的倒闭虽然令人惋惜，但有其历史必然性。
+
+					</div>
+
+
+				</div>
+				<div class='step' data-step='17' id="last-child">
+					<div class="blank"></div>
+				</div>
+
+			</article>
+		</section>
+
+		<section id='outro' style="text-align: center;">
+			<!-- <img style="position: fixed;" src="img/ghost.gif"> -->
+			<!-- <div style="height:100vh;background-image: url(img/outro.png);">
+			</div> -->
+			<img style="height:100vh;margin:0 auto" src="img/outro2.png">
+		</section>
+	</main>
+
+	<!-- <div class='debug'></div> -->
+	<script src='https://unpkg.com/d3@5.9.1/dist/d3.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js'></script>
+	<script src='./stickyfill.min.js'></script>
+	<script src='./scrollama.min.js'></script>
+	<script src="https://public.flourish.studio/resources/embed.js"></script>
+	<script>
+
+		// using d3 for convenience
+		var main = d3.select('main')
+		var scrolly = main.select('#scrolly');
+		var figure = scrolly.select('figure');
+		var article = scrolly.select('article');
+		var step = article.selectAll('.step');
+		var subtitle = article.selectAll('.subtitle');
+		var title = figure.selectAll('.title');
+
+		var intro = d3.selectAll('#intro');
+		var outro = d3.selectAll('#outro');
+
+		d3.select('#bar-race').style('width', (window.innerWidth - 14) + 'px')
+		// initialize the scrollama
+		var scroller = scrollama();
+		// generic window resize listener event
+
+		function handleResize() {
+			// 1. update height of step elements
+			var stepH = Math.floor(window.innerHeight * 0.25);
+			// step.style('height', stepH + 'px');
+			step.style('margin-bottom', window.innerHeight + 'px');
+			console.log(step.select('#last-child'))
+			article.select('#last-child').style('margin-bottom', 0);
+			outro.style('min-height', window.innerHeight + 'px');
+			intro.style('min-height', window.innerHeight + 'px');
+			// subtitle.style('margin-bottom', window.innerHeight/1.5 + 'px');
+			var figureHeight = window.innerHeight
+			var figureMarginTop = (window.innerHeight - figureHeight) / 2
+			console.log(figureMarginTop)
+			figure
+				.style('height', figureHeight + 'px')
+				.style('top', figureMarginTop + 'px');
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			// console.log(response)
+			// response = { element, direction, index }
+			// add color to current step only
+			step.classed('is-active', function (d, i) {
+				return i === response.index;
+			})
+			// update graphic based on step
+
+			// $('#figure').append('<div class="flourish-embed" data-src="visualisation/1111069"></div>')
+			// // figure.select('p').text(chartList[response.index]);
+			// figure.select('p').text(response.index + 1);
+			// console.log(d3.select('.flourish-embed').selectAll('circle'))
+			// let embed = d3.select('.flourish-embed')
+
+			// title
+			if (response.index === 4) {
+				$('.title').html('')
+				$('.title').append('<img style="height:40px;width:auto;margin:0 auto;opacity:0.8" src="img/title_1.png">')
+				// title.select('p').text('行业趋势');
+			}
+			else if (response.index > 4 && response.index <= 9) {
+				$('.title').html('')
+				$('.title').append('<img style="height:40px;width:auto;margin:0 auto;opacity:0.8" src="img/title_2.png">')
+			} else if (response.index === 10) {
+				$('.title').html('')
+				$('.title').append('<img style="height:40px;width:auto;margin:0 auto;opacity:0.8" src="img/title_3.png">')
+			} else {
+				$('.title').html('')
+			}
+
+			// change
+			if (response.direction === 'down') {
+				if (response.index >= 0 && response.index <= 3) {
+					$('.bar-race').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('#red-black').css('display', 'block')
+					$('#bangdan').css('display', 'none')
+					if (response.index >= 1) {
+						d3.select('#img_' + (response.index - 1))
+							.style('opacity', 1)
+							.transition()
+							.duration(1000)
+							.style('opacity', 0)
+					}
+				}
+				else if (response.index === 4) {
+					$('#bangdan').css('display', 'none')
+					$('#red-black').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('.bar-race').css('display', 'block')
+					d3.select('.bar-race')
+						.style('opacity', 1)
+					d3.select('.flourish-embed').select('iframe').style('max-width', '550px')
+					d3.select('.flourish-embed').select('iframe').style('width', (window.innerWidth - 14) + 'px')
+					// $('.figure-img').html('')
+					// return
+				}
+				else if (response.index >= 5 && response.index <= 9) {
+					$('#bangdan').css('display', 'none')
+					$('#red-black').css('display', 'none')
+					$('.bar-race').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('#circle-packing').css('display', 'block')
+					if (response.index >= 5) {
+						d3.select('#img_' + (response.index - 1))
+							.style('opacity', 1)
+							.transition()
+							.duration(1000)
+							.style('opacity', 0)
+						// d3.select('#img_5').style('opacity', 0)
+					}
+
+					// $('.figure-img').html('')
+					// $('.figure-img').append('<img id="img_' + (response.index) + '" src="img/img_' + (response.index) + '.png" />')
+
+				} else if (response.index === 10) {
+					$('#bangdan').css('display', 'none')
+					$('#red-black').css('display', 'none')
+					$('#treemap').css('display', 'block')
+					$('.bar-race').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+
+				} else if (response.index >= 11 && response.index <= 16) {
+					$('#bangdan').css('display', 'block')
+					$('#red-black').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('.bar-race').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+
+					if (response.index >= 11) {
+						d3.select('#img_' + (response.index - 1))
+							.style('opacity', 1)
+							.transition()
+							.duration(1000)
+							.style('opacity', 0)
+					}
+				}
+
+				//
+			} else if (response.direction === 'up') {
+				if (response.index >= 0 && response.index <= 3) {
+					$('.bar-race').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('#red-black').css('display', 'block')
+					$('#bangdan').css('display', 'none')
+					if (response.index >= 1) {
+						d3.select('#img_' + (response.index - 1))
+							.style('opacity', 0)
+							.transition()
+							.duration(1000)
+							.style('opacity', 1)
+					}
+				}
+				else if (response.index === 4) {
+					$('#bangdan').css('display', 'none')
+					$('#red-black').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('.bar-race').css('display', 'block')
+					d3.select('.bar-race')
+						.style('opacity', 1)
+					d3.select('.flourish-embed').select('iframe').style('max-width', '550px')
+					d3.select('.flourish-embed').select('iframe').style('width', (window.innerWidth - 14) + 'px')
+					// $('.figure-img').html('')
+					// return
+				}
+				else if (response.index >= 5 && response.index <= 9) {
+					$('#bangdan').css('display', 'none')
+					$('#red-black').css('display', 'none')
+					$('.bar-race').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('#circle-packing').css('display', 'block')
+					if (response.index === 5) {
+						d3.select('#img_' + (response.index))
+							.style('opacity', 0)
+							.transition()
+							.duration(1000)
+							.style('opacity', 1)
+					}
+					if (response.index >= 6) {
+						d3.select('#img_' + (response.index - 1))
+							.style('opacity', 0)
+							.transition()
+							.duration(1000)
+							.style('opacity', 1)
+						d3.select('#img_5').style('opacity', 0)
+					}
+
+					// $('.figure-img').html('')
+					// $('.figure-img').append('<img id="img_' + (response.index) + '" src="img/img_' + (response.index) + '.png" />')
+
+				} else if (response.index === 10) {
+					$('#bangdan').css('display', 'none')
+					$('#red-black').css('display', 'none')
+					$('#treemap').css('display', 'block')
+					$('.bar-race').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+					$('#img_11').css('opacity', 1);
+
+				} else if (response.index >= 11 && response.index <= 16) {
+					$('#bangdan').css('display', 'block')
+					$('#red-black').css('display', 'none')
+					$('#treemap').css('display', 'none')
+					$('.bar-race').css('display', 'none')
+					$('#circle-packing').css('display', 'none')
+
+					if (response.index >= 11) {
+						d3.select('#img_' + (response.index - 1))
+							.style('opacity', 0)
+							.transition()
+							.duration(1000)
+							.style('opacity', 1)
+					}
+				}
+			}
+
+			// if (response.index === 4 && response.direction === 'down') // diyige circle
+			// {
+			// 	d3.select('.bar-race')
+			// 		.style('opacity', 0)
+
+			// 	$('.bar-race').css('display', 'none')
+			// 	$('.figure-img').html('')
+			// 	$('.figure-img').append('<img id="img_' + (response.index) + '" src="img/img_' + (response.index) + '.png" />')
+
+			// } else {
+			// 	$('.bar-race').css('display', 'none')
+			// 	// $('.figure-img').html('')
+			// 	d3.select('#img_' + (response.index - 1)).transition().duration(300).style('opacity', 0.8)
+
+			// 	setTimeout(function countSecond() {
+			// 		$('.figure-img').html('')
+			// 		$('.figure-img').append('<img style="opacity:0.8" id="img_' + (response.index) + '" src="img/img_' + (response.index) + '.png" />')
+			// 		d3.select('#img_' + (response.index)).transition().duration(300).style('opacity', 1)
+			// 	}, 300)
+			// 	// setTimeout(function changeState() {
+			// 	// 	$('.figure-img').html('')
+			// 	// 	$('.figure-img').append('<img id="img_' + (response.index) + '" src="img/img_' + (response.index) + '.png" />')
+			// 	// }, 2000);
+
+			// }
+
+			// 给要全屏的图片加100vh
+			$('#img_0').css('height', '100vh')
+			$('#img_1').css('height', '100vh')
+			$('#img_2').css('height', '100vh')
+			$('#img_3').css('height', '100vh')
+
+		}
+
+		function setupStickyfill() {
+			d3.selectAll('.sticky').each(function () {
+				Stickyfill.add(this);
+			});
+		}
+		function init() {
+			setupStickyfill();
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+			// 2. setup the scroller passing options
+			// 		this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+				step: '#scrolly article .step',
+				offset: 0.99,
+				debug: false,
+			})
+				.onStepEnter(handleStepEnter)
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+		}
+		// kick things off
+		init();
+	</script>
+
+	<script src="https://public.flourish.studio/resources/embed.js"></script>
+</body>
+
+</html>
