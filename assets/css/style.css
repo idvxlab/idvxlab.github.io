@@ -175,6 +175,7 @@ div{overflow:hidden}
 .footer_menu ul li a:hover{}
 .copyright_text{line-height:17px; text-align:center}
 
+/* New addition */
 .sub_menu_area{overflow:visible; background:#fae5e5; min-height:36px}
 .sub_menu_area ul{margin:0; padding:0; list-style:none}
 .sub_menu_area ul li{float:left; position:relative}
@@ -194,3 +195,50 @@ div{overflow:hidden}
 .sub_menu_area ul li ul li ul li a{font-family:arial; font-weight:bold}
 
 .projects_div{line-height: 18px; margin-bottom: 40px;}
+
+.project_publication_content{
+	width:100%;
+	margin-bottom: 40px;
+}
+
+.project_publication_content img{
+	width:140px;
+	height:90px;
+	padding:1px;
+    border:1px solid #021a40;
+}
+.project_publication_content h3{
+	color:#000;
+	font-weight:800;
+	margin-left: 150px;
+	margin-top: -130px;
+}
+.project_publication_content p{
+	color:#201d1e;
+	margin-left: 150px;
+	margin-top: -75px;
+}
+.project_publication_content a{
+	color:blue;
+}
+.project_publication_content a:hover{
+	color:#CF0000;
+}
+
+.project_single_left_coloum{
+	margin-left:16px;
+	width:302px;
+	height:102px;
+}
+.project_single_left_coloum a{
+	color:blue;
+}
+.project_single_left_coloum a:hover{
+	color:#CF0000;
+}
+
+.video_single_left_coloum{
+	margin-left:16px;
+	width:302px;
+	height:220px;
+}
