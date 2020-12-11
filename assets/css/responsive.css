@@ -3,7 +3,9 @@
 .center{width:730px; padding:10px}
 #selectnav1{display:none}
 #selectnav2{display:none}
+#selectnav3{display:none}
 #nav{display:block}
+#nav_add{display: block}
 #f_menu{display:block}
 .top_menu{margin-left:139px; margin-top:10px}
 .main_menu_area ul li a{font-size:11px; padding:18px 14.1px}
@@ -27,8 +29,10 @@
 @media only screen and (max-width: 767px) {
 .center{width:290px; padding:5px}
 #nav{display:none}
+#nav_add{display: none}
 #f_menu{display:none}
-#selectnav1, #selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav1,#selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav3{background:none repeat scroll 0 0 #fae5e5; border:medium none; color:#cd0303; display:block; font-family:bebasregular; font-size:15px; height:30px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
 .main_menu_area{min-height:45px}
 .logo{float:none; margin:15px auto 0px; width:250px}
 .top_menu{float:none; margin:15px auto 10px; width:330px}
@@ -56,8 +60,10 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .center{width:440px; padding:5px}
 #nav{display:none}
+#nav_add{display: none}
 #f_menu{display:none}
-#selectnav1, #selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav1,#selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav3{background:none repeat scroll 0 0 #fae5e5; border:medium none; color:#cd0303; display:block; font-family:bebasregular; font-size:15px; height:30px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
 .main_menu_area{min-height:45px}
 .logo{float:none; margin:15px auto 0px; width:250px}
 .top_menu{float:none; margin:15px auto 10px; width:330px}
@@ -74,3 +80,4 @@
 .footer_top_area{padding:12px 0; width:430px}
 .inner_footer_top{width:350px}
 }
+
