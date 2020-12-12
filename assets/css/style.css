@@ -238,14 +238,33 @@ div{overflow:hidden}
 .project_single_left_coloum a:hover{
 	color:#CF0000;
 }
-
+.video_first_single_left_coloum{
+	margin-left:0px;
+	width:302px;
+	height:220px;
+}
 .video_single_left_coloum{
 	margin-left:16px;
 	width:302px;
 	height:220px;
 }
-
+.participants_single_left_coloum{
+	margin-left:16px;
+	width:143px;
+	height:270px;
+}
+.participants_first_single_left_coloum{
+	margin-left:0px;
+	width:143px;
+	height:270px;
+}
 .project_title{
+	width: 115px; 
+	background: #cd0303; 
+	float: left;
+}
+
+.project_main_title{
 	color:#fff;
 	margin-bottom: 0px;
 	margin-left: 4px;

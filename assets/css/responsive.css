@@ -22,6 +22,15 @@
 .footer_top_area{width:710px}
 .inner_footer_top{width:530px}
 .footer_menu ul li a{padding:0 12px}
+/* for preoject page */
+.sub_menu_area ul li a{font-size:11px; padding:18px 14.1px}
+.project_single_left_coloum{margin-left:0px; width:280px; height:150px;}
+.video_single_left_coloum{margin-left:3px; width:280px; height:230px;}
+.video_first_single_left_coloum{margin-left:3px; width:280px; height:230px;}
+.participants_single_left_coloum{margin-left:3px;}
+.participants_first_single_left_coloum{margin-left:3px;}
+
+
 }
 
 /*Mobile Layout: 320px.*/
@@ -53,6 +62,16 @@
 .single_left_coloum_wrapper .title{margin-left:3px}
 .title{font-size:15px}
 .single_left_coloum{margin-left:3px}
+/* for preoject page */
+.sub_menu_area{min-height:35px}
+.sub_title{font-size: 15px}
+.project_single_left_coloum{margin-left:0px; width:280px; height:150px;}
+.video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
+.video_first_single_left_coloum{margin-left:0px; width:280px; height:230px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:220px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:220px;}
+.project_title{width: 86px;}
+.project_sub_title{font-size: 6px;line-height: 14px;}
 }
 
 /*Wide Mobile Layout: 480px.*/
@@ -79,5 +98,16 @@
 .sidebar{float:none; margin:0 auto}
 .footer_top_area{padding:12px 0; width:430px}
 .inner_footer_top{width:350px}
+/* for preoject page */
+.sub_menu_area{min-height:35px}
+.sub_title{font-size: 15px}
+.project_single_left_coloum{margin-left:0px; width:280px; height:150px;}
+.video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:220px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:220px;}
+.project_title{width: 86px;}
+.project_sub_title{font-size: 6px;line-height: 14px;}
+.project_introduction{margin-top: 8px;}
+
 }
 
