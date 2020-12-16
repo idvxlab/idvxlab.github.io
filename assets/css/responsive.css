@@ -3,7 +3,9 @@
 .center{width:730px; padding:10px}
 #selectnav1{display:none}
 #selectnav2{display:none}
+#selectnav3{display:none}
 #nav{display:block}
+#nav_add{display: block}
 #f_menu{display:block}
 .top_menu{margin-left:139px; margin-top:10px}
 .main_menu_area ul li a{font-size:11px; padding:18px 14.1px}
@@ -20,6 +22,15 @@
 .footer_top_area{width:710px}
 .inner_footer_top{width:530px}
 .footer_menu ul li a{padding:0 12px}
+/* for preoject page */
+.sub_menu_area ul li a{font-size:11px; padding:18px 14.1px}
+.project_single_left_coloum{margin-left:0px; width:280px; height:90px;}
+.video_single_left_coloum{margin-left:3px; width:280px; height:230px;}
+.video_first_single_left_coloum{margin-left:3px; width:280px; height:230px;}
+.participants_single_left_coloum{margin-left:3px;}
+.participants_first_single_left_coloum{margin-left:3px;}
+
+
 }
 
 /*Mobile Layout: 320px.*/
@@ -27,8 +38,10 @@
 @media only screen and (max-width: 767px) {
 .center{width:290px; padding:5px}
 #nav{display:none}
+#nav_add{display: none}
 #f_menu{display:none}
-#selectnav1, #selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav1,#selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav3{background:none repeat scroll 0 0 #fae5e5; border:medium none; color:#cd0303; display:block; font-family:bebasregular; font-size:15px; height:30px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
 .main_menu_area{min-height:45px}
 .logo{float:none; margin:15px auto 0px; width:250px}
 .top_menu{float:none; margin:15px auto 10px; width:330px}
@@ -49,6 +62,18 @@
 .single_left_coloum_wrapper .title{margin-left:3px}
 .title{font-size:15px}
 .single_left_coloum{margin-left:3px}
+/* for preoject page */
+.sub_menu_area{min-height:35px}
+.sub_title{font-size: 15px;overflow:visible;}
+.project_single_left_coloum{margin-left:0px; width:280px; height:80px;}
+.video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
+.video_first_single_left_coloum{margin-left:0px; width:280px; height:230px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:160px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:160px;}
+.project_title{width: 86px;height: 45px;}
+.project_sub_title{margin-top: 6px; font-size: 1px;line-height: 13px;}
+.project_main_title{margin-top: 10px;}
+.projects_div{margin-bottom: 20px;}
 }
 
 /*Wide Mobile Layout: 480px.*/
@@ -56,8 +81,10 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .center{width:440px; padding:5px}
 #nav{display:none}
+#nav_add{display: none}
 #f_menu{display:none}
-#selectnav1, #selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav1,#selectnav2{background:none repeat scroll 0 0 #000; border:medium none; color:#FFF; display:block; font-family:bebasregular; font-size:19px; height:40px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
+#selectnav3{background:none repeat scroll 0 0 #fae5e5; border:medium none; color:#cd0303; display:block; font-family:bebasregular; font-size:15px; height:30px; margin:10px auto 0; overflow:hidden; padding-top:11px; text-align:center; width:100%}
 .main_menu_area{min-height:45px}
 .logo{float:none; margin:15px auto 0px; width:250px}
 .top_menu{float:none; margin:15px auto 10px; width:330px}
@@ -73,4 +100,16 @@
 .sidebar{float:none; margin:0 auto}
 .footer_top_area{padding:12px 0; width:430px}
 .inner_footer_top{width:350px}
+/* for preoject page */
+.sub_menu_area{min-height:35px}
+.sub_title{font-size: 15px;overflow:hidden;}
+.project_single_left_coloum{margin-left:0px; width:280px; height:100px;}
+.video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:180px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:180px;}
+.project_title{width: 86px;height: 45.5px;}
+.project_sub_title{margin-top: 1px; font-size: 6px;line-height: 14px;}
+.project_introduction{margin-top: 8px;}
+
 }
+
