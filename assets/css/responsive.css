@@ -71,7 +71,7 @@
 .participants_single_left_coloum{margin-left:3px; width:90px; height:180px;}
 .participants_first_single_left_coloum{margin-left:3px; width:90px; height:180px;}
 .project_title{width: 86px;height: 45px;}
-.project_sub_title{margin-top: 6px; font-size: 1px;line-height: 13px;}
+.project_sub_title{margin-top: 6px; font-size: 12px;line-height: 13px;}
 .project_main_title{margin-top: 10px;}
 .projects_div{margin-bottom: 20px;}
 }
@@ -108,7 +108,7 @@
 .participants_single_left_coloum{margin-left:3px; width:90px; height:180px;}
 .participants_first_single_left_coloum{margin-left:3px; width:90px; height:180px;}
 .project_title{width: 86px;height: 45.5px;}
-.project_sub_title{margin-top: 1px; font-size: 6px;line-height: 14px;}
+.project_sub_title{margin-top: 1px; font-size: 12px;line-height: 14px;}
 .project_introduction{margin-top: 8px;}
 
 }
