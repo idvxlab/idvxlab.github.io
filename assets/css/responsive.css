@@ -24,7 +24,7 @@
 .footer_menu ul li a{padding:0 12px}
 /* for preoject page */
 .sub_menu_area ul li a{font-size:11px; padding:18px 14.1px}
-.project_single_left_coloum{margin-left:0px; width:280px; height:150px;}
+.project_single_left_coloum{margin-left:0px; width:280px; height:90px;}
 .video_single_left_coloum{margin-left:3px; width:280px; height:230px;}
 .video_first_single_left_coloum{margin-left:3px; width:280px; height:230px;}
 .participants_single_left_coloum{margin-left:3px;}
@@ -64,14 +64,16 @@
 .single_left_coloum{margin-left:3px}
 /* for preoject page */
 .sub_menu_area{min-height:35px}
-.sub_title{font-size: 15px}
-.project_single_left_coloum{margin-left:0px; width:280px; height:150px;}
+.sub_title{font-size: 15px;overflow:visible;}
+.project_single_left_coloum{margin-left:0px; width:280px; height:80px;}
 .video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
 .video_first_single_left_coloum{margin-left:0px; width:280px; height:230px;}
-.participants_single_left_coloum{margin-left:3px; width:90px; height:220px;}
-.participants_first_single_left_coloum{margin-left:3px; width:90px; height:220px;}
-.project_title{width: 86px;}
-.project_sub_title{font-size: 6px;line-height: 14px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:160px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:160px;}
+.project_title{width: 86px;height: 45px;}
+.project_sub_title{margin-top: 6px; font-size: 1px;line-height: 13px;}
+.project_main_title{margin-top: 10px;}
+.projects_div{margin-bottom: 20px;}
 }
 
 /*Wide Mobile Layout: 480px.*/
@@ -100,13 +102,13 @@
 .inner_footer_top{width:350px}
 /* for preoject page */
 .sub_menu_area{min-height:35px}
-.sub_title{font-size: 15px}
-.project_single_left_coloum{margin-left:0px; width:280px; height:150px;}
+.sub_title{font-size: 15px;overflow:hidden;}
+.project_single_left_coloum{margin-left:0px; width:280px; height:100px;}
 .video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
-.participants_single_left_coloum{margin-left:3px; width:90px; height:220px;}
-.participants_first_single_left_coloum{margin-left:3px; width:90px; height:220px;}
-.project_title{width: 86px;}
-.project_sub_title{font-size: 6px;line-height: 14px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:180px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:180px;}
+.project_title{width: 86px;height: 45.5px;}
+.project_sub_title{margin-top: 1px; font-size: 6px;line-height: 14px;}
 .project_introduction{margin-top: 8px;}
 
 }
