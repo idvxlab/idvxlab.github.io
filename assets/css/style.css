@@ -121,7 +121,7 @@ div{overflow:hidden}
 .single_left_coloum_wrapper{position:relative; margin-left:-10px; margin-bottom:30px}
 .single_left_coloum_wrapper .title{margin-left:10px}
 .title{border-bottom:4px solid #CF0000; font-family:'bebasregular'; font-size:20px; word-spacing:2px}
-.sub_title {border-bottom:4px solid #CF0000; font-family:'bebasregular'; font-size:20px; word-spacing:2px;overflow: hidden;}
+.sub_title {border-bottom:4px solid #CF0000; font-family:'bebasregular'; font-size:20px; word-spacing:2px;}
 .more{background:url("images/plus.png") no-repeat scroll 57px 9px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:4px 20px; position:absolute; right:0; text-transform:uppercase; top:10px}
 .popular_more{background:url("images/plus.png") no-repeat scroll 57px 12px #CF0000; color:#FFF; display:block; font-size:10px; font-weight:bold; padding:7px 20px; text-transform:uppercase; width:74px; margin-top:10px}
 .single_left_coloum{margin-left:10px; width:143px; height:270px;}
@@ -251,12 +251,12 @@ div{overflow:hidden}
 .participants_single_left_coloum{
 	margin-left:16px;
 	width:143px;
-	height:220px;
+	height:240px;
 }
 .participants_first_single_left_coloum{
 	margin-left:0px;
 	width:143px;
-	height:220px;
+	height:240px;
 }
 .project_title{
 	width: 115px; 
@@ -276,4 +276,35 @@ div{overflow:hidden}
 	margin-top: 6px;
 	margin-left: 4px;
 	font-size: 16px;
+}
+
+.square_publication_content{
+	width:100%;
+	height:120px;
+	margin-bottom: 40px;
+}
+
+.square_publication_content img{
+	width:120px;
+	height:120px;
+	padding:1px;
+    border:1px solid #021a40;
+}
+.square_publication_content h3{
+	color:#000;
+	font-weight:800;
+	margin-left: 150px;
+	margin-top: -130px;
+}
+.square_publication_content p{
+	color:#201d1e;
+	margin-left: 150px;
+	margin-top: -115px;
+}
+.square_publication_content a{
+	color:blue;
+}
+.square_publication_content a:hover{
+	color:#CF0000;
+
 }

@@ -74,6 +74,11 @@
 .project_sub_title{margin-top: 6px; font-size: 12px;line-height: 13px;}
 .project_main_title{margin-top: 10px;}
 .projects_div{margin-bottom: 20px;}
+.square_publication_content{
+	width:100%;
+	height:150px;
+	margin-bottom: 40px;
+}
 }
 
 /*Wide Mobile Layout: 480px.*/
@@ -107,7 +112,7 @@
 .video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
 .participants_single_left_coloum{margin-left:3px; width:90px; height:180px;}
 .participants_first_single_left_coloum{margin-left:3px; width:90px; height:180px;}
-.project_title{width: 86px;height: 45.5px;}
+.project_title{width: 86px;height: 38.5px;}
 .project_sub_title{margin-top: 1px; font-size: 12px;line-height: 14px;}
 .project_introduction{margin-top: 8px;}
 
