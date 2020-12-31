@@ -65,13 +65,14 @@
 /* for preoject page */
 .sub_menu_area{min-height:35px}
 .sub_title{font-size: 15px;overflow:visible;}
-.project_single_left_coloum{margin-left:0px; width:280px; height:80px;}
+.project_single_left_coloum{margin-left:0px; width:280px; height:84px;}
 .video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
 .video_first_single_left_coloum{margin-left:0px; width:280px; height:230px;}
-.participants_single_left_coloum{margin-left:3px; width:90px; height:180px;}
-.participants_first_single_left_coloum{margin-left:3px; width:90px; height:180px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:220px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:220px;}
 .project_title{width: 86px;height: 45px;}
 .project_sub_title{margin-top: 6px; font-size: 12px;line-height: 13px;}
+.calliope_sub_title{margin-top: 8px; font-size: 12px;line-height: 18px;}
 .project_main_title{margin-top: 10px;}
 .projects_div{margin-bottom: 20px;}
 .square_publication_content{
@@ -79,6 +80,8 @@
 	height:150px;
 	margin-bottom: 40px;
 }
+.project_title_health{width: 138px;height: 45px;}
+.project_introduction_health p {margin-top: 8px;font-size: 12px;line-height: 18px;}
 }
 
 /*Wide Mobile Layout: 480px.*/
@@ -110,11 +113,13 @@
 .sub_title{font-size: 15px;overflow:hidden;}
 .project_single_left_coloum{margin-left:0px; width:280px; height:100px;}
 .video_single_left_coloum{margin-left:0px; width:280px; height:230px;}
-.participants_single_left_coloum{margin-left:3px; width:90px; height:180px;}
-.participants_first_single_left_coloum{margin-left:3px; width:90px; height:180px;}
+.participants_single_left_coloum{margin-left:3px; width:90px; height:220px;}
+.participants_first_single_left_coloum{margin-left:3px; width:90px; height:220px;}
 .project_title{width: 86px;height: 38.5px;}
 .project_sub_title{margin-top: 1px; font-size: 12px;line-height: 14px;}
 .project_introduction{margin-top: 8px;}
+.project_introduction_health{margin-top: 7px;}
+.project_title_health{width: 138px;}
 
 }
 

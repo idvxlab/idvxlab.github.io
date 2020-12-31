@@ -230,7 +230,7 @@ div{overflow:hidden}
 .project_single_left_coloum{
 	margin-left:16px;
 	width:302px;
-	height:67px;
+	height:84px;
 }
 .project_single_left_coloum a{
 	color:blue;
@@ -260,6 +260,12 @@ div{overflow:hidden}
 }
 .project_title{
 	width: 115px; 
+	height: 38px;
+	background: #cd0303; 
+	float: left;
+}
+.project_title_health{
+	width: 180px; 
 	height: 38px;
 	background: #cd0303; 
 	float: left;
@@ -307,4 +313,11 @@ div{overflow:hidden}
 .square_publication_content a:hover{
 	color:#CF0000;
 
+}
+
+.calliope_sub_title{
+	margin-bottom: 0px;
+	margin-top: 6px;
+	margin-left: 4px;
+	font-size: 16px;
 }
