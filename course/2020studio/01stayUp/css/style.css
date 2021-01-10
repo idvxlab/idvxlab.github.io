@@ -1,0 +1,2182 @@
+
+/* 动画效果 */
+.gelatine {
+    animation: gelatine 3s infinite;
+}
+@keyframes gelatine {
+    from, to {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+.spin {
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.elastic-spin {
+    animation: elastic-spin 1s infinite ease;
+}
+@keyframes elastic-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+.pulse {
+    animation: pulse 1s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1.0);
+    }
+}
+
+.pulse1 {
+    animation: pulse1 1s infinite ease-in-out alternate;
+}
+@keyframes pulse1 {
+    from {
+        opacity: 0.8;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.0);
+    }
+}
+
+.flash {
+    animation: flash 500ms ease infinite alternate;
+}
+@keyframes flash {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.hithere {
+    animation: hithere 1s ease infinite;
+}
+@keyframes hithere {
+    30% {
+        transform: scale(1.2);
+    }
+    40%,
+    60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.grow {
+    animation: grow 2s ease infinite;
+}
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.fade-in {
+    animation: fade-in 2.5s linear ;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-circle {
+    animation: fade-in-circle 1.5s linear infinite;
+}
+@keyframes fade-in-circle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in1 {
+    animation: fade-in1 5s linear ;
+}
+@keyframes fade-in1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
+.fade-out {
+    animation: fade-out 2s linear infinite;
+}
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.bounce {
+    animation: bounce 2s ease infinite;
+}
+@keyframes bounce {
+    70% {
+        transform: translateY(0%);
+    }
+    80% {
+        transform: translateY(-15%);
+    }
+    90% {
+        transform: translateY(0%);
+    }
+    95% {
+        transform: translateY(-7%);
+    }
+    97% {
+        transform: translateY(0%);
+    }
+    99% {
+        transform: translateY(-3%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.bounce2 {
+    animation: bounce2 2s ease infinite;
+}
+@keyframes bounce2 {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+.shake {
+    animation: shake 2s ease infinite;
+}
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+.flip {
+    backface-visibility: visible !important;
+    animation: flip 2s ease infinite;
+}
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(0);
+        animation-timing-function: ease-out;
+    }
+    40% {
+        transform: perspective(400px) translateZ(150px) rotateY(170deg);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+        animation-timing-function: ease-in;
+    }
+    80% {
+        transform: perspective(400px) rotateY(360deg) scale(.95);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: perspective(400px) scale(1);
+        animation-timing-function: ease-in;
+    }
+}
+.swing {
+    transform-origin: top center;
+    animation: swing 2s ease infinite;
+}
+@keyframes swing {
+    20% {
+        transform: rotate(0.5deg);
+    }
+    40% {
+        transform: rotate(-0.5deg);
+    }
+    60% {
+        transform: rotate(0.5deg);
+    }
+    80% {
+        transform: rotate(-0.5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+.wobble {
+    animation: wobble 2s ease infinite;
+}
+@keyframes wobble {
+    0% {
+        transform: translateX(0%);
+    }
+    15% {
+        transform: translateX(-25%) rotate(-5deg);
+    }
+    30% {
+        transform: translateX(20%) rotate(3deg);
+    }
+    45% {
+        transform: translateX(-15%) rotate(-3deg);
+    }
+    60% {
+        transform: translateX(10%) rotate(2deg);
+    }
+    75% {
+        transform: translateX(-5%) rotate(-1deg);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.fade-in-down {
+    animation: fade-in-down 2s ease ;
+}
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in-left {
+    animation: fade-in-left 2s ease ;
+}
+@keyframes fade-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    animation: fade-in-right 2s ease ;
+}
+@keyframes fade-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.fade-out-down {
+    animation: fade-out-down 2s ease infinite;
+}
+@keyframes fade-out-down {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+.fade-out-right {
+    animation: fade-out-right 2s ease infinite;
+}
+@keyframes fade-out-right {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+}
+.bounce-in {
+    animation: bounce-in 2s ease ;
+}
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.bounce-in-right {
+    animation: bounce-in-right 2s ease ;
+}
+@keyframes bounce-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.bounce-in-left {
+    animation: bounce-in-left 2s ease ;
+}
+@keyframes bounce-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.bounce-in-up {
+    animation: bounce-in-up 2s ease ;
+}
+@keyframes bounce-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    80% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.bounce-out {
+    animation: bounce-out 2s ease;
+}
+@keyframes bounce-out {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(.95);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+}
+.bounce-out-down {
+    animation: bounce-out-down 2s ease infinite;
+}
+@keyframes bounce-out-down {
+    0% {
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+.rotate-in-down-left {
+    animation: rotate-in-down-left 2s ease ;
+}
+@keyframes rotate-in-down-left {
+    0% {
+        transform-origin: left bottom;
+        transform: rotate(-90deg);
+        opacity: 0;
+    }
+    100% {
+        transform-origin: left bottom;
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+.rotate-in-down-right {
+    animation: rotate-in-down-right 2.5s ease ;
+}
+@keyframes rotate-in-down-right {
+    0% {
+        transform-origin: right bottom;
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform-origin: right bottom;
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+.rotate-in-up-left {
+    animation: rotate-in-up-left 2s ease infinite;
+}
+@keyframes rotate-in-up-left {
+    0% {
+        transform-origin: left bottom;
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+    100% {
+        transform-origin: left bottom;
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
+.hinge {
+    animation: hinge 2s ease infinite;
+}
+@keyframes hinge {
+    0% {
+        transform: rotate(0);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    20%,
+    60% {
+        transform: rotate(80deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    40% {
+        transform: rotate(60deg);
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    80% {
+        transform: rotate(60deg) translateY(0);
+        opacity: 1;
+        transform-origin: top left;
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: translateY(700px);
+        opacity: 0;
+    }
+}
+.roll-in {
+    animation: roll-in 2s ease infinite;
+}
+@keyframes roll-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%) rotate(-120deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+}
+.roll-out {
+    animation: roll-out 2s ease infinite;
+}
+@keyframes roll-out {
+    0% {
+        opacity: 1;
+        transform: translateX(0px) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%) rotate(120deg);
+    }
+}
+
+/* html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    width:100%;
+    height:100%;
+    overflow: hidden；
+   
+}
+
+ul {
+    list-style: none;
+}
+li,
+ul {
+    margin: 0;
+    padding: 0;
+} */
+
+/* body {
+    background-color: rgb(97, 170, 238);
+    color: #686868;
+    font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "黑体", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 19.6px;
+}
+
+body,
+html {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-list {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    list-style: none;
+}
+.content-li {
+    list-style: none;
+    width: 100%;
+    position: relative;
+}
+
+.content-li:first-child {
+    background-color: #f6c35f;
+}
+.content-li:nth-child(2) {
+    background-color: #f6cd5f;
+    -webkit-transition: background-color 1s linear;
+    transition: background-color 1s linear;
+}
+
+
+.page {
+    position: absolute;
+    width: 320px;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    height: 300px;
+    margin-top: -118px;
+}
+.part {
+    position: absolute;
+} */
+
+/* #canvas-overlay {
+    position: relative;
+    z-index: 98;
+    opacity: 0.85;
+}
+#canvas-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    opacity: 0.05;
+}
+
+.loading-wrap{
+    background-image: url(../img/test.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+} */
+
+
+/* * {
+    font-size: 20px;
+    font-family: 'Consolas', monospace;
+    color: #00aa00;
+    overflow: hidden;
+}
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    background: linear-gradient(45deg, #010, #333, #010);
+}
+section {
+    padding: 1em;
+}
+p {
+    font-size: 14px;
+    opacity: 1;
+} */
+
+/* * {
+    font-size: 20px;
+    font-family: 'Consolas', monospace;
+    color: #00aa00;
+    overflow: hidden;
+}
+.bubbletext {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    background: linear-gradient(45deg, #010, #333, #010);
+}
+
+.cursor-box {
+    width: 10em;
+    height: 10em;
+    position: absolute;
+    box-shadow: 0 0 0 10000px black;
+    z-index: 10;
+    border-radius: 50%;
+}
+.cursor-box .cursor-box-child {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    border-radius: 50%;
+    border: 0;
+    box-shadow: inset 0px 0px 200px 75px black;
+} */
+
+/* svg {
+    display: block;
+    background-size: cover
+  } */
+
+/*   
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    padding: 0;
+    position: relative;
+} */
+
+
+/* #loading{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: black;
+    font-size: 0;
+} */
+
+/*eye ball*/
+.span{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: black;
+    
+}
+.loading-text{
+    font-size: 40px;
+    color: white;
+    /* position: absolute; */
+    text-align: center;
+    font-family: monospace;
+  
+}
+.loading-text1{
+    font-size: 15px;
+    color: white;
+    position: absolute;
+    bottom: 30%;
+    left:28%;
+    text-align: center;
+    font-family: sans-serif;
+    
+  
+}
+.eye{
+    width: 40px;
+    height: 40px;
+    background-color:white;
+    border-radius: 50%;
+    box-shadow: 75px 0px 0px 0px white;
+    position: relative;
+    margin: 30% 31%;
+    padding-top: 100px;
+}
+
+.eye:after{
+    background-color: #09090c;
+    width: 20px;
+    height: 20px;
+    box-shadow: 75px 0px 0px 0px #09090c;
+    border-radius: 50%;
+    left: 20px;
+    top: 55px;
+    padding-top: 10px;
+    position: absolute;
+    content: "";
+    -webkit-animation: eyeball 1s linear infinite alternate;
+       -moz-animation: eyeball 1s linear infinite alternate;
+            animation: eyeball 1s linear infinite alternate;
+}
+@-webkit-keyframes eyeball{
+    0%{left: 20px;}
+    100%{left: 1px;}
+}
+@-moz-keyframes eyeball{
+    0%{left: 20px;}
+    100%{left: 1px;}
+}
+@keyframes eyeball{
+    0%{left: 20px;}
+    100%{left: 1px;}
+}
+
+
+/* 
+#loading::after{
+    content: '';
+    background: url(../img/downarrow.png) no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform:  translateX(-50%) translateY(-50%);
+} */
+
+/* ------Music------------ */
+#musicplayer{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+#musicplayer button{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+}
+#musicon{
+    background: url(../img/music1.png);
+    background-size: cover;
+}
+#musicoff{
+    background: url(../img/musicoff.png);
+    background-size: cover;
+}
+.hidden{
+    display: none;
+}
+/* --------下滑箭头------------- */
+.sec_down {
+  position: absolute;
+  bottom: 0%;
+  left:45%;
+  background-image: url(../img/arrow-up-bold.png)  ;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  animation: fadeInDown 2s infinite;
+    /* position: relative; */
+  display: block;
+}
+
+.sec_down_sec1{
+    position: absolute;
+    bottom: 0%;
+    left:45%;
+    background-image: url(../img/arrow-up-bold_1.png)  ;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    animation: fadeInDown 2s infinite;
+      /* position: relative; */
+    display: block;
+  }
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 30%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* 提示手指 */
+#tiptip{
+    position: absolute;
+    top: 20%;
+    left:60%;
+    background-image: url(../img/button/tiptip.png)  ;
+    background-size: cover;
+    width: 70px;
+    height: 77px;
+    animation: huangdong 5s ease;
+    animation-fill-mode:forwards;
+    display: block;
+}
+
+@keyframes huangdong {
+   
+    0% {
+        transform: translate3d(50%,30%,0) scale(0.9);
+        opacity: 0;
+    }
+   
+    25% {
+        transform: translate3d(-30%,-30%,0) scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: translate3d(50%,30%,0) scale(0.9);
+        opacity: 1;
+    }
+   
+    75% {
+        transform: translate3d(-30%,-30%,0) scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(-30%,-30%,0) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* 第一屏 */
+.scene1_light_shanshuo{
+    width: 336px;
+    height: 157px;
+    left: 2%;
+    top: 5%;
+    position: absolute;
+    background: url(../img/scene1/scene1_light_shanshuo.png) no-repeat;
+    background-size: cover;
+    display: block;
+}
+#scene1_biaoti{
+    width: 360px;
+    height: 216px;
+    left: 0%;
+    top: 3%;
+    position: absolute;
+    background: url(../img/scene1/scene1_biaoti.png) no-repeat;
+    background-size: cover;
+    display: block;
+}
+/* 第二屏 小人入场  */
+.scene2_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene2/scene2_pic1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene2_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene2/scene2_pic2.gif) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene2_qipao1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene2/scene2_qipao1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene2_qipao2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene2/scene2_qipao2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.sec2_clock{
+  /* width:100%;
+  height:100%;
+  bottom:0%;
+  left:0%;
+  position: absolute;
+  background: url(../img/sec2_time.gif) ;
+  background-size: 100% 100%;   */
+  width:70%;
+  height:70%;
+  top:25%;
+  left:-20%;
+  position: absolute;
+  background: url(../img/sec2_time.gif) center no-repeat;
+  background-size: 100% 100%;  
+}
+
+.sec2_tooltip{
+    /* top:15%;
+    background: url(../img/sec2_tooltip1.png) no-repeat center;
+    background-size: cover;
+    width: 350px;
+    height: 148px; */
+    width:120%;
+    height: 100%;
+    position: absolute;
+    bottom: -38%;
+    left:50%;
+    transform:translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    /* transform: translateY(75%) translateX(-50%); */
+    /* -webkit-transform: translateY(75%) translateX(-50%); */
+    background: url(../img/scene2/sec2_tooltip1.png) center no-repeat;
+    /* width:120%;
+    height: 100%;
+    position: absolute;
+    bottom: 0%;
+    left:63%;
+    transform: translateY(75%) translateX(-50%);
+    -webkit-transform: translateY(75%) translateX(-50%);
+    background: url(../img/sec2_tooltip1.png) no-repeat; */
+    /* background-size: cover; */
+  
+}
+
+
+ .sec2_text{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    bottom:-38%;
+    left:50%;
+    transform:translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    /* transform: translateY(75%) translateX(-50%);
+    -webkit-transform: translateY(75%) translateX(-50%); */
+    background: url(../img/scene2/sec2_word.png) center no-repeat;
+    /* background-size: cover; */
+   
+} 
+
+/* .sec2_circlel{
+    width:100%;
+    height: 100%;
+    bottom:-10.5%;
+    left:-2.5%;
+    position: absolute;
+    background: url(../img/circle1.png) no-repeat ; 
+    background-size: cover;   
+}
+
+.sec2_circles{
+    width:100%;
+    height: 100%;
+    bottom:-10.5%;
+    left:-2.5%;
+    position: absolute;
+    background: url(../img/circle1s.png) no-repeat ; 
+    background-size: cover;   
+} */
+
+#sec2_button{
+    width:60px;
+    height:60px;
+    position: absolute;
+    left: 25%;
+    top: 68%;
+    background: url(../img/circle1st.png) no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+
+/* 第三屏 手机  */
+#sec3_people{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene3/scene3_pic1.png) no-repeat ; 
+    background-size: cover;   
+}
+
+#sec3_mobile{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene3/scene3_pic2.png) no-repeat ; 
+    background-size: cover;   
+}
+
+#sec3_bubble{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene3/scene3_qipao.png) no-repeat ; 
+    background-size: cover;   
+}
+/* 第四屏 熬夜定义  */
+.scene4_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene4/scene4_pic1.png) no-repeat ; 
+    background-size: 100% 100%;   
+}
+.scene4_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene4/scene4_pic2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene4_pic3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene4/scene4_pic3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene4_qipao1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene4/scene4_qipao1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene4_qipao2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene4/scene4_qipao2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene4_qipao3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene4/scene4_qipao3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene4_wenzi{
+    width:100%;
+    height: 100%;
+    bottom:1%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene4/scene4_wenzi.png) no-repeat ; 
+    background-size: 100% 100%;   
+}
+
+/* 第五屏 叔本华  */
+.scene5_laotou{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene5/scene5_laotou.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene5_mupai{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    bottom: 0%;
+    position: absolute;
+    background: url(../img/scene5/scene5_mupai.png)  no-repeat;
+    background-size: 100% 100%;  
+} 
+
+.scene5_yueliang{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    bottom: 0%;
+    position: absolute;
+    background: url(../img/scene5/scene5_yueliang.png) no-repeat;
+    background-size: 100% 100%;  
+} 
+
+/* 第六屏 你在拿健康换取什么 */
+
+.scene6_dikuang{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene6/scene6_dikuang.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene6_emo{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene6/scene6_emo.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene6_tianshi{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene6/scene6_tianshi.png) no-repeat ; 
+    background-size: 100% 100%; 
+}
+
+.scene6_qipao{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene6/scene6_qipao.png) no-repeat ; 
+    background-size: 100% 100%; 
+}
+
+/* 第七屏 熬夜在干什么 */
+.scene7_pic0{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_pic0.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene7_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_pic1.png) no-repeat ; 
+    background-size: 100% 100%;   
+}
+
+.scene7_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_pic2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene7_pic3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_pic3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene7_qipao0{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_qipao0.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene7_qipao1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_qipao1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene7_qipao2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_qipao2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene7_qipao3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_qipao3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene7_emo{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene7/scene7_emo.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+
+
+/* 第八屏 睡眠分布*/
+.hidden1{
+    display: none;
+}
+.scene8_tianshi{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene8/scene8_tianshi.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene8_age{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene8/scene8_age.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene8_chengshi{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene8/scene8_chengshi.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene8_city{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene8/scene8_city.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+#scene8_qipao1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene8/scene8_qipao1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+#scene8_qipao2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene8/scene8_qipao2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+#scene8_qipao3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene8/scene8_qipao3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+/*第9屏 */
+.hidden2{
+    display: none;
+}
+.scene9_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene9/scene9_pic1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene9_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene9/scene9_pic2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene9_yuan1{
+    width:36px;
+    height: 36px;
+    bottom:54%;
+    left:76%;
+    position: absolute;
+    background: url(../img/scene9/scene9_yuan.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene9_yuan2{
+    width:36px;
+    height: 36px;
+    bottom:24%;
+    left:13%;
+    position: absolute;
+    background: url(../img/scene9/scene9_yuan.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+/*第10屏 */
+.sec101{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene10/scene10_ruchang.gif) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.sec102{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene10/scene10_xunhuan.gif) no-repeat ; 
+    background-size: 100% 100%;  
+}
+/* 第11屏 */
+.sec11bg{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene11/scene11_ruchang.gif) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+/* 第12屏 */
+.scene12_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene12/scene12_pic1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene12_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene12/scene12_pic2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene12_qipao{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene12/scene12_qipao.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+
+/* 第13屏 四大熬夜危害 */
+/* .scene13_bgg{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene13/scene13.gif) no-repeat ; 
+    background-size: 100% 100%;  
+} */
+
+.scene13_bianchou{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    background: url(../img/scene13/scene13_bianchou.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.scene13_bianben{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    background: url(../img/scene13/scene13_bianben.png) no-repeat;
+    background-size: 100% 100%;
+}
+.scene13_bianpang{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    background: url(../img/scene13/scene13_bianpang.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.scene13_cusi{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    background: url(../img/scene13/scene13_cusi.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+#bianben{
+    width:150px;
+    height:240px;
+    position: absolute;
+    left: 4%;
+    top: 12%;
+    background: url(../img/scene13/NO13_small.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+#bianchou{
+    width:178px;
+    height:240px;
+    position: absolute;
+    right: 4%;
+    top: 12%;
+    background: url(../img/scene13/NO13_big.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+#bianpang{
+    width:178px;
+    height:240px;
+    position: absolute;
+    left: 4%;
+    bottom: 12%;
+    background: url(../img/scene13/NO13_big.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+#cusi{
+    width:150px;
+    height:240px;
+    position: absolute;
+    right: 4%;
+    bottom: 12%;
+    background: url(../img/scene13/NO13_small.png) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0;
+}
+
+#grey1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene13/NO13_bianben_HB.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+#grey2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene13/NO13_bianchou_HB.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+#grey3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene13/NO13_bianpang_HB.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+#grey4{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene13/NO13_cusi_HB.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+/* ------------返回scene13 按钮------------------ */
+.back_button1{
+    width:106px;
+    height:46px;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    background: url(../img/backbutton.png) no-repeat;
+    background-size: 100% 100%;
+}
+.back_button2{
+    width:106px;
+    height:46px;
+    position: absolute;
+    left: 2%;
+    bottom: 2%;
+    background: url(../img/backbutton.png) no-repeat;
+    background-size: 100% 100%;
+}
+.back_button3{
+    width:106px;
+    height:46px;
+    position: absolute;
+    right: 4%;
+    bottom: 6%;
+    background: url(../img/backbutton.png) no-repeat;
+    background-size: 100% 100%;
+}
+.back_button4{
+    width:106px;
+    height:46px;
+    position: absolute;
+    right: 4%;
+    bottom: 8%;
+    background: url(../img/backbutton.png) no-repeat;
+    background-size: 100% 100%;
+}
+/* ----------第14屏 -----------*/
+.scene14_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene14/scene14_pic1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene14_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene14/scene14_pic2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene14_pic3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene14/scene14_pic3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene14_qipao1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene14/scene14_qipao1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene14_qipao2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene14/scene14_qipao2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene14_qipao3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene14/scene14_qipao3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene14_tianshi{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene14/scene14_tianshi.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+/* 第15屏 */
+.scene15_heiyanquan{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_heiyanquan.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_ren{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_ren.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_zhangdou{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_zhangdou.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_zhouwen{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_zhouwen.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_zuijiaoqipao_qp{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_zuijiaoqipao_qp.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_heiyanquan_qp{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_heiyanquan_qp.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_zhangdou_qp{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_zhangdou_qp.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_zuijiaoqipao{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_zuijiaoqipao.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene15_zhouwen_qp{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene15/scene15_zhouwen_qp.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+/* 第16屏 */
+.scene16_pic{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene16/scene16_pic.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene16_qipao{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene16/scene16_qipao.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene16_danru{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene16/scene16_danru.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+/* 第17屏 */
+.scene17_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene17/scene17_pic1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene17_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene17/scene17_pic2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene17_qipao{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene17/scene17_qipao.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene17_cusiw_enzi{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene17/scene17_cusiw_enzi.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+
+/* 第18屏 */
+.secc18{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene18/scene18.gif) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+#go_right{
+    width:100px;
+    height:100px;
+    position: absolute;
+    right: 4%;
+    top: 68%;
+    background: url(../img/scene18/right-arrow.png) no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+#go_left{
+    width:120px;
+    height:100px;
+    position: absolute;
+    left: 0%;
+    top: 74%;
+    background: url(../img/scene18/left-arrow.png) no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+
+/* 第19屏 */
+.hidden19{
+    display: none;
+}
+
+.scene19_bg{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene19/scene19_bg.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene19_biaoti{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene19/scene19_biaoti.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene19_tips1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene19/scene19_tips1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene19_tips2_biaoti{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene19/scene19_tips2_biaoti.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene19_tips2_wenzi{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene19/scene19_tips2_wenzi.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene19_tips3_wenzi{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene19/scene19_tips3_wenzi.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene19_tips4{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene19/scene19_tips4.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+/* 第20屏 23*/
+.scene20_bg{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene20/scene20_bg.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene20_beidong{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene20/scene20_beidong.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene20_pic1{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene20/scene20_pic1.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene20_pic2{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene20/scene20_pic2.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene20_pic2_xiaobiaoti{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene20/scene20_pic2_xiaobiaoti.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+.scene20_pic3{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene20/scene20_pic3.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+.scene20_pic4{
+    width:100%;
+    height: 100%;
+    bottom:0%;
+    left:0%;
+    position: absolute;
+    background: url(../img/scene20/scene20_pic4.png) no-repeat ; 
+    background-size: 100% 100%;  
+}
+
+
+/* ------------------- */
+.moreaboutbeidong{
+    width:106px;
+    height:46px;
+    position: absolute;
+    left: 5%;
+    bottom: 2%;
+    background: url(../img/button/beidongaoye.png) no-repeat;
+    background-size: 100% 100%;
+}
+.moreaboutzhudong{
+    width:106px;
+    height:46px;
+    position: absolute;
+    left: 5%;
+    bottom: 2%;
+    background: url(../img/button/zhudongaoye.png) no-repeat;
+    background-size: 100% 100%;
+}
+.getit{
+    width:106px;
+    height:46px;
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+    background: url(../img/button/get.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* final */
+.finalla{
+    width:100%;
+    height:100%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background: url(../img/scenefinal/final.png) no-repeat;
+    background-size: 100% 100%;
+}
+.finalbutton{
+    width:218px;
+    height:47px;
+    position: absolute;
+    left:20% ;
+    bottom: 40%;
+    background: url(../img/scenefinal/scene21_again.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* 附录 */
+.appendix1{
+    width:100%;
+    height:100%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background: url(../img/appendix/1.png) no-repeat;
+    background-size: 100% 100%;
+}
+.appendix2{
+    width:100%;
+    height:100%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background: url(../img/appendix/2.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.appendix3{
+    width:100%;
+    height:100%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background: url(../img/appendix/3.png) no-repeat;
+    background-size: 100% 100%;
+}
+.appendix4{
+    width:100%;
+    height:100%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background: url(../img/appendix/4.png) no-repeat;
+    background-size: 100% 100%;
+}
+.appendix5{
+    width:100%;
+    height:100%;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    background: url(../img/appendix/5.png) no-repeat;
+    background-size: 100% 100%;
+}

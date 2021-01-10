@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <audio id="click_audio" src="./bgm/click.mp3" style="display:none"></audio>
+    <head>
+        <title>appendix</title>
+        <link rel="stylesheet" href="appendix.css">
+        <link rel="stylesheet" href="csshake.css">
+	</head>
+	<body>
+        <div id="content" class="content_area">
+            <img id="title" src="./image/title.png">
+            <img id="knowledge1" class="shake shake-slow" style="position:absolute; width: 698px;left: 214px;top: -10px;"></img>
+            <img id="knowledge2" class="shake shake-slow" style="position:absolute; width: 698px;left: 388px;top: 76px;"></img>
+            <img id="knowledge3" class="shake shake-slow" style="position:absolute; width: 698px;left: 233px;top: 195px;"></img>
+            <img id="knowledge4" class="shake shake-slow" style="position:absolute; width: 698px;left: 337px;top: 251px;"></img>
+            <img id="knowledge5" class="shake shake-slow" style="position:absolute; width: 698px;left: 308px;top: 311px;"></img>
+            <img id="knowledge6" class="shake shake-slow" style="position:absolute; width: 459px;left: 509px;top: 437px;"></img>
+            <div id="button" onclick="location='index.html'">
+                <div id="next_page">Again</div>
+            </div>
+        <script src='jquery.min.js'></script>
+        <script src="appendix.js"></script>
+        <script>
+            var click_audio = document.getElementById('click_audio'),
+            content_area   = document.getElementById('content');
+            content_area.onclick = function() {
+            // 通过clone方法实现多个声音同时响起
+            click_audio.cloneNode().play();
+            };
+        </script>
+    </body>
+</html>

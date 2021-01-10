@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- <iframe allow="autoplay" src="./bgm/bgm.mp3" style="display: none;"></iframe> -->
+    <!-- <audio id="back_audio" src="" autoplay="true" loop playcount="-1" controls="controls" style="height:0px"></audio> -->
+    
+    <audio id="click_audio" src="./bgm/click.mp3" style="display:none"></audio>
+    
+    <head>
+        <title>comics</title>
+        <link rel="stylesheet" href="cartoon.css">
+        <link rel="stylesheet" href="csshake.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/3.7.0/animate.min.css">
+	</head>
+	<body>
+        <div id="content" class="content_area animated bounceIn delay-0.5s">
+            <div id="text1">
+                猫咪是何时走进人的生活的呢
+            </div>
+            <div id="cat1">
+                <img class="cat_page_1" src="./image/cat_page_1.png">
+                <div class="eye1" style="left:380px;top:145px;"></div>
+                <div class="eye1" style="left:441px;top:145px;"></div> 
+            </div>
+            <div id="cartoon1">
+                <img id="cartoon1_screen1" src="./image/cat/cat_history.gif">
+                <img id="cartoon1_screen2" src="./image/cat/time_changed.gif">
+            </div>
+            <div id="text2">
+                2019年有这么多人养猫呀
+            </div>
+            <div id="cat2">
+                <img class="cat_page_2" src="./image/cat_page_2.png">
+                <div class="eye2" style="left:310px;top:303px;"></div>
+                <div class="eye2" style="left:351px;top:303px;"></div> 
+            </div>
+            <div id="cartoon2">
+                <img id="cartoon2_screen1" src="./image/cat/num_left.gif">
+            </div>
+            <div id="text3">
+                比2018年增长8.6%
+            </div>
+            <div id="cat3">
+                <img class="cat_page_3" src="./image/cat_page_3.png">
+                <div class="eye3" style="left:503px;top:289px;"></div>
+                <div class="eye3" style="left:543px;top:295px;"></div> 
+            </div>
+            <div id="cartoon3">
+                <img id="cartoon3_screen1" src="./image/cat/num_right.gif">
+            </div>
+            <div id="text4">
+                大家为什么养猫呢
+            </div>
+            <div id="cat4">
+                <img class="cat_page_4" src="./image/cat_page_4.png">
+                <div class="eye4" style="left:381px;top:437px;"></div>
+                <div class="eye4" style="left:437px;top:435px;"></div> 
+            </div>
+            <div id="cartoon4">
+                <img id="cartoon4_screen1" src="./image/cat/cat_fish.gif">
+            </div>
+            <div id="text5">
+                养猫的花销有多大
+            </div>
+            <div id="cat5">
+                <img class="cat_page_5" src="./image/cat_page_5.png">
+                <div class="eye5" style="left:853px;top:116px;"></div>
+                <div class="eye5" style="left:908px;top:124px;"></div> 
+            </div>
+            <div id="cartoon5">
+                <img id="cartoon5_screen1" src="./image/cat/cat_cost.gif">
+                <img id="cartoon5_screen2" src="./image/cat/money_small.gif">
+            </div>
+            <div id="text6">
+                分别花销在这些猫咪用品
+            </div>
+            <div id="cat6">
+                <img class="cat_page_6" src="./image/cat_page_6.png">
+                <div class="eye6" style="left:790px;top:245px;"></div>
+                <div class="eye6" style="left:735px;top:245px;"></div> 
+            </div>
+            <div id="cartoon6">
+                <img id="cartoon6_screen1" src="./image/cat/cat_category.gif">
+                <img id="cartoon6_screen2" src="./image/cat/money.gif">
+            </div>
+            <div id="text7">
+                大家是怎么获得猫主子的
+            </div>
+            <div id="cat7">
+                <img class="cat_page_7" src="./image/cat_page_7.png">
+                <div class="eye7" style="left:780px;top:510px;"></div>
+                <div class="eye7" style="left:864px;top:508px;"></div> 
+            </div>
+            <div id="cartoon7">
+                <img id="cartoon7_screen1" src="./image/cat/cat_ball.gif">
+                <img id="cartoon7_screen2" src="./image/cat/cat_box.gif">
+            </div>
+            <div id="button" onclick="location='cartoon_human.html'">
+                <div id="next_page">Next</div>
+            </div>
+        <script src='jquery.min.js'></script>
+        <script src="cartoon.js"></script>
+        <script>
+            var click_audio = document.getElementById('click_audio'),
+            content_area   = document.getElementById('content');
+            content_area.onclick = function() {
+            click_audio.cloneNode().play();
+            };
+        </script>
+    </body>
+</html>

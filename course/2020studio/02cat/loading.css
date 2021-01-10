@@ -1,0 +1,90 @@
+.content_area{
+    position: absolute;
+    width: 1280px;
+    height: 610px;
+    top: 0px;
+    left: 0px;
+    cursor: url('./image/cursor.ico'),default;
+    font-size: 12px;
+}
+
+#loading_back{
+    margin-left: 50px;
+    margin-top:20px;
+    height: 560px;
+}
+#loading_cat{
+    position: absolute;
+    left: 616px;
+    top: 173px;
+    height: 142px;
+}
+.container{
+    position: absolute;
+    top:306px;
+    left: 421px;
+    width: 405px;
+    margin-top: 50px;
+  }
+
+.progressBar {
+    display: inline-block;
+    width: 100%;
+    height: 22px;
+    background-color:none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 11px;
+    border-radius: 11px;
+    margin-right: 3%;
+  }
+  #progressFill {
+    width: 0%;
+    margin-top: 6px;
+    margin-left: 10px;
+    height: 10px;
+    position: relative;
+    background-color:#C7766C;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    background-size: 3em 3em;
+    -webkit-animation: warning-animation 750ms infinite linear;
+    -moz-animation: warning-animation 750ms infinite linear;
+    animation: warning-animation 750ms infinite linear;
+  }
+
+  #progressFill:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    border-radius: 11px;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    background-color:#C7766C;
+}
+
+#percentage{
+    position: absolute;
+    height: 200px;
+    top:0px;
+    left: 0px;
+    color: #C7766C;
+}
+
+#loading_claw{
+    position: absolute;
+    height: 70px;
+    top:-28px;
+    left: -7px;
+}
+
+#percentage_number{
+    margin-top: 31px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}

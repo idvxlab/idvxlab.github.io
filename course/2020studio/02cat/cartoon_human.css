@@ -1,0 +1,432 @@
+.content_area{
+    position: absolute;
+    width: 1280px;
+    height: 610px;
+    background-image: url(image/human_page.png);
+    background-size: cover;
+    top:0;
+    left: 0;
+    cursor: url('./image/cursor.ico'),default;
+    font-size: 12px;
+}
+
+.cat_page_1{
+     position: absolute;
+     height: 192px;
+     left:267px;
+     top:55px;
+}
+.cat_page_2{
+  position: absolute;
+  height: 163px;
+  left:263px;
+  top:283px;
+}
+.cat_page_3{
+  position: absolute;
+  height: 128px;
+  left:442px;
+  top:277px;
+}
+.cat_page_4{
+  position: absolute;
+  height: 193px;
+  left:283px;
+  top:404px;
+}
+.cat_page_5{
+  position: absolute;
+  height: 161px;
+  left:686px;
+  top:63px;
+}
+.cat_page_6{
+  position: absolute;
+  height: 214px;
+  left:743px;
+  top:219px;
+}
+.cat_page_7{
+  position: absolute;
+  height: 150px;
+  left:670px;
+  top:437px;
+}
+
+.eye1{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    z-index: 99;
+  }
+
+.eye1::after {
+    background: #F6ECE6;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    width: 17px;
+    height: 17px;
+  }
+  .eye2{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+  }
+
+.eye2::after {
+    background: #F6ECE6;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    width: 13px;
+    height: 13px;
+  }
+  .eye3{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 99;
+  }
+
+.eye3::after {
+    background: #F6ECE6;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    width: 13px;
+    height: 13px;
+  }
+  .eye4{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 99;
+  }
+
+.eye4::after {
+    background: #F6ECE6;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+  }
+  .eye5{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    z-index: 99;
+  }
+
+.eye5::after {
+    background: #F6ECE6;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    width: 22px;
+    height: 22px;
+  }
+  .eye6{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    z-index: 99;
+  }
+
+.eye6::after {
+    background: #F6ECE6;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    width: 23px;
+    height: 23px;
+  }
+  .eye7{
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    z-index: 99;
+  }
+
+.eye7::after {
+    background: #F6ECE6;
+    border-radius: 50%;
+    content: ' ';
+    position: absolute;
+    right: 3px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  #cartoon1_screen1{
+    position: absolute;
+    top: 52px;
+    left:307px;
+    height: 175px;
+    display: none;
+  }
+  #cartoon2_screen1{
+    position: absolute;
+    top: 244px;
+    left:270px;
+    height: 146px;
+    display: none;
+  }
+  #cartoon3_screen1{
+    position: absolute;
+    top: 270px;
+    left:343px;
+    height: 112px;
+    display: none;
+  }
+  #cartoon4_screen1{
+    position: absolute;
+    top: 423px;
+    left:262px;
+    height: 162px;
+    display: none;
+  }
+  
+  #cartoon5_screen1{
+    position: absolute;
+    top: 58px;
+    left:689px;
+    height: 150px;
+    display: none;
+  }
+  #cartoon5_screen2{
+    position: absolute;
+    top: 42px;
+    left:683px;
+    height: 157px;
+    display: none;
+  }
+  
+  #cartoon6_screen1{
+    position: absolute;
+    top:215px;
+    left:683px;
+    height: 195px;
+    display: none;
+  }
+  #cartoon6_screen2{
+    position: absolute;
+    top:215px;
+    left:683px;
+    height: 195px;
+    display: none;
+  }
+
+  
+  #cartoon7_screen1{
+    position: absolute;
+    top: 452px;
+    left:658px;
+    height: 138px;
+    display: none;
+  }
+  #cartoon7_screen2{
+    position: absolute;
+    top: 430px;
+    left:673px;
+    height: 169px;
+    display: none;
+  }
+
+
+  #text1{
+    z-index: 99;
+    position: absolute;
+    animation: text1 2s;
+    -moz-animation: text1 2s;	/* Firefox */
+    -webkit-animation: text1 2s;	/* Safari 和 Chrome */
+    -o-animation: text1 2s;	/* Opera */
+    left: 257px;
+    top: 45px;
+    border:1.5px solid#c1ab8d;
+    display: none;
+    color: #3e3a39;
+    background-color: white;
+  }
+  
+  @-webkit-keyframes text1 /* Safari 和 Chrome */
+  {
+  0%   {left:370px; top:115px;}
+  100% {left:257px; top:45px;}
+  }
+  #text2{
+    z-index: 99;
+    position: absolute;
+    animation: text2 2s;
+    -moz-animation: text2 2s;	/* Firefox */
+    -webkit-animation: text2 2s;	/* Safari 和 Chrome */
+    -o-animation: text2 2s;	/* Opera */
+    left: 257px;
+    top: 248px;
+    border:1.5px solid#c1ab8d;
+    display: none;
+    color: #3e3a39;
+    background-color: white;
+  }
+  @-webkit-keyframes text2 /* Safari 和 Chrome */
+  {
+  0%   {left:301px; top:299px;}
+  100% {left:257px; top:248px;}
+  }
+
+  #text3{
+    z-index: 99;
+    position: absolute;
+    animation: text3 2s;
+    -moz-animation: text3 2s;	/* Firefox */
+    -webkit-animation: text3 2s;	/* Safari 和 Chrome */
+    -o-animation: text3 2s;	/* Opera */
+    left: 503px;
+    top: 248px;
+    border:1.5px solid#c1ab8d;
+    display: none;
+    color: #3e3a39;
+    background-color: white;
+  }
+  @-webkit-keyframes text3 /* Safari 和 Chrome */
+  {
+  0%   {left:485px; top:299px;}
+  100% {left:503px; top:248px;}
+  }
+  
+  #text4{
+    z-index: 99;
+    position: absolute;
+    animation: text4 2s;
+    -moz-animation: text4 2s;	/* Firefox */
+    -webkit-animation: text4 2s;	/* Safari 和 Chrome */
+    -o-animation: text4 2s;	/* Opera */
+    left: 257px;
+    top: 412px;
+    border:1.5px solid#c1ab8d;
+    display: none;
+    color: #3e3a39;
+    background-color: white;
+  }
+  @-webkit-keyframes text4 /* Safari 和 Chrome */
+  {
+  0%   {left:377px; top:466px;}
+  100% {left:257px; top:412px;}
+  }
+  
+  
+  #text5{
+    z-index: 99;
+    position: absolute;
+    animation: text5 2s;
+    -moz-animation: text5 2s;	/* Firefox */
+    -webkit-animation: text5 2s;	/* Safari 和 Chrome */
+    -o-animation: text5 2s;	/* Opera */
+    left: 867px;
+    top: 45px;
+    border:1.5px solid#c1ab8d;
+    display: none;
+    color: #3e3a39;
+    background-color: white;
+  }
+  @-webkit-keyframes text5 /* Safari 和 Chrome */
+  {
+  0%   {left:809px; top:99px;}
+  100% {left:867px; top:45px;}
+  }
+  
+  #text6{
+    z-index: 99;
+    position: absolute;
+    animation: text6 2s;
+    -moz-animation: text6 2s;	/* Firefox */
+    -webkit-animation: text6 2s;	/* Safari 和 Chrome */
+    -o-animation: text6 2s;	/* Opera */
+    left: 891px;
+    top: 222px;
+    border:1.5px solid#c1ab8d;
+    display: none;
+    color: #3e3a39;
+    background-color: white;
+  }
+  @-webkit-keyframes text6 /* Safari 和 Chrome */
+  {
+  0%   {left:781px; top:306px;}
+  100% {left:891px; top:222px;}
+  }
+
+  #text7{
+    z-index: 99;
+    position: absolute;
+    animation: text7 2s;
+    -moz-animation: text7 2s;	/* Firefox */
+    -webkit-animation: text7 2s;	/* Safari 和 Chrome */
+    -o-animation: text7 2s;	/* Opera */
+    left: 903px;
+    top: 434px;
+    border:1.5px solid#c1ab8d;
+    display: none;
+    color: #3e3a39;
+    background-color: white;
+  }
+  @-webkit-keyframes text7 /* Safari 和 Chrome */
+  {
+  0%   {left:803px; top:492px;}
+  100% {left:903px; top:434px;}
+  }
+  
+  #button{
+    position: absolute;
+    top:520px;
+    right: 59px;
+    background-image:url(./image/next_back.png);
+    background-size: 100% 100%;
+    width: 70px;
+    height: 70px;
+    display: none;
+  }
+  #next_page{
+    margin-top: 25px;
+    margin-left: 12px;
+    font-size: 21px;
+    color: #C7766C;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+  #button:hover{
+    width: 80px;
+    height: 80px;
+  }
+  #button:hover #next_page{
+    margin-top: 27px;
+    margin-left: 16px;
+    font-size: 24px;
+  }
