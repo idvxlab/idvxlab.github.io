@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+	<meta content="telephone=no" name="format-detection"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content=""/>
+	<title>Stay up</title>
+	<!--引入pageSlider所需样式表-->
+    <link rel="stylesheet" href="css/pageSlider.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <!--引入zepto.js-->
+    <script src="node_modules/zepto/dist/zepto.js"></script>
+    <script src="node_modules/zepto/dist/zepto.min.js"></script>
+	<!-- <script src="http://cdn.bootcss.com/zepto/1.1.4/zepto.js"></script> -->
+	<!--引入pageSlider.js文件-->
+    <script src="js/pageSlider.js"></script>
+    <!--TweenMax.js文件-->
+    <script src="js/TweenMax.min.js"></script>
+    <!--引入Hammer.js文件-->
+    <!-- <script src="js/hammer.min.js"></script> -->
+ 
+<body>
+    <!--DOM结构-->
+    <!-- <div  class="loader">Loading...</div> -->
+   
+    <div id="loading" class="span">
+            <div class="eye"></div>
+            <div class="loading-text">Loading...</div>
+            <div class="loading-text1">仅支持手机竖屏查看哦</div>
+        </div>
+	<!-- <div class="section sec1" id="bubbletext"  style=" background-image: url(../img/test.png); background-size: cover; width: 100%; height: 100%;"> -->
+    <div class="section sec1">
+        <svg width="100%" height="100%" style="background-color:#00000d" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- <svg width="100%" height="100%" style=" background-image: url(../img/sec1.png); background-size: cover; width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink"> -->         
+            <filter id="light">
+                <!-- blur the source image to make bump map less sharp -->
+                <feGaussianBlur stdDeviation="16" result="blurred"></feGaussianBlur>
+                <!-- create bump map based on alpha channel -->
+                <feColorMatrix in="blurred" type="luminanceToAlpha" result="bumpMap"></feColorMatrix>
+                <!-- use bump map for lighting filter -->
+                <feDiffuseLighting in="bumpMap" surfaceScale="16" result="light">
+                <fePointLight x="225" y="150" z="5"></fePointLight>
+                </feDiffuseLighting>
+                <!-- compose the lighting result with source image using multiplication -->
+                <feComposite in="light" in2="SourceGraphic"
+                operator="arithmetic"
+                k1="1" k2="0" k3="0" k4="0">
+                </feComposite>
+            </filter>          
+            <pattern id="pattern1"  width="100%" height="100%" object-fit="fill"; patternUnits="objectBoundingBox" >
+                <image  xlink:href="./img/scene1/scene1_1.png" width="100%" height="100%"  background-size="100% 100%";></image>
+            </pattern>
+             
+            <rect width="100%" height="100%" fill="url(#pattern1)" filter="url(#light)"></rect>
+        </svg>
+       
+        <div id="scene1_biaoti" class=""></div>
+        <div id="scene1_light_shanshuo" class=""></div>
+        <div class="sec_down_sec1"></div>
+    </div>
+
+	<div class="section sec2" style=" background-color:white">
+        <div id="scene2_pic1" class=""></div>
+        <div id="scene2_pic2" class=""></div>
+        <div id="scene2_qipao1" class=""></div>
+        <div id="scene2_qipao2" cla ss=""></div>
+        <div id="sec2_clock" class=""></div>
+        <div id="sec2_tooltip" class=""></div>
+        <div id="sec2_text" class=""></div>
+        <!-- <div id="sec2_circlel"></div>
+        <div id="sec2_circles"></div> -->
+        <div id="sec2_button"></div>
+    </div>
+
+	<div class="section sec3" style="background-color:white;" >
+        <div id="sec3_people" class=""></div>
+        <div id="sec3_mobile" class=""></div>
+        <div id="sec3_bubble"></div>
+        <div class="sec_down"></div>
+    </div>
+
+    <div class="section sec4" style="background-color:white">
+        <div id="scene4_pic1" class=""></div>
+        <div id="scene4_pic2" class=""></div>
+        <div id="scene4_pic3" class=""></div>
+        <div id="scene4_qipao1"class=''></div>
+        <div id="scene4_qipao2"class=''></div>
+        <div id="scene4_qipao3"class=''></div>
+        <div id="scene4_wenzi" class=''></div>
+        <div class="sec_down"></div>
+    </div>
+
+	<div class="section sec5"  style="background-color:white">
+        <div id="scene5_yueliang" class="hidden"></div>
+        <div id="scene5_laotou" class="hidden"></div>
+        <div id="scene5_mupai"class="hidden"></div>
+        <div class="sec_down"></div>
+    </div>
+
+	
+	<div class="section sec6"  style="background-color:white">
+        <div id="scene6_dikuang" class=""></div>
+        <div id="scene6_emo" class=""></div>
+        <div id="scene6_tianshi" class=""></div>
+        <div id="scene6_qipao" class=''></div>
+        <div class="sec_down"></div>
+    </div>
+
+    <div class="section sec7"  style="background-color:white">     
+       <div id="scene7_pic0" class=""></div>
+       <div id="scene7_pic1" class=""></div>
+       <div id="scene7_pic2" class=""></div>
+       <div id="scene7_pic3" class=""></div>
+       <div id="scene7_emo" class=""></div>
+       <div id="scene7_qipao0" class=""></div>
+       <div id="scene7_qipao1" class=""></div>
+       <div id="scene7_qipao2" class=""></div>
+       <div id="scene7_qipao3" class=""></div>
+
+       <div class="sec_down"></div>
+    </div>
+
+    <div class="section sec8" id="secc8" style=" background-color:white">
+        <div id="scene8_age" class=""></div>
+        <div id="scene8_chengshi" class=""></div>
+        <div id="scene8_city" class=""></div>
+        <div id="scene8_qipao1" class="hidden1"></div>
+        <div id="scene8_qipao2" class="hidden1"></div>
+        <div id="scene8_qipao3" class="hidden1"></div>
+        <div id="scene8_tianshi" class=""></div>
+        <div id="tiptip" class=""></div>
+        <div class="sec_down"></div>
+    </div>
+
+    <div class="section sec9" style="background-color:white;">
+         <div id="scene9_pic1" class=""></div>
+         <div id="scene9_pic2" class=""></div>
+         <div id="scene9_yuan1" class="hidden2"></div>
+         <div id="scene9_yuan2" class="hidden2"></div>
+         <div class="sec_down"></div>
+    </div>
+    
+    <div class="section sec10" style="background-color:white;">
+        <div id="sec10_bg" class=""></div>
+        <div class="sec_down"></div>
+    </div>
+
+    <div class="section sec11" style="background-color:white;">
+        <div id="sec11_bg" class=""></div>
+        <div class="sec_down"></div>
+    </div>
+    <div class="section sec12" style="background-color:white;">    
+        <div id="scene12_pic1" class=""></div>
+        <div id="scene12_pic2" class=""></div>       
+        <div id="scene12_qipao" class=""></div>
+        <div class="sec_down"></div>
+    </div>
+    <div class="section sec13" id="secc13" style="background-color:white">
+        
+        <!-- <div id="scene13_bg" class=""></div> -->
+        <div id="scene13_bianben" class=""></div>
+        <div id="grey1" class="hidden bounce-in-left"></div>
+
+        <div id="scene13_bianchou" class=""></div>
+        <div id="grey2" class="hidden bounce-in-right"></div>
+
+        <div id="scene13_bianpang" class=""></div>
+        <div id="grey3" class="hidden bounce-in-left"></div>
+
+        <div id="scene13_cusi" class=""></div>
+        <div id="grey4" class="hidden bounce-in-right"></div>
+        
+        <div id="bianben"></div>
+        <div id="bianchou"></div>
+        <div id="bianpang"></div>
+        <div id="cusi"></div>
+        <div id="tiptip" class=""></div>
+        <div class="sec_down1" id="dangerous"></div>
+    </div>
+
+    <div class="section sec14" style="background-color:white;">
+        <div id="scene14_pic1" class=""></div>
+        <div id="scene14_pic2" class=""></div>
+        <div id="scene14_pic3" class=""></div>
+        <div id="scene14_qipao1" class=""></div>
+        <div id="scene14_qipao2" class=""></div>
+        <div id="scene14_qipao3" class=""></div>
+        <div id="scene14_tianshi" class=""></div>
+
+        <div id="back_button1" class=""></div>
+    </div>
+
+    <div class="section sec15" id="secc15" style="background-color:white;">
+        <div id="scene15_ren" class=""></div>
+        <div id="scene15_heiyanquan" class=""></div>
+        <div id="scene15_zhangdou" class=""></div>
+        <div id="scene15_zhouwen" class=""></div>
+        <div id="scene15_zuijiaoqipao" class=""></div>
+        <div id="scene15_zuijiaoqipao_qp" class=""></div>
+        <div id="scene15_heiyanquan_qp" class=""></div>
+        <div id="scene15_zhangdou_qp" class=""></div>
+        <div id="scene15_zhouwen_qp" class=""></div>
+          
+        <div id="tiptip" class=""></div>
+        <div id="back_button2" class=""></div>
+    </div>
+
+    <div class="section sec16" style="background-color:white;">
+        <div id="scene16_pic"  class=""></div>
+        <div id="scene16_qipao" class=""></div>
+        <div id="scene16_danru" class=""></div>
+
+        <div id="back_button3" class=""></div>
+    </div>
+
+    <div class="section sec17" style="background-color:white;">
+        <div id="scene17_pic2" class=""></div>
+       
+        <div id="scene17_pic1" class=""></div>
+        <div id="scene17_qipao" class=""></div>
+        <div id="scene17_cusiw_enzi" class=""></div>
+        <div id="back_button4" class=""></div>
+    </div>
+
+    <div class="section sec18" style="background-color:white;">
+        <div id="sec18_bg" class=""></div>
+        <div id="go_right"></div>
+        <div id="go_left"> </div>
+    </div>
+
+    <div class="section sec19" style="background-color:white;">
+       <div id="scene19_bg" class=""></div>
+       <div id="scene19_biaoti" class=""></div>
+       <div id="scene19_tips1" class=""></div>
+
+       <div class="sec_down"></div>
+    </div>
+
+    <div class="section sec20" style="background-color:white;">
+        <div id="scene20_bg" class=""></div>
+        <div id="scene20_biaoti" class=""></div>
+
+        <div id="scene19_tips2_biaoti" class=""></div>
+        <div id="scene19_tips2_wenzi" class=""></div>
+
+        <div class="sec_down"></div>
+    </div>
+
+    <div class="section sec21" style="background-color:white;">
+        <div id="scene21_bg" class=""></div>
+       <div id="scene21_biaoti" class=""></div>
+       <div id="scene21_tips2_biaoti" class=""></div>
+       <div id="scene19_tips3_wenzi" class=""></div>
+
+       <div class="sec_down"></div>
+
+    </div>
+    <div class="section sec22" style="background-color:white;">
+       <div id="scene22_bg" class=""></div>
+       <div id="scene22_biaoti" class=""></div>
+       <div id="scene19_tips4" class=""></div>
+       
+       <div id="moreaboutbeidong" class=""></div>
+       <div id="getit" class=""></div>
+    </div>
+
+
+
+    <div class="section sec23" style="background-color:white;">
+          <div id="scene23_bg" class=""></div>
+          <div id="scene23_beidong" class=""></div>
+          <div id="scene23_pic1" class=""></div>
+
+          <div class="sec_down"></div>
+    </div>
+    <div class="section sec24" style="background-color:white;">
+            <div id="scene24_bg" class=""></div>
+            <div id="scene24_beidong" class=""></div>     
+            <div id="scene24_pic2" class=""></div>
+            <div id="scene24_pic2_xiaobiaoti" class=""></div>
+
+            <div class="sec_down"></div>
+      </div>
+      <div class="section sec25" style="background-color:white;">
+            <div id="scene25_bg" class=""></div>
+            <div id="scene25_beidong" class=""></div>
+            <div id="scene25_pic2_xiaobiaoti" class=""></div>
+            <div id="scene25_pic3" class=""></div>
+
+            <div class="sec_down"></div>
+      </div>
+      <div class="section sec26" style="background-color:white;">
+            <div id="scene26_bg" class=""></div>
+            <div id="scene26_beidong" class=""></div>
+            <div id="scene26_pic4" class=""></div>
+
+            <div id="moreaboutzhudong" class=""></div>
+            <div id="getit1" class=""></div>
+      </div>
+      <div class="section sec27" style="background-color:white;">
+            <div id="finalla" class=""></div>
+            <div id="finalbutton" class=""></div>
+
+            <div class="sec_down"></div>
+      </div>
+
+      <div class="section sec28" style="background-color:white;">
+        <div id="appendix1" class=""></div>
+        <div class="sec_down"></div>
+  </div>
+  <div class="section sec29" style="background-color:white;">
+    <div id="appendix2" class=""></div>
+    <div class="sec_down"></div>
+</div>
+<div class="section sec30" style="background-color:white;">
+    <div id="appendix3" class=""></div>
+    <div class="sec_down"></div>
+</div>
+<div class="section sec31" style="background-color:white;">
+    <div id="appendix4" class=""></div>
+    <div class="sec_down"></div>
+</div>
+<div class="section sec32" style="background-color:white;">
+    <div id="appendix5" class=""></div>
+</div>
+
+
+
+    <div id="musicplayer">
+            <button id="musicon" class="hidden"></button>
+            <button id="musicoff"></button>
+            <audio src="./music/bgmusic.mp3" loop id="music"></audio>
+        </div>
+    
+    <script src="js/vis.js"></script>
+	<script>
+        window.onload=function(){
+            setTimeout(function(){document.getElementById("loading").style.display="none"},3000) 
+        }
+		//$(function(){
+            var pageSlider = PageSlider.case();
+            var sec2_button = document.getElementById('sec2_button');
+            var bianben=document.getElementById("bianben")
+            var bianchou=document.getElementById("bianchou")
+            var bianpang=document.getElementById("bianpang")
+            var cusi=document.getElementById("cusi")
+            var musicoff=document.getElementById("musicoff")
+            var musicon=document.getElementById("musicon")
+            var music=document.getElementById("music")
+
+            var flag=0;
+
+            musicoff.addEventListener("touchend",musicOff);
+            musicon.addEventListener("touchend",musicOn);
+
+            function musicOff(){
+                musicon.className=musicon.className?"":"hidden";
+                musicoff.className=musicoff.className?"":"hidden";
+                music.play()
+            }
+            function musicOn(){
+                musicon.className=musicon.className?"":"hidden";
+                musicoff.className=musicoff.className?"":"hidden";
+                music.pause();
+            }
+
+            sec2_button.addEventListener("touchend",pageGoto1)
+            bianben.addEventListener("touchend",pageGoto14)
+            bianchou.addEventListener("touchend",pageGoto15)
+            bianpang.addEventListener("touchend",pageGoto16)
+            cusi.addEventListener("touchend",pageGoto17)
+
+            function pageGoto1(e){
+                pageSlider.go(3)
+                showScene3();
+            }
+            function pageGoto14(e){
+                pageSlider.go(14)
+                showScene14();
+            }
+            function pageGoto15(e){
+                pageSlider.go(15)
+                showScene15();
+            }
+            function pageGoto16(e){
+                pageSlider.go(16)
+                showScene16();
+            }
+            function pageGoto17(e){
+                pageSlider.go(17)
+                showScene17();
+            }
+            function pageGoto18(e){
+                pageSlider.go(18)
+                showScene18();
+            }
+
+            function pageGoto19(e){
+                pageSlider.go(19);
+                showScene19();
+            }
+
+            function pageGoto23(e){
+                pageSlider.go(23);
+                showScene23();
+            }
+
+            function pageGoto27(e){
+                pageSlider.go(27);
+                showScene27();
+            }
+
+            function pageGotopage1(e){
+                pageSlider.go(1);
+                showScene1();
+            }
+
+            var grey1=document.getElementById("grey1")
+            var grey2=document.getElementById("grey2")
+            var grey3=document.getElementById("grey3")
+            var grey4=document.getElementById("grey4")
+            var back_button1=document.getElementById("back_button1")
+            var back_button2=document.getElementById("back_button2")
+            var back_button3=document.getElementById("back_button3")
+            var back_button4=document.getElementById("back_button4")
+
+            var go_leftzhudong=document.getElementById("go_left");
+            var go_rightbeidong=document.getElementById("go_right");
+
+            var moreaboutzhudong=document.getElementById("moreaboutzhudong");
+            var moreaboutbeidong=document.getElementById("moreaboutbeidong");
+            var getit=document.getElementById("getit");
+            var getit1=document.getElementById("getit1");
+
+            var finalbutton=document.getElementById("finalbutton");
+            
+
+            var sec13=document.getElementById("secc13")
+            var dangerous=document.getElementById("dangerous")
+            back_button1.addEventListener("touchend",goBack1);
+            back_button2.addEventListener("touchend",goBack2);
+            back_button3.addEventListener("touchend",goBack3);
+            back_button4.addEventListener("touchend",goBack4);
+
+
+            go_leftzhudong.addEventListener("touchend",pageGoto19);
+            go_rightbeidong.addEventListener("touchend",pageGoto23);
+
+            moreaboutzhudong.addEventListener("touchend",pageGoto19);
+            moreaboutbeidong.addEventListener("touchend",pageGoto23);
+            getit.addEventListener("touchend",pageGoto27);
+            getit1.addEventListener("touchend",pageGoto27);
+
+            finalbutton.addEventListener("touchend", pageGotopage1)
+                        
+            function pageGoto13(e){
+                showScene13();
+                pageSlider.go(13)
+            }
+            function goBack1(){
+                bianben.removeEventListener("touchend",pageGoto14)
+                showScene13();
+                grey1.className=grey1.className?"bounce-in-left":"hidden bounce-in-left";
+                flag++;
+                if(flag===4){
+                    sec13.addEventListener("touchmove",pageGoto18)
+                    dangerous.className="sec_down"
+                }
+                pageGoto13()
+               
+            }
+            function goBack2(){
+                bianchou.removeEventListener("touchend",pageGoto15)
+                grey2.className=grey2.className?"bounce-in-right":"hidden bounce-in-right";
+                flag++;
+                if(flag===4){
+                    sec13.addEventListener("touchmove",pageGoto18)
+                    dangerous.className="sec_down"
+                }
+                pageSlider.go(13)
+                showScene13();
+            }
+            function goBack3(){
+                bianpang.removeEventListener("touchend",pageGoto16)
+                grey3.className=grey3.className?"bounce-in-left":"hidden bounce-in-left";
+                flag++;
+                if(flag===4){
+                    sec13.addEventListener("touchmove",pageGoto18)
+                    dangerous.className="sec_down"
+                }
+                pageSlider.go(13)
+                showScene13();
+            }
+            function goBack4(){
+                cusi.removeEventListener("touchend",pageGoto17)
+                grey4.className=grey4.className?"bounce-in-right":"hidden bounce-in-right" ;
+                flag++;
+                if(flag===4){
+                    sec13.addEventListener("touchmove",pageGoto18)
+                    dangerous.className="sec_down"
+                }
+                pageSlider.go(13)
+                showScene13();
+            }
+
+           
+          
+            PageSlider.case({callback:{
+                1:function(){showScene1()},
+                2:function(){showScene2()},
+                3:function(){showScene3()},
+                4:function(){showScene4()},
+                5:function(){showScene5()},
+                6:function(){showScene6()},
+                7:function(){showScene7()},
+                8:function(){showScene8()},
+                9:function(){showScene9()},
+                10:function(){showScene10()},
+                11:function(){showScene11()},
+                12:function(){showScene12()},
+                13:function(){showScene13()},
+                14:function(){showScene14()},
+                15:function(){showScene15()},
+                16:function(){showScene16()},
+                17:function(){showScene17()},
+                18:function(){showScene18()},
+                19:function(){showScene19()},
+                20:function(){showScene20()},
+                21:function(){showScene21()},
+                22:function(){showScene22()},
+                23:function(){showScene23()},
+                24:function(){showScene24()},
+                25:function(){showScene25()},
+                26:function(){showScene26()},
+                27:function(){showScene27()},
+                28:function(){showScene28()},
+                29:function(){showScene29()},
+                30:function(){showScene30()},
+                31:function(){showScene31()},
+                32:function(){showScene32()},
+            },
+            elastic:false
+               
+            })
+
+            //});
+	</script>
+</body>
+</html>
