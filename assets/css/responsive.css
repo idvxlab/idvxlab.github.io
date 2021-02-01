@@ -23,13 +23,17 @@
 .inner_footer_top{width:530px}
 .footer_menu ul li a{padding:0 12px}
 /* for preoject page */
-.sub_menu_area ul li a{font-size:11px; padding:18px 14.1px}
+.sub_menu_area ul li a{font-size:11px; padding:18px 14.1px; height: 30px;}
 .project_single_left_coloum{margin-left:0px; width:280px; height:90px;}
 .video_single_left_coloum{margin-left:3px; width:280px; height:230px;}
 .video_first_single_left_coloum{margin-left:3px; width:280px; height:230px;}
 .participants_single_left_coloum{margin-left:3px;}
 .participants_first_single_left_coloum{margin-left:3px;}
-
+.project_sub_title_empty{
+	margin-bottom: 0px;
+	margin-top: 36px;
+	margin-left: 4px;
+	font-size: 16px;}
 
 }
 
@@ -81,7 +85,8 @@
 	margin-bottom: 40px;
 }
 .project_title_health{width: 138px;height: 45px;}
-.project_introduction_health p {margin-top: 8px;font-size: 12px;line-height: 18px;}
+.project_title_information{width: 159px;height: 45px;}
+.project_title_urban{width: 124px;height: 45px;}
 }
 
 /*Wide Mobile Layout: 480px.*/
@@ -118,8 +123,13 @@
 .project_title{width: 86px;height: 38.5px;}
 .project_sub_title{margin-top: 1px; font-size: 12px;line-height: 14px;}
 .project_introduction{margin-top: 8px;}
-.project_introduction_health{margin-top: 7px;}
+.project_introduction_health{margin-top: 17px;}
+.project_introduction_empty{margin-top: 0px;}
 .project_title_health{width: 138px;}
 
 }
 
+@media only screen and (max-width: 480px) {
+.project_sub_title_empty{margin-top:41px;}
+.project_introduction_health p {margin-top: 16px;}
+}

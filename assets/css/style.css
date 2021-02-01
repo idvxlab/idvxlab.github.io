@@ -270,6 +270,18 @@ div{overflow:hidden}
 	background: #cd0303; 
 	float: left;
 }
+.project_title_information{
+	width: 203px; 
+	height: 38px;
+	background: #cd0303; 
+	float: left;
+}
+.project_title_urban{
+	width: 165px; 
+	height: 38px;
+	background: #cd0303; 
+	float: left;
+}
 
 .project_main_title{
 	color:#fff;
@@ -280,6 +292,12 @@ div{overflow:hidden}
 .project_sub_title{
 	margin-bottom: 0px;
 	margin-top: 6px;
+	margin-left: 4px;
+	font-size: 16px;
+}
+.project_sub_title_empty{
+	margin-bottom: 0px;
+	margin-top: 36px;
 	margin-left: 4px;
 	font-size: 16px;
 }
