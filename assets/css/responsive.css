@@ -53,7 +53,7 @@
 .slider1{width:195px}
 .slider2{max-height:92px; width:80px}
 .left_coloum{float:none; width:280px}
-.single_left_coloum{margin-left:3px; width:91px; height:220px;}
+.single_left_coloum{margin-left:3px; width:91px; height:270px;}
 .gallery img{width:129px}
 .single_cat_left_content{width:280px; margin-left:3px}
 .main_content{width:280px}
@@ -87,6 +87,8 @@
 .project_title_health{width: 138px;height: 45px;}
 .project_title_information{width: 159px;height: 45px;}
 .project_title_urban{width: 124px;height: 45px;}
+/*h2 font*/
+.single_left_coloum_wrapper h2 {font-size:12px;}
 }
 
 /*Wide Mobile Layout: 480px.*/
